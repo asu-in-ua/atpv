@@ -28,7 +28,8 @@
 
 ## Практична частина
 
-- [Початок роботи з Virtual Box: практична частина](lab.md)
+- [Початок роботи з Virtual Box: ВМ з Windows XP](lab.md)
+- [Встановлення ВМ з Linux (Debian)](lablinuxdesktop.md)
 
 ## Перевірка знань
 
