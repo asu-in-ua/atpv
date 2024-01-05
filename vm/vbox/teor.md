@@ -316,6 +316,47 @@ Oracle VM VirtualBox підтримує використання віртуал�
 
 рис.11
 
+Ви можете налаштувати до чотирьох віртуальних послідовних портів на віртуальну машину. Для кожного пристрою необхідно встановити наступне:
+
+- Номер порту (Port Number): Це означує послідовний порт, який має бачити віртуальна машина. Для досягнення найкращих результатів використовуйте традиційні значення таким чином:
+
+  - COM1: I/O base 0x3F8, IRQ 4 
+
+  - COM2: I/O base 0x2F8, IRQ 3 
+
+  - COM3: I/O base 0x3E8, IRQ 4 
+
+  - COM4: I/O base 0x2E8, IRQ 3 
+
+Ви також можете налаштувати означений користувачем послідовний порт. Введіть базову адресу введення/виведення та переривання (IRQ).
+
+- Режим порту (Port Mode): До чого підключений віртуальний порт. Для кожного віртуального послідовного порту ви маєте такі параметри:
+
+  - Від'єднаний (Disconnected): Гостьова ОС побачить пристрій, але він буде поводитися так, ніби до нього не було підключено кабель.
+
+  - Головний пристрій (Host Device): Підключає віртуальний послідовний порт до фізичного послідовного порту на вашому хості. На хості з Windows це матиме назву по типу `COM1`. На хостах з Linux або Oracle Solaris це буде вузол пристрою, наприклад `/dev/ttyS0`. Тоді Oracle VM VirtualBox просто перенаправить усі дані, отримані з віртуального послідовного порту та надіслані на нього, на фізичний пристрій.
+
+  - Головний канал (Host Pipe): Налаштуйте Oracle VM VirtualBox для підключення віртуального послідовного порту до програмного каналу (pipe) на хості. У цьому випадку ви можете налаштувати, чи повинен Oracle VM VirtualBox створювати іменований канал або хости локального доменного сокета, відмінні від Windows, чи Oracle VM VirtualBox повинен припускати, що канал або сокет уже існують. З параметрами командного рядка VBoxManage це називається режимом сервера або режимом клієнта відповідно. Для прямого з’єднання між двома віртуальними машинами, що відповідає нуль-модемному кабелю, просто налаштуйте одну віртуальну машину для створення каналу або сокета, а іншу – для приєднання до нього. Це залежить від вашої хост-ОС, а саме:
+
+    - На хості Windows дані надсилатимуться та отримуватимуться через іменований канал. Ім’я каналу має бути у форматі `\\.\pipe\name`, де `name` має ідентифікувати віртуальну машину, але його можна вибрати вільно.
+    - On a Mac OS, Linux, or Oracle Solaris host, a local domain socket is used instead. The socket filename must be chosen such that the user running Oracle VM VirtualBox has sufficient privileges to create and write to it. The /tmp directory is often a good candidate. 
+
+    - On Linux there are various tools which can connect to a local domain socket or create one in server mode. The most flexible tool is socat and is available as part of many distributions. 
+
+  In this case, you can configure whether Oracle VM VirtualBox should create the named pipe, or the local domain socket non-Windows hosts, itself or whether Oracle VM VirtualBox should assume that the pipe or socket exists already. With the VBoxManage command-line options, this is referred to as server mode or client mode, respectively. For a direct connection between two virtual machines, corresponding to a null-modem cable, simply configure one VM to create a pipe or socket and another to attach to it. 
+
+  - Необроблений файлі (Raw File): Send the virtual serial port output to a file. This option is very useful for capturing diagnostic output from a guest. Any file may be used for this purpose, as long as the user running Oracle VM VirtualBox has sufficient privileges to create and write to the file. 
+
+  - TCP: Useful for forwarding serial traffic over TCP/IP, acting as a server, or it can act as a TCP client connecting to other servers. This option enables a remote machine to directly connect to the guest's serial port using TCP. 
+
+- TCP Server: Deselect the Connect to Existing Pipe/Socket check box and specify the port number in the Path/Address field. This is typically 23 or 2023. Note that on UNIX-like systems you will have to use a port a number greater than 1024 for regular users. 
+- The client can use software such as PuTTY or the telnet command line tool to access the TCP Server. 
+- TCP Client: To create a virtual null-modem cable over the Internet or LAN, the other side can connect using TCP by specifying *hostname*:*port* in the Path/Address field. The TCP socket will act in client mode if you select the Connect to Existing Pipe/Socket check box. 
+
+Up to four serial ports can be configured per virtual machine, but you can pick any port numbers out of the above. However, serial ports cannot reliably share interrupts. If both ports are to be used at the same time, they must use different interrupt levels, for example COM1 and COM2, but not COM1 and COM3. 
+
+
+
 ### USB
 
 Розділ USB у вікні налаштувань віртуальної машини дозволяє налаштувати складну підтримку USB Oracle VM VirtualBox. Oracle VM VirtualBox може надати віртуальним машинам прямий доступ до USB-пристроїв на хості. Для цього Oracle VM VirtualBox надає гостьовій ОС віртуальний контролер USB. Щойно гостьова система починає використовувати USB-пристрій, він відображатиметься як недоступний на хості.
