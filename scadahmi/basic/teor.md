@@ -641,6 +641,18 @@
 
 56) Які мережні архітектури Ви можете назвати? 
 
+<iframe width="800" height="600" src="https://www.youtube.com/embed/HWP3Jsx3JZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/_NAAw8Jo-0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/lMnEkbYL_NA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/UvKgEk4Rkr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
