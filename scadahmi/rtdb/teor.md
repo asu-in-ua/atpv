@@ -395,6 +395,6 @@ WPACK = WPACK AND 61439
 
 1. PAC Framework V1.02. Функціональний каркас для розроблення прикладного програмного забезпечення для промислових контролерів [Електронний ресурс]. Доступно: https://github.com/pupenasan/PACFramework
 
-
+<iframe width="640" height="480" src="https://www.youtube.com/embed/zZRxLh32nHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
