@@ -1,3 +1,5 @@
+[<- До підрозділу](README.md)
+
 # Підсистема звітів у zenon
 
 SCADA zenon підтримує два типи звітів: 
@@ -65,3 +67,5 @@ RDL вміщує:
 <a href="media8/8_50.png" target="_blank"><img src="media/8_50.png"/></a> 
 
 *Рис. 8.50.* Означення формату для RDL у MS Report Builder
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 

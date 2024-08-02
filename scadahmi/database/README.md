@@ -30,6 +30,9 @@
 ## Теоретична частина
 
 - [Доступ до баз даних зі SCADA/HMI: теоретична частина](teor.md)
+- [Доступ до БД з Citect](citect.md)
+- [Доступ до БД зі SCADA zenon](zenon.md)
+- [Доступ до БД з Aveva Edge](avevaedge.md)
 
 ## Практична частина
 
@@ -38,3 +41,5 @@
 ## Перевірка знань
 
 todo
+
+![Image2](media/Image2.png)

@@ -1,3 +1,5 @@
+[<- До підрозділу](README.md)
+
 # Підсистема рецептів у SCADA zenon 
 
 У SCADA zenon рецепти реалізовані у вигляді двох модулів:
@@ -43,3 +45,5 @@
 <a href="media8/8_31.png" target="_blank"><img src="media/8_31.png"/></a> 
 
 *Рис. 8.31.* Налаштування функції "Recipegroup Manager" 
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 

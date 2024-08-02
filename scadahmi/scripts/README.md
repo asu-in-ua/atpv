@@ -30,6 +30,9 @@
 ## Теоретична частина
 
 - [Підсистема скриптів: теоретична частина](teor.md)
+- [Citect Cicode](cicode.md)
+- [VBA у zenon](vbazenon.md)
+- [VBScript у WinCC Comfort](vbscriptwincccomfort.md)
 
 ## Практична частина
 
@@ -38,3 +41,5 @@
 ## Перевірка знань
 
 todo
+
+![1118931](media/1118931.png)

@@ -30,6 +30,9 @@
 ## Теоретична частина
 
 - [Підсистема роботи з рецептами: теоретична частина](teor.md)
+- [Підсистема рецептів у SCADA Citect ](citect.md)
+- [Підсистема рецептів у SCADA zenon ](zenon.md)
+- [Підсистема рецептів у WinCC Comfort](wincccomfort.md)
 
 ## Практична частина
 
@@ -38,3 +41,5 @@
 ## Перевірка знань
 
 todo
+
+![Capture](media/Capture.PNG)

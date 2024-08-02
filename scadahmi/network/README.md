@@ -30,6 +30,10 @@
 ## Теоретична частина
 
 - [Мережні архітектури: теоретична частина](teor.md)
+- [Мережні архітектури в Citect](citect.md)
+- [Мережні архітектури в SCADA zenon](zenon.md)
+- [Мережні архітектури в операторських панелях SIMATIC Comfort](wincccomfort.md)
+- [Мобільний доступ в Aveva Edge](avevaedgemobile.md)
 
 ## Практична частина
 
@@ -38,3 +42,5 @@
 ## Перевірка знань
 
 todo
+
+![Header-SCADA-ITOT-Platform-Services](media/Header-SCADA-ITOT-Platform-Services.jpg)
