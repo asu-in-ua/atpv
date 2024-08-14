@@ -39,7 +39,9 @@
 - [Приклади роботи з підпрограмами та функціональними блоками користувача UnityPRO/Control Expert](exmplun.md)
 - 
 
+## PLCNext
 
+- [Програмні сутності POU в PLCnext](teorplcnext.md)
 
 ## Перевірка знань
 

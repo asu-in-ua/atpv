@@ -1,6 +1,6 @@
 [< -- До розділу](../README.md)         [Зміст](../../contents.md)
 
-# Робота з даними в ПЛК
+# Робота з бібліотеками: імпорт, експорт та інш
 
 **Про що:**
 
@@ -28,17 +28,11 @@
 
 - [Прототип: теоретична частина](teor.md)
 
-## ПЛК M221 в EcoStruxure Machine Expert - Basic
 
-- [Робота з даними в EcoStruxure Machine Expert - Basic](teorm221.md)
-
-## UnityPRO/Control Expert
-
-- [Робота з даними в M340](teorun.md)
 
 ## PLCNext
 
-- [Робота з даними в PLCnext](teorplcnext.md)
+- [Керування бібліотеками, імпортування/експортування: теоретична частина](teorplcnext.md)
 
 ## Перевірка знань
 
