@@ -236,7 +236,8 @@
 
 - VBA
 - VBS
-- JS/Node.js
+- [JavaScript](js/README.md)
+- Node.js
 - C/C++
 - Python
 
