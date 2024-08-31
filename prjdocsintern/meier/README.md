@@ -4,6 +4,8 @@
 
 За матеріалами книги Meier, Fred A. Instrumentation and control systems documentation / Fred A. Meier and Clifford A. Meier. 2004 ISA – The Instrumentation, Systems, and Automation Society
 
+- [Вступ](intro.md)
+
 1. Схеми PFD
 
 2. [Схеми P&IDs та символи](2.md)
