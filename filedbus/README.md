@@ -23,6 +23,8 @@
 ## Мережі Modbus (Modbus Serial, Modbus TCP/IP)
 
 - [Мережі Modbus: загальні відомості](modbus/README.md)
+- [Мережі Modbus](modbusadvanced/README.md)
+- [Підсистема введення/виведення MODBUS в SCADA/HMI](../scadahmi/iomodbus/teor.md) - із іншого розділу
 
 
 
