@@ -9,9 +9,9 @@
 
 Тут не вказані графічні символи для електротехнічних схем, для них означено стандарт IEC 60617.
 
-Своїх зауваження та пропозиції в тому числі стосовно перекладів можете написати в створених для цього групах та темах, зокрема 
+Свої зауваження та пропозиції в тому числі стосовно перекладів можете написати в створених для цього групах та темах, зокрема 
 
-- [Обговорення в Телеграм](https://t.me/c/2023569743/20)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
 - [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
 - [Пост у Facebook](https://www.facebook.com/groups/asu.in.ua/posts/26427774536869927/)
 - [Пост у Linkedin](https://www.linkedin.com/in/oleksandr-pupena-67aa0b33/)
@@ -60,3 +60,7 @@
 | [28](28.md) | Мішалки, змішувачі (Agitators, stirrers)                     | ![Rührer (allgemein)](media/Agitator_(general)_stirrer_(general).png) |
 | [29](29.md) | Внутрішні характеристики та вбудовані компоненти (Internal characteristics and built-in-components) | ![Schwerkraft-, Absetz-](media/Gravity_type_settling_type.png) |
 
+Редактори схем:
+
+- https://app.diagrams.net/?splash=0&libs=pid
+- https://www.electronic-software-shop.com/demo-versionen/ splan
