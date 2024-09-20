@@ -11,7 +11,9 @@
 
 Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
 
-- приєднатися до групи [Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
 - залишити свої пропозиції і відгуки у [issue](https://github.com/asu-in-ua/atpv/issues) даного репозиторію
 
 Якщо Ви не зареєстровані в системі GitHub і не вмієте ним користуватися, то можете пройти майстер-клас за [цим посиланням](vercontrol/workshop1/README.md) 
