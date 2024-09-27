@@ -63,4 +63,4 @@
 Редактори схем:
 
 - https://app.diagrams.net/?splash=0&libs=pid
-- https://www.electronic-software-shop.com/demo-versionen/ splan
+- https://www.electronic-software-shop.com/demo-versionen/ - splan
