@@ -40,7 +40,9 @@
 - [Основи регулювання в UnityPRO/ControlExpert: практична частина](labun.md)
 - [Реалізація контурів аналогового регулювання з каскадним управлінням та програмним задатчиком в UnityPRO/Control Expert: практична частина](lab6.md)
 
+## TIA Portal
 
+- [PID регулятор з PID_Compact](teorcompacttia.md)
 
 ## Перевірка знань
 
