@@ -390,4 +390,4 @@
 - [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
 - [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
 
-Про "народний посібник АТПВ" написано [тут](https://asu-in-ua.github.io/atpv/)
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)
