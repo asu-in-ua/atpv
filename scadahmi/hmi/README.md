@@ -34,6 +34,7 @@
 ## Особливі функції HMI
 
 - [Перегляд великих екранів Worldview в SCADA zenon](zen_worldview.md)
+- [Smart Object в SCADA zenon](zen_smartobject.md)
 
 ## Практична частина
 
