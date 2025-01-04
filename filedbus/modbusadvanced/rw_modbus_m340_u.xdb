@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FBExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XL V13.1 - 180823C" dateTime="date_and_time#2025-1-3-21:40:38" content="Function Block source file" DTDVersion="41"></fileHeader>
+	<contentHeader name="Project" version="0.0.000" dateTime="date_and_time#2025-1-3-21:40:13"></contentHeader>
+	<FBSource nameOfFBType="RW_MODBUS_M340" version="0.42" dateTime="dt#2025-01-03-20:25:31">
+		<comment>DFB для читання і запису до 20-ти вихідних/внутрішніх регістрів</comment>
+		<attribute name="TypeCodeCheckSumString" value="0284"></attribute>
+		<attribute name="TypeSignatureCheckSumString" value="6D7C"></attribute>
+		<inputParameters>
+			<variables name="START_REQ" typeName="BOOL">
+				<comment>=1, читання/запис з максимальною продуктивністю</comment>
+				<attribute name="PositionPin" value="1"></attribute>
+			</variables>
+			<variables name="ADDR_RW" typeName="ARRAY[0..7] OF INT">
+				<comment>адреса Веденого у форматі М340</comment>
+				<attribute name="PositionPin" value="2"></attribute>
+			</variables>
+			<variables name="NUM_W" typeName="INT">
+				<comment>адреса 1-го регістра для запису</comment>
+				<attribute name="PositionPin" value="5"></attribute>
+			</variables>
+			<variables name="NB_W" typeName="INT">
+				<comment>кількість регістрів на запис (1-20)</comment>
+				<attribute name="PositionPin" value="6"></attribute>
+			</variables>
+			<variables name="NUM_R" typeName="INT">
+				<comment>адреса 1-го регістра для читання</comment>
+				<attribute name="PositionPin" value="3"></attribute>
+			</variables>
+			<variables name="NB_R" typeName="INT">
+				<comment>кількість регістрів читання (1-20)</comment>
+				<attribute name="PositionPin" value="4"></attribute>
+			</variables>
+			<variables name="EMIS_W" typeName="ARRAY[0..19] OF INT">
+				<comment>масив значень для запису</comment>
+				<attribute name="PositionPin" value="7"></attribute>
+			</variables>
+		</inputParameters>
+		<inOutParameters>
+			<variables name="GEST_RW" typeName="ARRAY[0..3] OF INT">
+				<comment>масив параметрів комунікаційного обміну</comment>
+				<attribute name="PositionPin" value="9"></attribute>
+			</variables>
+		</inOutParameters>
+		<outputParameters>
+			<variables name="RECP" typeName="ARRAY[0..19] OF INT">
+				<comment>масив значень що прочиталися</comment>
+				<attribute name="PositionPin" value="7"></attribute>
+			</variables>
+			<variables name="COM_ERR" typeName="INT">
+				<comment>номер комунікаційної помилки, 0 - нмає помилок </comment>
+				<attribute name="PositionPin" value="1"></attribute>
+			</variables>
+			<variables name="MODBUS_ERR" typeName="INT">
+				<comment>номер помилки Modbus протоколу, 0 - немає помилок</comment>
+				<attribute name="PositionPin" value="2"></attribute>
+			</variables>
+			<variables name="NB_BYTE_READ" typeName="INT">
+				<comment>кількість прочитаних байт </comment>
+				<attribute name="PositionPin" value="3"></attribute>
+			</variables>
+		</outputParameters>
+		<privateLocalVariables>
+			<variables name="SEND_BUFER" typeName="ARRAY[0..26] OF INT"></variables>
+			<variables name="RECV_BUFER" typeName="ARRAY[0..22] OF INT"></variables>
+			<variables name="INDEX" typeName="INT"></variables>
+			<variables name="STARTED_REQ" typeName="BOOL"></variables>
+		</privateLocalVariables>
+		<FBProgram name="PROG">
+			<STSource>    if NOT GEST_RW[0].0 AND STARTED_REQ then (*якщо функція DATA_EXCH оброблена*)
+    	STARTED_REQ:=FALSE;
+	COM_ERR:=GEST_RW[1]; (*в 1-м слові ком параметрів міститься звіт про обробку функції*)
+	
+	if COM_ERR=0 then (*якщо функція оброблена без помилок*)
+		if (RECV_BUFER[0] and 16#00FF)=16#17 then (*якщо 1-й байт відповіді дорівнює номеру ф-ції*) 
+		   NB_BYTE_READ:=ROL((RECV_BUFER[0] and 16#FF00),8); (*кількість прочитаних байт в 2-му байті*) 
+		   (*--------- значення регістрів читання --------------*)
+		   for INDEX:=0 to NB_BYTE_READ/2 do 
+		   	RECP[INDEX]:=ROL((RECV_BUFER[INDEX+1]),8); (*перетворення BIG/LITTLE ENDIAN *)	
+		   end_for; 
+		else (*якщо 1-й байт не дорівнює номеру функції, то повернулася помилка*)
+		   MODBUS_ERR:=ROL((RECV_BUFER[0] and 16#FF00),8); (*номер помилки у 2-му байті відповіді*)
+		end_if;  
+	end_if;
+
+    end_if;
+
+   if START_REQ and NOT GEST_RW[0].0 then (*---------------- запуск запиту--------------*)
+	
+	SEND_BUFER[0]:= 16#0017 or NUM_R and 16#FF00;(*1байт-адр 1-го рег читання (HI);2 байт-функція*)
+	SEND_BUFER[1]:= NUM_R and 16#00FF;  (*3 байт-адр 2-го рег читання (LO), 4 байт-кількість (HI) завжди = 0*)
+	SEND_BUFER[2]:= NB_R and 16#00FF or (*5 байт-кількість рег для читання (LO)*)
+			NUM_W and 16#FF00;  (*6 байт-адр 1-го рег для запису (HI)*)
+	SEND_BUFER[3]:= NUM_W and 16#00FF;  (*7 байт-адр 1-го рег для запису (LO), 8 байт-кількість (HI) завжди=0*)
+	SEND_BUFER[4]:= NB_W and 16#00FF or (*9 байт-кількість рег для запису (LO)*)
+			NB_W*2*16#100; 	    (*10 байт-кільк наступних байт = кіл_регістрів*2 =&gt; в старш байт*)
+        (*--------- значенння регистрів для запису --------------*) 
+	for INDEX:=0 to NB_W do
+		SEND_BUFER[INDEX+5]:=ROL ((EMIS_W[INDEX]),8); (*перетворення BIG/LITTLE ENDIAN *)
+	end_for;   
+	
+	GEST_RW [3]:= NB_W*2+10;(*в отсаннє слово таблиці параметрів потрібно записати*)
+				(*кількість байт що передаються з записом, за вкилюченням адреси Slave*)   
+	
+	(*----------- вкилик функції ----------------*)
+	DATA_EXCH (ADR := ADDR_RW ,
+           TYP := 1, (*тип запиту, 1 - відправити запит і чекати відповіді*) 
+           EMIS :=SEND_BUFER  (*дані для передачі*),
+           GEST := GEST_RW(*параметри керуванняя*),
+           RECP =&gt; RECV_BUFER (*дані для приймання*));
+        
+	STARTED_REQ:=TRUE;(* мітка запуска запиту*)
+    end_if;
+    if not START_REQ then  modbus_err:=0; end_if;
+</STSource>
+		</FBProgram>
+	</FBSource>
+</FBExchangeFile>
