@@ -31,6 +31,10 @@
 - [Стаття DNP3 та IEC 60870-5](DNP3vsIEC60870.md)
 - [Переклад розділів Practical Modern SCADA Protocols: DNP3, 60870.5 and Related Systems](practicalscada.md)
 
+## Теоретична частина обладнання/софта від вендорів
+
+- [Налаштування драйверу IEC 60870 в SCADA zenon](zenon.md)
+
 ## Практична частина
 
 - [Прототип: практична частина](lab.md)
