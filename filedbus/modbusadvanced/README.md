@@ -34,6 +34,7 @@
 
 - [Практичне заняття. Програмування IoT шлюзів з використанням Node.js та Modbus TCP/IP](labiot.md)
 - [Реалізація Modbus TCP Server S7 1200/1500](mbservers71200.md)
+- [Реалізація Modbus Master з використанням функції MB_MASTER для S7-1200](mbmaster_s71200.md)
 - [Реалізація функції 23 (1716) Read/Write Multiple Registers в M340](rw23m340.md)
 
 ## Перевірка знань
