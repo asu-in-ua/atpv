@@ -27,15 +27,14 @@
 ## Теоретична частина
 
 - [Мережі Modbus](teor.md)
-
 - [Приклад реалізації MODBUS TCPIP Клієнтської програми для зв’язку VIPA Speed7 з віддаленими модулями вводу/виводу VIPA IM 253NET](exmplvipambt.md)
 - [Приклад реалізації MODBUS TCPIP Клієнтської програми для зв’язку прикладних програм з інтегрованим VBA та ПЛК.](exmplmbtvba.md)
-- [Реалізація Modbus TCP Server S7 1200/1500](mbservers71200.md)
-- [Реалізація функції 23 (1716) Read/Write Multiple Registers в M340](rw23m340.md)
 
 ## Практична частина
 
 - [Практичне заняття. Програмування IoT шлюзів з використанням Node.js та Modbus TCP/IP](labiot.md)
+- [Реалізація Modbus TCP Server S7 1200/1500](mbservers71200.md)
+- [Реалізація функції 23 (1716) Read/Write Multiple Registers в M340](rw23m340.md)
 
 ## Перевірка знань
 
