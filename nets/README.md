@@ -6,4 +6,15 @@
 - [Основи протоколів рівня IP](ipstart/README.md)
 - [Основи протоколів TCP та UDP](tcpudp/README.md)
 - [Додаткові служби TCP/IP та основи налаштування маршрутизаторів](tcpiipadd/README.md)
+- [Прикладний рівень: HTTP, HTTP API](http/README.md) 
 
+- [Серіалізація: XML та JSON](xmljson/README.md)
+
+- [Керування ідентифікацією і доступом](security/README.md) 
+
+- [Віртуальні приватні мережі (VPN)](vpn/README.md)
+
+
+
+
+![4397024_fae2](media/1.jpg)
