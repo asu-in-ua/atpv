@@ -15,7 +15,7 @@ sudo apt update
 sudo apt-get install openvpn
 ```
 
-Щоб увімкнути OpenVPN в аплеті Gnome [NetworkManager](https://wiki.debian.org/NetworkManager) для області сповіщень на панелі завдань, на клієнті потрібно встановити додатковий пакет *network-manager-openvpn-gnome*:
+Щоб увімкнути OpenVPN в аплеті Gnome [NetworkManager](https://wiki.debian.org/NetworkManager) для області сповіщень на панелі завдань, на клієнті потрібно встановити додатковий пакет `network-manager-openvpn-gnome`:
 
 ```
 apt-get install network-manager-openvpn-gnome
