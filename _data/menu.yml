@@ -1,0 +1,11 @@
+primary:
+  - title: Main Menu
+    subfolderitems:
+      - name: "Про проект"
+        url: "/"
+      - name: "Зміст"
+        url: "/contents.md"
+      - name: "Лабораторні"
+        url: "/Лабор/"
+      - name: "Репозиторій GitHub"
+        url: "https://github.com/asu-in-ua/atpv"
