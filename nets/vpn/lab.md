@@ -736,6 +736,7 @@ cat /var/log/vpnapp1.log
 - [ ] Скопіюйте сертифікати CA та клієнтів в домашню директорію для можливості доступу ззовні. Для цього в консолі сервера введіть:
 
 ```
+cd /home
 PKI=/usr/local/etc/easy-rsa/pki
 cp -a $PKI/ca.crt ca.crt 
 cp -a $PKI/issued/remotesys1.crt remotesys1.crt
