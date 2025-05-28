@@ -35,6 +35,7 @@
 ## Статті в тему
 
 - [Цифрові двійники для передового виробництва: стандартизований підхід](articles/DigitalTwinsforAdvancedManufacturingTheStandardizedApproach.md)
+- [Огляд технологічних стандартів для впровадження цифрового двійника](articles/Areviewofthetechnologystandardsforenablingdigitaltwin.md)
 
 ## Перевірка знань
 
