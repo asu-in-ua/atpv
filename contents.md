@@ -209,7 +209,7 @@
 - IIoT Platforms
 - 3D Printing
 - ідентифікація QR-code, RFID
-- Цифрові двійники
+- [Цифрові двійники](dt/README.md)
 
 
 
