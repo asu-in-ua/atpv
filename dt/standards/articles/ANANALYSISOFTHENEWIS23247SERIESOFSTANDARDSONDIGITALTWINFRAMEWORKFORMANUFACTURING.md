@@ -320,30 +320,56 @@ FIGURE 1. EXAMPLE OF AN XML INSTANCE FOR THE SEVEN ATTRIBUTES OF A DRILLING EQUI
 
 ## Посилання
 
-[1] ISO 23247-1. ISO 23247-1: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 1: Overview and general principles. International Organization for Standardization, Geneva, Switzerland (2021).
-[2] ISO 23247-2. ISO 23247-2: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 2: Reference architecture. International Organization for Standardization, Geneva, Switzerland (2021).
-[3] ISO 23247-3. ISO 23247-3: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 3: Digital representation of manufacturing elements. International Organization for Standardization, Geneva, Switzerland (2021).
-[4] ISO 23247-4. ISO 23247-4: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 4: Information exchange. International Organization for Standardization, Geneva, Switzerland (2021).
-[5] Trevett, N. The Metaverse Standards Forum, Fostering Interoperability Standards for an Open Metaverse. 2022. https://metaverse-standards.org/
-[6] ISO 8000-115. ISO 8000-115: Data quality - Part 115: Master data: Exchange of quality identifiers: Syntactic, semantic and resolution requirements (2018).
-[7] IEC 62264-2. IEC 62264-2: Enterprise-control system integration - Part 2: Objects and attributes for enterprise-control system integration (2015).
-[8] ECLASS. An ISO/IEC-compliant data standard for goods and services. https://eclass.eu/en.
-[9] ISO 13584-42. ISO 13584-42: Industrial automation systems and integration - Parts library - Part 42: Description methodology: Methodology for structuring parts families (2010).
-[10] IEC 61360-1. IEC 61360-1: Standard data element types with associated classification scheme - Part 1: Definitions - Principles and methods (2017).
-[11] ISO 8601. ISO 8601: Date and time format (2017).
-[12] VDMA 24582. VDMA 24582: Fieldbus Neutral Reference Architecture for Condition Monitoring in Production Automation (2014). Verband Deutscher Maschinen- und Anlagenbau e.V.
-[13] ISO 6709. ISO 6709: Standard representation of geographic point location by coordinates (2008).
-[14] QIF. The Quality Information Framework Standard. (2020). http://qifstandards.org/
-[15] MTConnect. MTConnect standardizes factory device data. (2022). https://www.mtconnect.org/
-[16] IEC 62264-2. IEC 62264: Enterprise-control system integration - Part 2: Objects and attributes for enterprise-control system integration (2015).
-[17] P.A.M. Dirac, The Principles of Quantum Mechanics, Clarendon Press, U.K., 1982. ISBN-13: 978-1607965602.
-[18] ISO 10303. ISO 10303-1: Industrial automation systems and integration - Product data representation and exchange - Part 1: Overview and fundamental principles (2021).
-[19] G. Shao and M. Helu, “Framework for a digital twin in manufacturing: Scope and requirements,” Manufacturing Letters, vol. 24, pp. 105–107, 2020, DOI: 10.1016/J.MFGLET.2020.04.004.
-[20] Y. J. Son, S. B. Joshi, R. A. Wysk, and J. S. Smith, “Simulation-based shop floor control,” Journal of Manufacturing Systems, vol. 21, issue 5, pp. 380-394, 2002. DOI: 10.1016/S0278-6125(02)80036-X.
-[21] Y. J. Son, R. A. Wysk, and A. T. Jones, “Simulation-based shop floor control: formal model, model generation and control interface,” IIE Transactions, 35:1, pp. 29-48, 2003. DOI: 10.1080/07408170304428.
-[22] ISO TC184 SC4 WG15. “Digital Twin Framework for Manufacturing – ISO 23247.” (2020). URL https://www.ap238.org/iso23247/.
-[23] Accenture. “Think thread first: Surf the wave of product data.” (2020). URL https://www.accenture.com/us-en/insights/industry-x/thread-first-thinking.
-[24] Vernica, T., Lipman, R., Kramer, T., Kwon, S., and Bernstein, W. Z. “Visualizing Standardized Model-Based Design and Inspection Data in Augmented Reality.” ASME. J. Comput. Inf. Sci. Eng. August 2022; 22(4): 041001. https://doi.org/10.1115/1.4053154
-[25] Rathore, A., Mishra, S., Nikita, S., Priyanka, P. Bioprocess Control: Current Progress and Future Perspectives. Life 11, 557 (2021).
-[26] Pileggi, P., Bujari, A, Barrowclough, O., Haenisch, J. and Woitsch, R. Overcoming Nine Digital Twin Barriers for Manufacturing SMEs. (2020). Change2Twin. https://www.change2twin.eu/about/download/
-[27] Jacoby, M., Volz, F., Weißenbacher, C., Stojanovic, L. and Usländer T. “An approach for Industrie 4.0-compliant and data-sovereign Digital Twins: Realization of the Industrie 4.0 Asset Administration Shell with a data-sovereignty extension” at - Automatisierungstechnik, vol. 69, no. 12, 2021, pp. 1051-1061. https://doi.org/10.1515/auto-2021-0074
+- [1] ISO 23247-1. ISO 23247-1: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 1: Overview and general principles. International Organization for Standardization, Geneva, Switzerland (2021).
+
+- [2] ISO 23247-2. ISO 23247-2: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 2: Reference architecture. International Organization for Standardization, Geneva, Switzerland (2021).
+
+- [3] ISO 23247-3. ISO 23247-3: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 3: Digital representation of manufacturing elements. International Organization for Standardization, Geneva, Switzerland (2021).
+
+- [4] ISO 23247-4. ISO 23247-4: Automation Systems and Integration - Digital Twin Framework for Manufacturing – Part 4: Information exchange. International Organization for Standardization, Geneva, Switzerland (2021).
+
+- [5] Trevett, N. The Metaverse Standards Forum, Fostering Interoperability Standards for an Open Metaverse. 2022. https://metaverse-standards.org/
+
+- [6] ISO 8000-115. ISO 8000-115: Data quality - Part 115: Master data: Exchange of quality identifiers: Syntactic, semantic and resolution requirements (2018).
+
+- [7] IEC 62264-2. IEC 62264-2: Enterprise-control system integration - Part 2: Objects and attributes for enterprise-control system integration (2015).
+
+- [8] ECLASS. An ISO/IEC-compliant data standard for goods and services. https://eclass.eu/en.
+
+- [9] ISO 13584-42. ISO 13584-42: Industrial automation systems and integration - Parts library - Part 42: Description methodology: Methodology for structuring parts families (2010).
+
+- [10] IEC 61360-1. IEC 61360-1: Standard data element types with associated classification scheme - Part 1: Definitions - Principles and methods (2017).
+
+- [11] ISO 8601. ISO 8601: Date and time format (2017).
+
+- [12] VDMA 24582. VDMA 24582: Fieldbus Neutral Reference Architecture for Condition Monitoring in Production Automation (2014). Verband Deutscher Maschinen- und Anlagenbau e.V.
+
+- [13] ISO 6709. ISO 6709: Standard representation of geographic point location by coordinates (2008).
+
+- [14] QIF. The Quality Information Framework Standard. (2020). http://qifstandards.org/
+
+- [15] MTConnect. MTConnect standardizes factory device data. (2022). https://www.mtconnect.org/
+
+- [16] IEC 62264-2. IEC 62264: Enterprise-control system integration - Part 2: Objects and attributes for enterprise-control system integration (2015).
+
+- [17] P.A.M. Dirac, The Principles of Quantum Mechanics, Clarendon Press, U.K., 1982. ISBN-13: 978-1607965602.
+
+- [18] ISO 10303. ISO 10303-1: Industrial automation systems and integration - Product data representation and exchange - Part 1: Overview and fundamental principles (2021).
+
+- [19] G. Shao and M. Helu, “Framework for a digital twin in manufacturing: Scope and requirements,” Manufacturing Letters, vol. 24, pp. 105–107, 2020, DOI: 10.1016/J.MFGLET.2020.04.004.
+
+- [20] Y. J. Son, S. B. Joshi, R. A. Wysk, and J. S. Smith, “Simulation-based shop floor control,” Journal of Manufacturing Systems, vol. 21, issue 5, pp. 380-394, 2002. DOI: 10.1016/S0278-6125(02)80036-X.
+
+- [21] Y. J. Son, R. A. Wysk, and A. T. Jones, “Simulation-based shop floor control: formal model, model generation and control interface,” IIE Transactions, 35:1, pp. 29-48, 2003. DOI: 10.1080/07408170304428.
+
+- [22] ISO TC184 SC4 WG15. “Digital Twin Framework for Manufacturing – ISO 23247.” (2020). URL https://www.ap238.org/iso23247/.
+
+- [23] Accenture. “Think thread first: Surf the wave of product data.” (2020). URL https://www.accenture.com/us-en/insights/industry-x/thread-first-thinking.
+
+- [24] Vernica, T., Lipman, R., Kramer, T., Kwon, S., and Bernstein, W. Z. “Visualizing Standardized Model-Based Design and Inspection Data in Augmented Reality.” ASME. J. Comput. Inf. Sci. Eng. August 2022; 22(4): 041001. https://doi.org/10.1115/1.4053154
+
+- [25] Rathore, A., Mishra, S., Nikita, S., Priyanka, P. Bioprocess Control: Current Progress and Future Perspectives. Life 11, 557 (2021).
+
+- [26] Pileggi, P., Bujari, A, Barrowclough, O., Haenisch, J. and Woitsch, R. Overcoming Nine Digital Twin Barriers for Manufacturing SMEs. (2020). Change2Twin. https://www.change2twin.eu/about/download/
+
+- [27] Jacoby, M., Volz, F., Weißenbacher, C., Stojanovic, L. and Usländer T. “An approach for Industrie 4.0-compliant and data-sovereign Digital Twins: Realization of the Industrie 4.0 Asset Administration Shell with a data-sovereignty extension” at - Automatisierungstechnik, vol. 69, no. 12, 2021, pp. 1051-1061. https://doi.org/10.1515/auto-2021-0074
