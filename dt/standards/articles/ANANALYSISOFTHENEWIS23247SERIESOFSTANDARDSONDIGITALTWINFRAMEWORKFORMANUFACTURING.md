@@ -82,14 +82,14 @@ ISO нещодавно випустила серію стандартів (ISO 2
             <value>Maintenance for Machine #2 is scheduled on every Monday</value>
         </EquipmentSchedule>
         <EquipmentStatus>
-            < Up and running </
+            <value> Up and running </value>
         </EquipmentStatus>
         <EquipmentLocation>
             <name>relative</name>
             <value>Machine 1 : Work Unit 2 in Room #3</value>
             <gps>
-                < 77.1659474 </longitude>
-                < 39.1865667 </latitude>
+               <longitude> 77.1659474 </longitude>
+                <latitude> 39.1865667 </latitude>
                 <altitude>1 2 </altitude>
             </gps>
         </EquipmentLocation>
@@ -100,10 +100,10 @@ ISO нещодавно випустила серію стандартів (ISO 2
             </MaintenanceReport>
         </EquipmentReport>
         <EquipmentRelationship>
-            <value>WorkUnit 3 must have at least 2 persons for safety reasons</v alue>
+            <value>WorkUnit 3 must have at least 2 persons for safety reasons</value>
         </EquipmentRelationship>
-        </
-        </EquipmentInformation>
+        </OptionalInformationAttributes>
+ </EquipmentInformation>
 ```
 
 FIGURE 1. EXAMPLE OF AN XML INSTANCE FOR THE SEVEN ATTRIBUTES OF A DRILLING EQUIPMENT
