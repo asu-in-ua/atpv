@@ -1,3 +1,5 @@
+[<- До підрозділу](../README.md)
+
 # Аналіз нової серії стандартів ISO 23247 щодо рамкової моделі цифрового двійника для виробництва.
 
 Shao, G.  ,  Frechette, S.   and  Srinivasan, V. (2023), An Analysis of the New ISO 23247 Series of Standards on Digital Twin Framework for Manufacturing, 2023 MSEC Manufacturing Science &  Engineering Conference, New Brunswick, NJ, US, [online],  https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935765   
