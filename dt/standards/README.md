@@ -1,6 +1,6 @@
 [< -- До розділу](../README.md)         [Зміст](../../contents.md)
 
-# Стандарти для цифрових двійників
+# Стандарти та кращі практики для цифрових двійників
 
 **Про що:**
 
@@ -38,6 +38,7 @@
 - [Огляд технологічних стандартів для впровадження цифрового двійника](articles/Areviewofthetechnologystandardsforenablingdigitaltwin.md)
 - [Аналіз нової серії стандартів ISO 23247 щодо рамкової моделі цифрового двійника для виробництва.](articles/ANANALYSISOFTHENEWIS23247SERIESOFSTANDARDSONDIGITALTWINFRAMEWORKFORMANUFACTURING.md)
 - [Від імітаційного моделювання до автономії: Огляд інтеграції штучного інтелекту та цифрових двійників](articles/From_Simulation_to_Autonomy_Reviews_of_the_Integra.md)
+- [Цифрові двійники: сучасний стан теорії та практики, виклики та відкриті наукові питання](articles/DigitalTwinsStateofthearttheoryandpracticechallengesandopen.md)
 
 ## Перевірка знань
 
