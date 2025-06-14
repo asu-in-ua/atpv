@@ -39,6 +39,7 @@
 - [Аналіз нової серії стандартів ISO 23247 щодо рамкової моделі цифрового двійника для виробництва.](articles/ANANALYSISOFTHENEWIS23247SERIESOFSTANDARDSONDIGITALTWINFRAMEWORKFORMANUFACTURING.md)
 - [Від імітаційного моделювання до автономії: Огляд інтеграції штучного інтелекту та цифрових двійників](articles/From_Simulation_to_Autonomy_Reviews_of_the_Integra.md)
 - [Цифрові двійники: сучасний стан теорії та практики, виклики та відкриті наукові питання](articles/DigitalTwinsStateofthearttheoryandpracticechallengesandopen.md)
+- [Огляд цифрового двійника: визначення, характеристики, застосування та конструктивні аспекти](articles/A_Survey_on_Digital_Twin_Definitions_Characteristi.md)
 
 ## Перевірка знань
 
