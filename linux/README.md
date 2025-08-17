@@ -2,7 +2,7 @@
 
 # Операційні системи Linux
 
-- [Прототип теми](topic/README.md)
+- [Системне програмне забезпечення Linux](system/README.md)
 - [Xserver](xserver/README.md)
 
 
