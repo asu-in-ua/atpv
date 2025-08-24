@@ -6,6 +6,8 @@
 
 **Мета:** Навчитися встановлювати ОС на Raspberry PI без необхідності підключення до нього монітора та клавіатури/миші  
 
+**Відеозапис** доступний [за посиланням](https://youtu.be/82nHajeQykg)
+
 ## Лабораторна установка 
 
 - Апаратне забезпечення: 
@@ -174,15 +176,16 @@ sudo raspi-config
 
 - [ ] після цього відкриється віддалений робочий стіл вашого Raspberry.
 
-### 9. Віддалене підключення через Інтернет
 
-VNC також дає можливість підключатися до пристроїв віддалено через Інтернет.
-
-- [ ] Зареєструйтеся на сайті https://www.realvnc.com
-- [ ] 
-
-
-
-https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi#establishing-a-cloud-connection-0-3
 
 Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)
