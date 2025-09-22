@@ -2,6 +2,7 @@
 
 # Основи комп'ютерних мереж
 
+- [Інструменти віддаленого доступу та налагодження](debug/README.md)
 - [Основи Ethernet](ethernetstart/README.md)
 - [Основи протоколів рівня IP](ipstart/README.md)
 - [Основи протоколів TCP та UDP](tcpudp/README.md)
