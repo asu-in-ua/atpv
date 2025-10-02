@@ -13,6 +13,7 @@
 - [Керування ідентифікацією і доступом](security/README.md) 
 - [Віртуальні приватні мережі (VPN)](vpn/README.md)
 - [Сервіси SNMP](snmp/README.md)
+- [Інтернет](internet/README.md)
 - [ASN,1]()
 
 
