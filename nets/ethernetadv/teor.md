@@ -10,4 +10,12 @@
 
 
 
+## STP
+
+[Spanning Tree Protocol (STP): уникнення петель у комутованих мережах Ethernet](stp.md)
+
+[Протокол побудови остовного дерева (Spanning Tree Protocol)](stp1.md)
+
+
+
 Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 

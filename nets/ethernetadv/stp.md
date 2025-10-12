@@ -1,10 +1,6 @@
-Джерело https://irkr.fei.tuke.sk/PocitacoveSiete/_materialy/Prednasky/pred_4%20STP%20Concepts.pdf
+Даний матеріал є дослівним перекладом з  https://irkr.fei.tuke.sk/PocitacoveSiete/_materialy/Prednasky/pred_4%20STP%20Concepts.pdf
 
-https://www.routeralley.com/guides/stp.pdf
-
-
-
-# 5. Spanning Tree Protocol (STP): уникнення петель у комутованих мережах Ethernet
+# Spanning Tree Protocol (STP): уникнення петель у комутованих мережах Ethernet
 
 ## 1. Про STP
 
