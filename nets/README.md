@@ -6,6 +6,7 @@
 - [Основи Ethernet](ethernetstart/README.md)
 - [Розширені механізми Ethernet та керовані комутатори](ethernetadv/README.md)
 - [Основи протоколів рівня IP](ipstart/README.md)
+- [Маршрутизація в IP мережах](routing/README.md)
 - [Основи протоколів TCP та UDP](tcpudp/README.md)
 - [Система доменних імен DNS](dns/README.md)
 - [Додаткові служби TCP/IP та основи налаштування маршрутизаторів](tcpiipadd/README.md)
