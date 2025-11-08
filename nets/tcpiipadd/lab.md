@@ -161,7 +161,7 @@ File and Printer Sharing (Echo Request - ICMPv4-In)    True  Public
   sudo nano /etc/network/interfaces
   ```
 
-- додайте або змініть розділ для вашого інтерфейсу (зазвичай `enp0s3` або `eth0`):
+- додайте або змініть розділ для вашого інтерфейсу (зазвичай `enp0s3`):
 
 ```
 allow-hotplug enp0s3
@@ -231,7 +231,7 @@ sudo ifdown enp0s3 && sudo ifup enp0s3
 
 рис.9.
 
-#### 7. Перегляд виданих адрес на Microtic
+#### 7. Перегляд виданих адрес на Mikrotik
 
 - [ ] У вікні веб-консолі маршрутизатору перейдіть до відображення усіх налаштувань  (`Advanced`).
 
