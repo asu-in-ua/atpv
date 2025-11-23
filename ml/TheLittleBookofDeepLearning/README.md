@@ -11,11 +11,8 @@ François Fleuret
 
 У даному розділі міститься конспект, який створений на базі вільного перекладу книги The Little Book of Deep Learning, яку можна завантажити за [цим посиланням](https://fleuret.org/public/lbdl.pdf). Конспект містить усі перекладені розділи з моїми доповненнями. 
 
-- Обговорення даної версії конспекту та [посиланням](https://github.com/pupenasan/ml/issues/3). Ліцензія дозволяє змінювати, перекладати та поширювати книгу. 
-- Словник термінів [за цим посиланням](../../dictionary.md)
-- Група в Телеграм з обговоренням [за цим посиланням](https://t.me/+sdEoEWViu4o5OWJi) 
-
-[François Fleuret](https://fleuret.org/francois/) is a professor of computer sci- ence at the University of Geneva, Switzerland. The cover illustration is a schematic of the Neocognitron by  Fukushima [1980], a key ancestor of deep neural networks.
+- Словник термінів [за цим посиланням](../dictionary.md)
+- Група в Телеграм з обговоренням [за цим посиланням](https://t.me/c/2023569743/780) 
 
 [Франсуа Флере](https://fleuret.org/francois/) — професор комп’ютерних наук Женевського університету, Швейцарія. Ілюстрація обкладинки — це схема Неокогнітрона Фукусіми [1980], основного прабатька глибоких нейронних мереж.
 

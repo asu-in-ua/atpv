@@ -2,20 +2,17 @@
 | --------------------------------------- | ------------------ | ------------------------------------------------------------ |
 | [<---   3__Training.md](3__Training.md) | [Зміст](README.md) | [3_2_Autoregressive_models.md    --->](3_2_Autoregressive_models.md) |
 
-## 3.1    Losses
+## 3.1 Втрати
 
-The example of the **mean squared error** of Equation [1.1](1_1_Learning_from_data.md) is a standard loss for predicting a continuous
-value.
+Приклад середньоквадратичної помилки з формули [1.1](1_2_Basis_function_regression.md) є стандартною втратою для прогнозування неперервного значення.
 
-For density modeling, the standard loss is the likelihood of the data. If $f(x;w)$ is to be interpreted as a normalized log-probability or log-density, the loss is the opposite of the sum of its value over training samples.
+Для моделювання густини стандартною втратою є правдоподібність даних. Якщо $f(x;w)$ інтерпретується як нормалізований логарифм ймовірності або лог-густини, то втрата — це протилежність суми її значень для навчальних зразків.
 
-#### Cross-entropy
+#### Крос-ентропія
 
-For classification, the usual strategy is that the output of the model is a vector with one component $f(x;w)_y$ per class $y$, interpreted as the logarithm of a non-normalized probability, or **logit**.
+Для класифікації зазвичай вихід моделі є вектором з однією компонентою $f(x;w)_y$ на кожен клас $y$, яка інтерпретується як логарифм ненормалізованої ймовірності, або логіт.
 
-With $X$ the input signal and $Y$ the class to predict, we can then compute from $f$ an estimate
-of the **posterior probabilities**:
-
+Якщо $X$ — вхідний сигнал, а $Y$ — клас, який треба передбачити, тоді можна обчислити з $f$ оцінку апостеріорних ймовірностей:
 $$
 \hat{P}(Y=y\ |\ X=x) = \frac{\exp f(x;w)_y}{\sum_z \exp f(x;w)_z}
 $$
