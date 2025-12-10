@@ -1,0 +1,553 @@
+[<- До підрозділу](README.md)  			[Коментувати](#feedback)
+
+# Google Sheet API : теоретична частина
+
+## 1. Використання GAS в Google Sheet
+
+`Google Sheet` (Гугл Таблиці) - це хмарний застосунок від Google для роботи з електронними таблицями. За функціональністю і принципами роботи він схожий на `Microsoft Excel`. Усі створені таблиці зберігаються на Гугл Диску (`Google Drive`). 
+
+Google Apps Script може використовуватися в Google Sheet для:
+
+- додавання спеціальних меню
+- додавання діалогових вікон та бічних панелей
+- додавання спеціальних функцій для Таблиць
+- інтегрування Таблиці з іншими службами Google, таких як Календар, Диск і Gmail
+
+Більшість скриптів, розроблених для Гугл Таблиць, керують масивами для взаємодії з клітинками, рядками та стовпцями в електронній таблиці. 
+
+Apps Script містить спеціальні API, які дозволяють програмно створювати, читати та редагувати Google Таблиці. Apps Script може взаємодіяти з Google Sheets двома способами: 
+
+- будь-який скрипт може створювати або змінювати електронну таблицю, якщо користувач скрипту має відповідні дозволи для електронної таблиці, 
+- скрипт також можна прив’язувати до електронної таблиці, що надає сценарію спеціальні можливості для зміни інтерфейсу користувача або відповіді на відкриття електронної таблиці. 
+
+Щоб створити пов’язаний скрипт, необхідно у Google Таблиці вибрати Розширення > Apps Script.
+
+![image-20231114161640746](media/image-20231114161640746.png)
+
+рис.1. Створення розширення на Apps Script
+
+Для роботи з Гул Таблиці через GAS надається спеціальний об'єкт - Spreadsheet service, який розглядає Таблиці Google (Google Sheets) як таблицю, що працює з двовимірними масивами. Щоб отримати дані з електронної таблиці (spreadsheet), необхідно:
+
+- отримати доступ до електронної таблиці, де зберігаються дані, 
+- отримати діапазон у електронній таблиці, який містить дані, 
+- а потім отримати значення клітинок. 
+
+Apps Script полегшує доступ до даних, читаючи структуровані дані в електронній таблиці та створюючи для них об’єкти JavaScript. 
+
+Наприклад, є список назв продуктів і номерів продуктів, які зберігаються в електронній таблиці, як показано на рис. 2.
+
+![img](media/spreadsheet_basics1.png)
+
+рис.2. Приклад таблиці 
+
+У прикладі нижче показано, як отримати та зареєструвати назви та номери продуктів.
+
+```js
+function logProductInfo() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = sheet.getDataRange().getValues();
+  for (var i = 0; i < data.length; i++) {
+    console.log('Назва продукту: ' + data[i][0]);
+    console.log('Номер продукту: ' + data[i][1]);
+  }
+}
+```
+
+Щоб переглянути зареєстровані дані, у верхній частині редактора сценаріїв натисніть `Журнал виконання`.
+
+Щоб зберегти дані в електронній таблиці, наприклад назву та номер нового продукту, можна додати наступний код у кінець скрипта.
+
+```js
+function addProduct() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  sheet.appendRow(['Cotton Sweatshirt XL', 'css004']);
+}
+```
+
+Наведений вище код додає новий рядок унизу електронної таблиці із зазначеними значеннями. Якщо ви запустите цю функцію, ви побачите новий рядок, доданий до електронної таблиці.
+
+## 2. Google Sheets API
+
+Google Sheets API -  це інтерфейс RESTful, який дозволяє читати та змінювати дані електронної таблиці. Найпоширеніші використання цього API включають такі завдання: 
+
+- Створення електронних таблиць
+- Читання та запис значень клітинок електронної таблиці
+- Оновлення форматування електронної таблиці
+- Керування підключеними аркушами
+
+Опис Google Sheets API доступний за [цим посиланням](https://developers.google.com/sheets/api)
+
+Нижче наведено список поширених термінів, які використовуються в API таблиць.
+
+- `Spreadsheet`  - це основний об’єкт у Таблицях Google, який може містити кілька аркушів, кожен із структурованою інформацією, що міститься в клітинках. Кожну електронну таблицю представляє ресурс `Spreadsheet`  який має унікальний `spreadsheetId` - Ідентифікатор електронної таблиці, що містить літери, цифри, дефіси або підкреслення. Ідентифікатор електронної таблиці можна подивитися в URL-адресі Google Таблиць:
+
+  `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+
+- `Sheet`  - надає доступ до аркушу або вкладки в електронній таблиці. Кожен аркуш представляється ресурсом `Sheet`, який має унікальну назву та числовий `sheetId` - ідентифікатор аркушу, який можна знайти в URL-адресі Google Таблиць як значення параметру `gid`: 
+
+  `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+
+- `Cell`  - надає доступ до окремого поля тексту або даних на аркуші. Комірки розташовані в рядках і стовпцях і можуть бути згруповані у вигляді діапазону комірок. Кожну клітинку представляє ресурс `CellData`, який не має унікального значення ідентифікатора. Натомість клітинки ідентифікуються координатами рядків і стовпців. Можна використати один з 2-х варіантів нотації:
+
+  - *A1 Нотація* - Синтаксис, який використовується для означення комірки або діапазону комірок із рядком, який містить ім’я аркуша, а також початкові та кінцеві координати комірки за допомогою літер стовпців і номерів рядків. Цей метод є найбільш поширеним і корисним при посиланні на абсолютний діапазон клітинок. 
+    - `Sheet1!A1:B2` посилається до перших двох клітинок у верхніх двох рядках Sheet1.
+    - `Sheet1!A:A` посилається до всіх клітинок у першому стовпці Sheet1.
+    - `Sheet1!1:2` посилається до всіх клітинок у перших двох рядках Sheet1.
+    - `Sheet1!A5:A` посилається до всіх клітинок першого стовпця Sheet 1, з 5-го ряду і далі.
+    - `A1:B2` посилається до перших двох клітинок у верхніх двох рядках першого видимого аркуша.
+    - `Sheet1` посилається до всіх клітинок у Sheet1.
+    - `'My Custom Sheet'!A:A`  посилається на всі клітинки в першому стовпці аркуша з назвою "My Custom  Sheet." Для імен аркушів із пробілами, спеціальними символами чи буквено-цифровими комбінаціями потрібні одинарні лапки.
+    - `'My Custom Sheet'` посилається до всіх клітинок у "My Custom Sheet".
+
+  - *Нотація R1C1*  - Синтаксис, який використовується для означення комірки або діапазону комірок із рядком, який містить ім’я аркуша, а також координати початкової та кінцевої комірок за допомогою номерів рядків і стовпців. Цей метод менш поширений, ніж нотація A1, але може бути корисним під час посилання на діапазон комірок відносно позиції даної комірки.
+    - `Sheet1!R1C1:R2C2` посилається до перших двох клітинок у верхніх двох рядках  Sheet1.
+    - `R1C1:R2C2` посилається до перших двох клітинок у верхніх двох рядках першого видимого аркуша.
+    - `Sheet1!R[3]C[1]` посилається на комірку, розташовану трьома рядками нижче та одним стовпцем праворуч від поточної комірки.
+
+- `Named range` - Означена комірка або діапазон комірок із настроюваною назвою для спрощення посилань у програмі. Іменований діапазон представляє ресурс  [`FilterView`](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#filterview).
+
+- `Protected range` - Означена клітинка або діапазон клітинок, які не можна змінювати. Захищений діапазон представляє  ресурс [`ProtectedRange`](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#protectedrange) 
+
+На сторінках допомоги Google є вбудований конструктор запиту, в якому можна спробувати перевірити API. Ось наприклад за [цим посиланням](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get) можна перевірити роботу запиту на отримання значення комірок `spreadsheets.values.get`.  Запит проводиться з використанням методу GET за наступним шаблоном:
+
+```http
+GET https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}/values/{range}
+```
+
+де `range` - діапазон комірок в нотації A1 або R1C1.
+
+На рис.3 наведений інтерфейс для прикладу перевірки такого запиту.
+
+![image-20231211105739230](media/image-20231211105739230.png)
+
+рис.3. Приклад використання конструктору запиту 
+
+Таким чином Google Sheet API можна користуватися як зі сторонніх сервісів так і GAS. Надалі будемо розглядати тільки використання GAS.  
+
+## 3. Об'єкт SpreadsheetApp
+
+Цей клас дає можливість отримати доступ до файлів Google Таблиць і створювати їх. Цей клас є батьківським класом для служби електронних таблиць. Нижче наведено кілька методів об'єкту SpreadsheetApp, детальніше написано в [документації](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app).
+
+### Створення та відкриття таблиці
+
+`create (name, rows, columns)` - створює нову електронну таблицю з заданим іменем і вказаною кількістю рядків і стовпців.
+
+`open(file)` - відкриває електронну таблицю, яка відповідає заданому об’єкту File.
+
+```js
+// Отримує будь-які електронні таблиці з Диска Google позначені зірочкою
+// потім відкриває електронні таблиці та пише їх ім’я в журнал
+function myFunction() {
+  let files = DriveApp.searchFiles('mimeType = "' + MimeType.GOOGLE_SHEETS + '"');
+  while (files.hasNext()) {
+    const spreadsheet = SpreadsheetApp.open(files.next());
+    console.log(spreadsheet.getName())
+  }
+}
+```
+
+`openByUrl(url)` - відкриває електронну таблицю з указаною URL-адресою. Створює виняток скрипта, якщо URL-адреса не існує або користувач не має дозволу на доступ до неї.
+
+```js
+function myFunction() {
+  const ss = SpreadsheetApp.openByUrl ("https://docs.google.com/spreadsheets/d/1e7nWHSOuPlnBtR96gAqyKFKR4Bzdj5DwxKfWr43_IT4/edit?usp=drive_link");
+  console.log(ss.getName());
+}
+```
+
+`openById(id)` - відкриває електронну таблицю з указаним ідентифікатором. Ідентифікатор електронної таблиці можна отримати з її URL-адреси. Наприклад, ідентифікатор електронної таблиці в URL-адресі `https://docs.google.com/spreadsheets/d/abc1234567/edit#gid=0` є `abc1234567`.
+
+```js
+function myFunction() {
+  const ss = SpreadsheetApp.openById("1e7nWHSOuPlnBtR96gAqyKFKR4Bzdj5DwxKfWr43_IT4");
+  console.log(ss.getName());
+}
+```
+
+### Отримання/встановлення активної таблиці 
+
+`getActive()` або `getActiveSpreadsheet()` - ці функції працюють однаково і повертають поточну активну електронну таблицю або `null`, якщо такої немає. Викликавши цю функцію, функції, які виконуються в контексті електронної таблиці, можуть отримати посилання на відповідний об’єкт `Spreadsheet`.
+
+```js
+function myFunction() {
+  const activess = SpreadsheetApp.getActive();
+  console.log (activess.getName() )
+  console.log(activess.getUrl());
+}
+```
+
+`setActiveSpreadsheet(newActiveSpreadsheet)` - встановлює вказану таблицю активною.
+
+```js
+function myFunction() {
+  const ss = SpreadsheetApp.openByUrl ("https://docs.google.com/spreadsheets/d/1e7nWHSOuPlnBtR96gAqyKFKR4Bzdj5DwxKfWr43_IT4/edit?usp=drive_link");
+  SpreadsheetApp.setActiveSpreadsheet(ss);
+  const activess = SpreadsheetApp.getActive();
+  console.log (activess.getName())
+}
+```
+
+### Отримання/встановлення активного аркушу таблиці
+
+`getActiveSheet()` - повертає активний аркуш в електронній таблиці. Активний аркуш в електронній таблиці – це аркуш, який відображається в інтерфейсі користувача електронної таблиці.
+
+```js
+function myFunction() {
+  const activesh = SpreadsheetApp.getActiveSheet();
+  console.log (activesh.getName() )
+  console.log(activesh.getSheetId());
+}
+```
+
+`setActiveSheet(sheet, restoreSelection)` - встановлює активний аркуш в електронній таблиці з можливістю відновлення останнього вибору на цьому аркуші.
+
+```js
+function myFunction() {
+  const ss = SpreadsheetApp.getActive();
+  SpreadsheetApp.setActiveSheet(ss.getSheets()[0]);
+}
+```
+
+### Доступ до змісту
+
+Наступний перелік методів надає можливість доступатися до змісту таблиці. 
+
+| Метод                  | Повертає    | Опис                                                         |
+| ---------------------- | ----------- | ------------------------------------------------------------ |
+| `getActiveRange()`     | `Range`     | Повертає вибраний діапазон на активному аркуші або `null`, якщо активного діапазону немає. |
+| `getActiveRangeList()` | `RangeList` | Повертає список активних діапазонів на активному аркуші або `null`, якщо діапазонів не вибрано. |
+| `getCurrentCell()`     | `Range`     | Повертає поточну (виділену) комірку, вибрану в одному з активних діапазонів на активному аркуші, або `null`, якщо поточної комірки немає. |
+| `getSelection()`       | `Selection` | Повертає поточний `Selection` в електронній таблиці.         |
+
+## 4. Об'єкт Sheet
+
+Об'єкт для роботи з аркушем. Весь перелік методів та властивостей доступний за [посиланням](https://developers.google.com/apps-script/reference/spreadsheet/sheet).
+
+### Інформація про аркуш
+
+`getName()` - повертає інформацію про аркуш
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+Logger.log(sheet.getName());
+```
+
+### Вставлення рядків
+
+`insertRows(rowIndex)` - вставляє порожній рядок на аркуші у вказане місце `rowIndex`.
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+// Зміщує всі рядки вниз на один
+sheet.insertRows(1);
+```
+
+`insertRows(rowIndex, numRows)` - вставляє один або кілька `numRows` послідовних порожніх рядків на аркуші, починаючи з указаного місця `rowIndex`. 
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+// Зміщує всі рядки на три вниз
+sheet.insertRows(1, 3);
+```
+
+`insertRowsAfter(afterPosition, howMany)` - вставляє кілька рядків `howMany` після вказаної позиції рядка `afterPosition`.
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+
+// вставляє п'ять рядків після першого рядка
+sheet.insertRowsAfter(1, 5);
+```
+
+`insertRowsBefore(beforePosition, howMany)` - вставляє кілька рядків `howMany` перед заданою позицією `beforePosition` рядка . 
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+
+// вставляє п’ять рядків перед першим рядком
+sheet.insertRowsBefore(1, 5);
+```
+
+### Доступ до комірок
+
+`getRange(row, column)` - повертає діапазон із верхньою лівою клітинкою за заданими координатами `row` `column`.
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+// Передача лише двох аргументів повертає "діапазон" з однією клітинкою.
+var range = sheet.getRange(1, 1);
+var values = range.getValues();
+Logger.log(values[0][0]);
+```
+
+`getRange(row, column, numRows)` - повертає діапазон із верхньою лівою клітинкою за заданими координатами та заданою кількістю рядків.
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+// Коли використовується аргумент "numRows", повертається лише один стовпець даних.
+var range = sheet.getRange(1, 1, 3);
+var values = range.getValues();
+
+// Друкує 3 значення з першого стовпця, починаючи з рядка 1.
+for (var row in values) {
+  for (var col in values[row]) {
+    Logger.log(values[row][col]);
+  }
+}
+```
+
+`getRange(row, column, numRows, numColumns)` - Повертає діапазон із верхньою лівою коміркою в заданих координатах із заданою кількістю рядків і стовпців.
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+var range = sheet.getRange(1, 1, 3, 3);
+var values = range.getValues();
+
+// Роздрукуйте значення з поля 3x3.
+for (var row in values) {
+  for (var col in values[row]) {
+    Logger.log(values[row][col]);
+  }
+}
+```
+
+`getRange(a1Notation)` - повертає діапазон, в зазначеній нотації: A1 або R1C1.
+
+```js
+// Отримує діапазон A1:D4 на аркуші "Invoices" 
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var range = ss.getRange("Invoices!A1:D4");
+
+// Отримує комірку A1 на першому аркуші
+var sheet = ss.getSheets()[0];
+var cell = sheet.getRange("A1");
+```
+
+`getRangeList(a1Notations)` - повертає колекцію RangeList, яка представляє діапазони на тому самому аркуші, визначеному непорожнім списком нотацій A1 або R1C1.
+
+```js
+// Отримує список Range A1:D4, F1:H4.
+var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+var rangeList  = sheet.getRangeList(['A1:D4', 'F1:H4']);
+```
+
+`getActiveRange()`  - повертає вибраний діапазон `Range` на активному аркуші або `null`, якщо активного діапазону немає. Зазвичай це означає діапазон, який користувач вибрав на активному аркуші, але в користувацькій функції це стосується комірки, яка активно перераховується.
+
+```js
+// Наведений нижче код реєструє фоновий колір для активного діапазону.
+var colorObject = SpreadsheetApp.getActiveRange().getBackgroundObject();
+// Припустимо, що колір має ColorType.RGB.
+Logger.log(colorObject.asRgbColor().asHexString());
+```
+
+`setActiveRange(range)`  - встановлює вказаний діапазон як `active range`, а верхню ліву клітинку в діапазоні як `current cell`. Інтерфейс електронної таблиці відображає аркуш, який містить вибраний діапазон, і вибирає комірки, визначені у вибраному діапазоні.
+
+```js
+// Наведений нижче код встановлює діапазон C1:D4 на першому аркуші як активний діапазон. 
+var range = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0].getRange('C1:D4');
+SpreadsheetApp.setActiveRange(range);
+
+var selection = SpreadsheetApp.getSelection();
+// Current cell: C1
+var currentCell = selection.getCurrentCell();
+// Active Range: C1:D4
+var activeRange = selection.getActiveRange();
+```
+
+`getActiveRangeList()` - повертає список активних діапазонів ( `RangeList`  ) на активному аркуші або `null`, якщо діапазонів не вибрано.
+
+`getCurrentCell()` - повертає поточну (виділену) комірку, вибрану в одному з активних діапазонів на активному аркуші, або `null`, якщо поточної комірки немає.
+
+`getSelection()`  -  повертає поточний `Selection` в електронній таблиці.
+
+## 5. Range
+
+Доступ і зміна діапазонів електронних таблиць. Діапазоном може бути одна клітинка на аркуші або група суміжних клітинок на аркуші.
+
+### Доступ до діапазону
+
+`getCell(row, column)` - повертає задану клітинку в діапазоні.
+
+`getDataRegion()` - повертає копію діапазону, розширеного в чотирьох основних напрямках, щоб охопити всі суміжні клітинки з даними в них.
+
+`offset(rowOffset, columnOffset, numRows, numColumns)` (повертає Range) - повертає новий діапазон відносно поточного діапазону, верхня ліва точка якого зміщена відносно поточного діапазону на вказані рядки та стовпці, а також із заданою висотою та шириною в клітинках.
+
+### Читання/запис значень комірок
+
+`getValue()` - повертає значення `Object` верхньої лівої клітинки в діапазоні. Значення може бути типу  `Number`, `Boolean`, `Date`, або `String` залежно від значення клітинки. Порожні клітинки повертають порожній рядок.
+
+`getValues()` - повертає двовимірний масив значень `Object[][]`, проіндексованих рядком, а потім стовпцем. Значення можуть бути типу `Number`, `Boolean`, `Date`, або`String` залежно від значення комірки. Порожні клітинки представлені порожнім рядком у масиві. Зверніть увагу, що хоча індекс діапазону починається з `1,1`, масив JavaScript індексується з `[0][0]`.
+
+```js
+// Код нижче отримує значення для діапазону C2:G8
+// в активній електронній таблиці. Зверніть увагу, що це масив JavaScript.
+var values = SpreadsheetApp.getActiveSheet().getRange(2, 3, 6, 4).getValues();
+Logger.log(values[0][0]);
+```
+
+У веб-застосунках значення `Date`  не є допустимим параметром, тому `getValues()` не повертає дані веб-застосунку, якщо діапазон містить клітинку зі значенням `Date`. Натомість необхідно перетворити усі значення, отримані з аркуша, у підтримуваний примітив JavaScript, як-от `Number`, `Boolean` або `String`.
+
+`setValue(value)` - Встановлює значення діапазону і повертає `Range`. Значення може бути `Number`, `Boolean`, `Date`, або `String` . Якщо воно починається з `'='` , то інтерпретується як формула.
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+
+var cell = sheet.getRange("B2");
+cell.setValue(100);
+```
+
+`setValues(values)` - встановлює прямокутну сітку значень `Object[][]` (має відповідати розмірам цього діапазону).
+
+```js
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheet = ss.getSheets()[0];
+
+// The size of the two-dimensional array must match the size of the range.
+var values = [
+  [ "2.000", "1,000,000", "$2.99" ]
+];
+
+var range = sheet.getRange("B2:D2");
+range.setValues(values);
+```
+
+### Форматування
+
+Клас `Range` має різні методи для форматування для зміни формату клітинки або діапазону клітинок. У наступному прикладі показано, як можна встановити стиль шрифту для діапазону:
+
+```js
+function formatMySpreadsheet() {
+  // Set the font style of the cells in the range of B2:C2 to be italic.
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[0];
+  var cell = sheet.getRange('B2:C2');
+  cell.setFontStyle('italic');
+}
+```
+
+Метод `setBackground(color)` встановлює колір заднього фону клітинки.
+
+## 6. Інші функції
+
+### Перевірка даних
+
+Apps Script дає вам доступ до існуючих правил перевірки даних у Google Таблицях або створює нові правила. Наприклад, у наведеному нижче прикладі показано, як встановити правило перевірки даних, яке дозволяє лише числа від 1 до 100 у клітинці.
+
+```js
+function validateMySpreadsheet() {
+  // Встановлює правило, щоб клітинка B4 була числом від 1 до 100
+  var cell = SpreadsheetApp.getActive().getRange('B4');
+  var rule = SpreadsheetApp.newDataValidation()
+     .requireNumberBetween(1, 100)
+     .setAllowInvalid(false)
+     .setHelpText('Number must be between 1 and 100.')
+     .build();
+  cell.setDataValidation(rule);
+}
+```
+
+Докладніше про роботу з правилами перевірки даних див [`SpreadsheetApp.newDataValidation()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#newDataValidation()), [`DataValidationBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/data-validation-builder), and [`Range.setDataValidation(rule)`](https://developers.google.com/apps-script/reference/spreadsheet/range#setDataValidation(DataValidation))
+
+### Діаграми
+
+Apps Script дозволяє вставляти в електронну таблицю діаграми, які представляють дані в певному діапазоні. У наведеному нижче прикладі створюється вбудована гістограма, припускаючи, що для діаграми  є дані в клітинках «A1:B15».
+
+```js
+function newChart() {
+  // Створює діаграму, яка представлятиме дані в діапазоні A1:B15.
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[0];
+
+  var chart = sheet.newChart()
+     .setChartType(Charts.ChartType.BAR)
+     .addRange(sheet.getRange('A1:B15'))
+     .setPosition(5, 5, 0, 0)
+     .build();
+
+  sheet.insertChart(chart);
+}
+```
+
+Щоб дізнатися більше про вбудовування діаграми в електронну таблицю, перегляньте [`EmbeddedChart`](https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart) і спеціальні конструктори діаграм, як-от [`EmbeddedPieChartBuilder `](https://developers.google.com/apps-script/reference/spreadsheet/embedded-pie-chart-builder).
+
+### Спеціальні функції в Google Таблицях 
+
+Спеціальна функція подібна до вбудованої функції електронної таблиці, типу  `=SUM(A1:A5)` , за винятком того, що означується поведінка функцій із скриптом. Наприклад, можна створити спеціальну функцію `in2mm()`, яка перетворює значення з дюймів на міліметри, а потім використати формулу в електронній таблиці, ввівши у комірку `=in2mm(A1)` або `=in2mm(10)`.
+
+Деталі можна почитати в [посібнику зі спеціальних функцій](https://developers.google.com/apps-script/guides/sheets/functions).
+
+## 7. Тригери
+
+Скрипти, прив’язані до файлу Google Таблиць, можуть автоматично реагувати на певні подіі через використання різних тригерів. Для цього використовуються зарезервовані назви функцій, наприклад `onOpen()` і `onEdit()`. Наступні функції зарезервовані для тригерів:
+
+- `onOpen(e)` - запускається, коли користувач відкриває електронну таблицю, документ, презентацію або форму, на редагування яких він має дозвіл.
+- `onInstall(e)` - запускається, коли користувач встановлює [Editor Add-on](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) з Google Docs, Sheets, Slides, або Forms.
+- `onEdit(e)` - запускається, коли користувач змінює значення в електронній таблиці.
+- `onSelectionChange(e)` - запускається, коли користувач змінює вибір в електронній таблиці.
+- `doGet(e)` - запускається, коли користувач відвідує опублікований з використанням GAS web-застосунок? відправивши HTTP-запит  `GET`.
+- `doPost(e)` rзапускається, коли користувач відправляє HTTP-запит `POST` на web-застосунок.
+
+Параметр `e` у наведених вище назвах функцій є об’єктом події, який передається у функцію. Об’єкт містить інформацію про контекст, який викликав спрацьовування тригера, але використовувати його необов’язково. Для таблиць Google перелік об'єктів подій з їх описом наведений [за посиланням](https://developers.google.com/apps-script/guides/triggers/events).
+
+Наведений нижче приклад створює примітки для комірки, яка була змінена:
+
+```js
+function onEdit(e){
+  const range = e.range;
+  range.setNote('Останній раз модифіковано : ' + new Date());
+}
+```
+
+## Контрольні питання
+
+1. Для чого можна використати GAS в Google Таблицях?
+2. Розкажіть про основні кроки використання Google Таблиць за допомогою GAS.
+3. Що так Google Sheets API? 
+4. Що таке `Spreadsheet` і як ідентифікується цей ресурс?
+5. Що таке `Sheet` і як ідентифікується цей ресурс?
+6. Що таке `Cell` і як ідентифікується цей ресурс?
+7. Наведіть приклад використання Google Sheets API.
+8. Назвіть кілька методів для відкриття Google таблиці з GAS.
+9. Яким чином можна доступитися до активної Google таблиці з GAS?
+10. Як доступитися до активного та вказаного аркушу Google таблиці з GAS? 
+11. Як доступитися змісту аркушу Google таблиці з GAS?
+12. Яким чином можна вставити кілька комірок в аркушу Google таблиці з GAS? 
+13. Як доступитися до конкретних комірок аркушу Google таблиці з GAS?
+14. Що представляє об'єкт Range в Google таблиці?
+15. Як отримати значення з конкретних комірок аркушу Google таблиці з GAS?
+16. Як змінити значення в конкретних комірках аркушу Google таблиці з GAS?
+17. Які додаткові тригери доступні в скриптах GAS в Google таблиці?  
+
+## Корисні посилання
+
+https://developers.google.com/sheets/api/guides/concepts
+
+https://blog.coupler.io/google-apps-script-tutorial/#What_makes_Google_Apps_Script_useful
+
+## Посилання на відеозаписи лекцій
+
+[Запис Л15. Google Sheet API](https://youtu.be/YeEL7Hb6yZE)
+
+## Автор
+
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)
