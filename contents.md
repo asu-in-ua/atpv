@@ -259,7 +259,7 @@
 
 ### LoCode/NoCode платформи
 
-- NodeRED
+- [NodeRED](nodered/README.md)
 - AppSmith
 - [Сервіси Google](googleaps/README.md)
 
