@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile SchemaVersion="3.0" FileName="CAEXdemoSysUnit.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+	<SuperiorStandardVersion>AutomationML 2.1</SuperiorStandardVersion>
+	<SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="6.4.2.18" LastWritingDateTime="2025-12-02T22:50:27.164948+02:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="6.4.2.18" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org"/>
+	<InstanceHierarchy Name="Production">
+		<Version>1.0.0</Version>
+		<InternalElement Name="ProcessCell1" ID="06433d6d-3873-4c76-be01-ec789409e28e">
+			<Attribute Name="ProdType" AttributeDataType="xs:string">
+				<Value>milk</Value>
+			</Attribute>
+			<Attribute Name="MaxBatchSize" AttributeDataType="xs:float" Unit="m^3">
+				<Description>volume</Description>
+				<Value>100</Value>
+			</Attribute>
+			<ExternalInterface Name="rawin" ID="f8f2392a-25ff-4d58-ad25-5ef5de914a43"/>
+			<ExternalInterface Name="prodout" ID="679d9ed4-cd79-4ea6-be66-d6f470f27e91"/>
+			<InternalElement Name="Tank_1" ID="dea37369-0346-4070-a123-70852c7e1d55">
+				<Attribute Name="Volume" AttributeDataType="xs:float" Unit="m^3">
+					<Description>volume</Description>
+				</Attribute>
+				<ExternalInterface Name="in" ID="65085048-b946-42e0-a423-c1f1d2f358c5"/>
+				<ExternalInterface Name="out" ID="0613c7fd-4988-4216-b9d7-c8805cc18691"/>
+			</InternalElement>
+			<InternalElement Name="Pipe" ID="45cfccfd-b410-4d84-8665-7023d61df57c">
+				<Attribute Name="Length" Unit="m" AttributeDataType="xs:float">
+					<DefaultValue>1</DefaultValue>
+					<Value>2</Value>
+					<RefSemantic CorrespondingAttributePath="www.SI-Units.org/length"/>
+					<Constraint Name="C1">
+						<OrdinalScaledType>
+							<RequiredMaxValue>15</RequiredMaxValue>
+							<RequiredValue>5</RequiredValue>
+							<RequiredMinValue>1</RequiredMinValue>
+						</OrdinalScaledType>
+					</Constraint>
+				</Attribute>
+				<Attribute Name="Colour">
+					<DefaultValue>Yellow</DefaultValue>
+					<Value>Green</Value>
+					<Constraint Name="C1">
+						<NominalScaledType>
+							<RequiredValue>Black</RequiredValue>
+							<RequiredValue>Green</RequiredValue>
+							<RequiredValue>Blue</RequiredValue>
+							<RequiredValue>Yellow</RequiredValue>
+						</NominalScaledType>
+					</Constraint>
+				</Attribute>
+				<Attribute Name="Position">
+					<Attribute Name="x"/>
+					<Attribute Name="y"/>
+					<Attribute Name="z"/>
+				</Attribute>
+				<ExternalInterface Name="in" ID="b204eee7-0685-49b6-88ea-afda5fe230a0">
+					<Description>Один кінцеь труби</Description>
+				</ExternalInterface>
+				<ExternalInterface Name="out" ID="5854e96a-ddd3-478b-aa18-782ab065eb36"/>
+			</InternalElement>
+			<InternalElement Name="Tank_2" ID="078958d8-7b98-4d45-a82b-f83de4ee9292">
+				<Attribute Name="Volume" AttributeDataType="xs:float" Unit="m^3">
+					<Description>volume</Description>
+					<Value>51</Value>
+				</Attribute>
+				<ExternalInterface Name="in" ID="b3f41eda-6cdf-4a27-a599-60b14bf4d1f3"/>
+				<ExternalInterface Name="out" ID="b9f87112-e09d-4165-b5c0-d49bb0d37823"/>
+			</InternalElement>
+			<InternalLink RefPartnerSideA="0613c7fd-4988-4216-b9d7-c8805cc18691" RefPartnerSideB="b204eee7-0685-49b6-88ea-afda5fe230a0" Name="Link"/>
+			<InternalLink RefPartnerSideA="5854e96a-ddd3-478b-aa18-782ab065eb36" RefPartnerSideB="b3f41eda-6cdf-4a27-a599-60b14bf4d1f3" Name="Link"/>
+			<InternalLink RefPartnerSideA="f8f2392a-25ff-4d58-ad25-5ef5de914a43" RefPartnerSideB="65085048-b946-42e0-a423-c1f1d2f358c5" Name="Link"/>
+			<InternalLink RefPartnerSideA="679d9ed4-cd79-4ea6-be66-d6f470f27e91" RefPartnerSideB="b9f87112-e09d-4165-b5c0-d49bb0d37823" Name="Link"/>
+		</InternalElement>
+		<InternalElement Name="ProcessCell2" ID="f15744a8-3856-43bd-b2fe-18e0efcc6e4f" RefBaseSystemUnitPath="ProcessEngineeringClassLib/TankSystemClass">
+			<InternalElement Name="T1" RefBaseSystemUnitPath="ProcessEngineeringClassLib/TankClass" ID="f8c82141-057c-4002-8d9f-2a568a452383">
+				<Attribute Name="V">
+					<Value>2</Value>
+				</Attribute>
+			</InternalElement>
+			<InternalElement Name="T2" RefBaseSystemUnitPath="ProcessEngineeringClassLib/TankClass" ID="b56ede7a-1b18-4e2f-bea1-30845b6888fa">
+				<Attribute Name="V" Unit="qm"/>
+			</InternalElement>
+		</InternalElement>
+		<InternalElement Name="Wall" ID="GUID1">
+			<Attribute Name="Colour" AttributeDataType="xs:string" RefAttributeType="DemoAttributeLib/Colour">
+				<Value>red</Value>
+			</Attribute>
+			<Attribute Name="MyPointTime" RefAttributeType="DemoAttributeLib/PointInTime">
+				<Attribute Name="X">
+					<Value>10</Value>
+				</Attribute>
+			</Attribute>
+		</InternalElement>
+		<InternalElement Name="Device" ID="GUID1">
+			<ExternalInterface Name="SetOfPlugs" ID="GUID10">
+				<ExternalInterface Name="Plug1" ID="GUID11" RefBaseClassPath="DemoInterfaceClassLib/PowerSupply"/>
+				<ExternalInterface Name="Plug2" ID="GUID12" RefBaseClassPath="DemoInterfaceClassLib/PowerSupply"/>
+				<ExternalInterface Name="Plug3" ID="GUID13" RefBaseClassPath="DemoInterfaceClassLib/Port"/>
+				<ExternalInterface Name="Pin1" ID="GUID20" RefBaseClassPath="DemoInterfaceClassLib/DigitalIn">
+					<ExternalInterface Name="Pin2" ID="GUID21" RefBaseClassPath="DemoInterfaceClassLib/DigitalOut"/>
+				</ExternalInterface>
+			</ExternalInterface>
+		</InternalElement>
+		<InternalElement Name="B1" ID="ID1" RefBaseSystemUnitPath="DemoLib/VendorA_Tank37">
+			<Attribute Name="Volume">
+				<Value>15</Value>
+			</Attribute>
+			<Attribute Name="Order Number">
+				<Value>012345</Value>
+			</Attribute>
+			<RoleRequirements RefBaseRoleClassPath="ProcessRoleClassLib/Tank">
+				<Attribute Name="V" Unit="m3">
+					<Constraint Name="C1">
+						<OrdinalScaledType>
+							<RequiredMinValue>12</RequiredMinValue>
+						</OrdinalScaledType>
+					</Constraint>
+				</Attribute>
+				<MappingObject>
+					<AttributeNameMapping RoleAttributeName="V" SystemUnitAttributeName="Volume"/>
+				</MappingObject>
+			</RoleRequirements>
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="ProductInterfaceLib">
+		<InterfaceClass Name="ProductNode">
+			<Attribute Name="Direction">
+				<Constraint Name="C1">
+					<NominalScaledType>
+						<RequiredValue>In</RequiredValue>
+						<RequiredValue>Out</RequiredValue>
+						<RequiredValue>Undirected</RequiredValue>
+					</NominalScaledType>
+				</Constraint>
+			</Attribute>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="DemoInterfaceClassLib">
+		<InterfaceClass Name="PowerSupply"/>
+		<InterfaceClass Name="DigitalIn"/>
+		<InterfaceClass Name="DigitalOut"/>
+		<InterfaceClass Name="Port">
+			<ExternalInterface Name="Pin1" ID="ID1" RefBaseClassPath="DemoInterfaceClassLib/DigitalIn"/>
+			<ExternalInterface Name="Pin2" ID="ID2" RefBaseClassPath="DemoInterfaceClassLib/DigitalIn"/>
+			<InterfaceClass Name="SpecialPort" RefBaseClassPath="DemoInterfaceClassLib/Port"/>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<RoleClassLib Name="ProceessRoleClassLib" ID="acf0bf7f-732f-4973-81d0-9809e5c658ad">
+		<Version>1.0.0</Version>
+		<RoleClass Name="Pipe" ID="8871fe83-d2ab-4d31-bb83-a4a316dc51c8">
+			<Version>1.0.0</Version>
+			<Attribute Name="Diameter" AttributeDataType="xs:string"/>
+			<ExternalInterface Name="InFlow" ID="8aa7adba-7e9e-4369-b9b1-2319b6f2e7a9"/>
+			<ExternalInterface Name="OutFlow" ID="27a9bc46-0893-460e-862a-43ceca2deacb"/>
+		</RoleClass>
+		<RoleClass Name="Tank" ID="08596c45-997a-4acc-abeb-f131d602a441">
+			<Version>1.0.0</Version>
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="ProcessEngineeringClassLib">
+		<SystemUnitClass Name="TankClass">
+			<Attribute Name="Length" Unit="m"/>
+			<Attribute Name="Heigth" Unit="m"/>
+			<Attribute Name="Width" Unit="m"/>
+			<Attribute Name="V" Unit="qm"/>
+			<SystemUnitClass Name="TankHeatClass" ID="34a8778b-98f2-45b2-a1a2-7b30c62f1bca" RefBaseClassPath="ProcessEngineeringClassLib/TankClass">
+				<Version>1.0.0</Version>
+			</SystemUnitClass>
+		</SystemUnitClass>
+		<SystemUnitClass Name="TankSystemClass">
+			<InternalElement Name="T1" RefBaseSystemUnitPath="ProcessEngineeringClassLib/TankClass" ID="GUID1">
+				<Attribute Name="V">
+					<Value>2</Value>
+				</Attribute>
+			</InternalElement>
+			<InternalElement Name="T2" RefBaseSystemUnitPath="ProcessEngineeringClassLib/TankClass" ID="GUID2">
+				<Attribute Name="V" Unit="qm"/>
+			</InternalElement>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+	<AttributeTypeLib Name="DemoAttributeLib">
+		<AttributeType Name="Colour" AttributeDataType="xs:string"/>
+		<AttributeType Name="Point">
+			<Attribute Name="X" AttributeDataType="xs:float"/>
+			<Attribute Name="Y" AttributeDataType="xs:float"/>
+			<Attribute Name="Z" AttributeDataType="xs:float"/>
+		</AttributeType>
+		<AttributeType Name="PointInTime" RefAttributeType="DemoAttributeLib/Point">
+			<Attribute Name="Time" AttributeDataType="xs:time"/>
+		</AttributeType>
+	</AttributeTypeLib>
+</CAEXFile>

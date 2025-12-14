@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile SchemaVersion="3.0" FileName="CAEXdemo1_1.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+  <SuperiorStandardVersion>AutomationML 2.1</SuperiorStandardVersion>
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="6.4.2.18" LastWritingDateTime="2025-12-01T09:14:35.236923+02:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="6.4.2.18" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
+  <InstanceHierarchy Name="Production">
+    <Version>1.0.0</Version>
+    <InternalElement Name="ProcessCell1" ID="06433d6d-3873-4c76-be01-ec789409e28e">
+      <Attribute Name="ProdType" AttributeDataType="xs:string">
+        <Value>milk</Value>
+      </Attribute>
+      <Attribute Name="MaxBatchSize" AttributeDataType="xs:float" Unit="m^3">
+        <Description>volume</Description>
+        <Value>100</Value>
+      </Attribute>
+      <ExternalInterface Name="rawin" ID="f8f2392a-25ff-4d58-ad25-5ef5de914a43" />
+      <ExternalInterface Name="prodout" ID="679d9ed4-cd79-4ea6-be66-d6f470f27e91" />
+      <InternalElement Name="Tank_1" ID="dea37369-0346-4070-a123-70852c7e1d55">
+        <Attribute Name="Volume" AttributeDataType="xs:float" Unit="m^3">
+          <Description>volume</Description>
+        </Attribute>
+        <ExternalInterface Name="in" ID="65085048-b946-42e0-a423-c1f1d2f358c5" />
+        <ExternalInterface Name="out" ID="0613c7fd-4988-4216-b9d7-c8805cc18691" />
+      </InternalElement>
+      <InternalElement Name="Pipe" ID="45cfccfd-b410-4d84-8665-7023d61df57c">
+        <ExternalInterface Name="in" ID="b204eee7-0685-49b6-88ea-afda5fe230a0">
+          <Description>Один кінцеь труби</Description>
+        </ExternalInterface>
+        <ExternalInterface Name="out" ID="5854e96a-ddd3-478b-aa18-782ab065eb36" />
+      </InternalElement>
+      <InternalElement Name="Tank_2" ID="078958d8-7b98-4d45-a82b-f83de4ee9292">
+        <Attribute Name="Volume" AttributeDataType="xs:float" Unit="m^3">
+          <Description>volume</Description>
+          <Value>51</Value>
+        </Attribute>
+        <ExternalInterface Name="in" ID="b3f41eda-6cdf-4a27-a599-60b14bf4d1f3" />
+        <ExternalInterface Name="out" ID="b9f87112-e09d-4165-b5c0-d49bb0d37823" />
+      </InternalElement>
+      <InternalLink RefPartnerSideA="0613c7fd-4988-4216-b9d7-c8805cc18691" RefPartnerSideB="b204eee7-0685-49b6-88ea-afda5fe230a0" Name="Link" />
+      <InternalLink RefPartnerSideA="5854e96a-ddd3-478b-aa18-782ab065eb36" RefPartnerSideB="b3f41eda-6cdf-4a27-a599-60b14bf4d1f3" Name="Link" />
+      <InternalLink RefPartnerSideA="f8f2392a-25ff-4d58-ad25-5ef5de914a43" RefPartnerSideB="65085048-b946-42e0-a423-c1f1d2f358c5" Name="Link" />
+      <InternalLink RefPartnerSideA="679d9ed4-cd79-4ea6-be66-d6f470f27e91" RefPartnerSideB="b9f87112-e09d-4165-b5c0-d49bb0d37823" Name="Link" />
+    </InternalElement>
+  </InstanceHierarchy>
+</CAEXFile>
