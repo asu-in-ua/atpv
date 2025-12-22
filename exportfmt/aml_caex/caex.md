@@ -665,7 +665,7 @@ CAEX явно підтримує доступ до зовнішніх файлі
 <ExternalReference Path="http://www.abc.com/ YetanotherCAEXFile.xml" Alias="C03"/>
 ```
 
-Рисунок A.37 показує приклад використання визначених посилань на зовнішні файли CAEX. Посилання на зовнішній файл задається за допомогою імені псевдоніма, після якого через роздільник псевдоніма “@” вказується повний шлях до відповідного класу.
+Рисунок 29 показує приклад використання визначених посилань на зовнішні файли CAEX. Посилання на зовнішній файл задається за допомогою імені псевдоніма, після якого через роздільник псевдоніма `@` вказується повний шлях до відповідного класу.
 
 ![image-20230211124750209](media/image-20230211124750209.png)
 
@@ -673,33 +673,25 @@ CAEX явно підтримує доступ до зовнішніх файлі
 
 ```xml
 <InstanceHierarchy Name="Project01">
-
     <InternalElement Name="Brewery01" ID="ID1">
-
         <InternalElement
             Name="Unit01"
             ID="ID2"
             RefBaseSystemUnitPath="CO1@UnitLib/BasicUnit">
-
             <InternalElement
                 Name="T01"
                 ID="ID3"
                 RefBaseSystemUnitPath="CO2@TankLibA/Tank01234"/>
-            
             <InternalElement
                 Name="N01"
                 ID="ID4"/>
         </InternalElement>
-
         <InternalElement
             Name="T02"
             ID="ID5"
             RefBaseSystemUnitPath="CO3@TankLibB/Tank01235"/>
-
     </InternalElement>
-
 </InstanceHierarchy>
-
 ```
 
 

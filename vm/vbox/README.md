@@ -31,6 +31,7 @@
 - [Початок роботи з Virtual Box: ВМ з Windows XP](lab.md)
 - [Встановлення ВМ з Linux (Debian)](labdebian.md)
 - [Встановлення та налаштування ВМ з Windows 10](labwin10.md)
+- [Встановлення та налаштування ВМ з Windows 11](labwin11.md)
 
 ## Перевірка знань
 
