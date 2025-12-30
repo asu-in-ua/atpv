@@ -4,10 +4,4 @@
 
 - [Вступ до хмарних технологій](cloudsintro/README.md)
 - [Віртуалізація машин з використанням Virtual Box](vbox/README.md) 
-- 
-
-
-
-
-
-https://signup.oraclecloud.com/
+- [Контейнери Docker](docker/README.md)
