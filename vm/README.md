@@ -4,4 +4,4 @@
 
 - [Вступ до хмарних технологій](cloudsintro/README.md)
 - [Віртуалізація машин з використанням Virtual Box](vbox/README.md) 
-- [Контейнери Docker](docker/README.md)
+- [Контейнери](docker/README.md)

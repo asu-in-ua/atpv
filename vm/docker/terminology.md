@@ -4,8 +4,6 @@
 
 Це переклад статті [A Practical Introduction to Container Terminology](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#)
 
-Переклад ще не завершений.
-
 Ви можете подумати, що контейнери здаються досить простим поняттям, то чому мені потрібно читати про термінологію контейнерів? У моїй роботі як проповідника контейнерних технологій я стикався з неправильним використанням контейнерної термінології, через що люди спотикалися на шляху до оволодіння контейнерами. Такі терміни, як контейнери та образи, використовуються як взаємозамінні, але існують важливі концептуальні відмінності. У світі контейнерів репозиторій має інше значення, ніж ви очікували. Крім того, ландшафт для контейнерних технологій є більшим, ніж просто Docker. Без розуміння термінології може бути важко зрозуміти ключові відмінності між docker і (виберіть улюблені, CRI-O, rkt, lxc/lxd) або зрозуміти, що Open Container Initiative робить для стандартизації технології контейнерів.
 
 ## Background
@@ -315,13 +313,11 @@ REGISTRY/NAMESPACE/REPOSITORY[:TAG]
  docker pull rhel7/rhel:latest
 ```
 
+### Namespace (простір імен)
 
+Простір імен — це засіб для розділення груп репозиторіїв. У публічному DockerHub простір імен зазвичай відповідає імені користувача, який публікує образ, але також може бути назвою групи або логічною назвою.
 
-### Namespace
-
-A namespace is a tool for separating groups of repositories. On the public [DockerHub](https://hub.docker.com/), the namespace is typically the username of the person sharing the image, but can also be a group name, or a logical name.
-
-Red Hat uses the namespace to separate groups of repositories based on products listed on the [Red Hat Federated Registry](https://www.redhat.com/en/about/press-releases/red-hat-announces-pathway-enterprise-ready-linux-containers) server. Here are some example results returned by registry.access.redhat.com.  Notice, the last result is actually listed on another registry server.  This is because Red Hat works to also list repositories on our partner’s registry servers:
+Red Hat використовує простори імен для розділення груп репозиторіїв відповідно до продуктів, представлених на сервері Red Hat Federated Registry. Нижче наведено приклади результатів, які повертає registry.access.redhat.com. Зверніть увагу, що останній результат фактично розміщений на іншому сервері реєстру. Це пов’язано з тим, що Red Hat також працює над розміщенням репозиторіїв на серверах реєстрів своїх партнерів.
 
 ```
 registry.access.redhat.com/rhel7/rhel
@@ -331,7 +327,7 @@ registry.access.redhat.com/rhscl_beta/mongodb-26-rhel7
 registry-mariadbcorp.rhcloud.com/rhel7/mariadb-enterprise-server:10.0
 ```
 
-Notice, that sometimes the full URL  does not need to be specified. In this case, there is a default  repository for a given namespace. If a user only specifies the fedora  namespace, the latest tag from the default repository will be pulled to  the local server. So, running the following commands is essentially the  same, each one more specific:
+Зверніть увагу, що іноді повну URL-адресу вказувати не потрібно. У такому випадку для певного простору імен існує репозиторій за замовчуванням. Якщо користувач вкаже лише простір імен fedora, на локальний сервер буде завантажено репозиторій за замовчуванням з тегом latest. Отже, виконання наведених нижче команд є по суті однаковим, при цьому кожна наступна команда є більш конкретною:
 
 ```
 docker pull fedora
@@ -339,27 +335,27 @@ docker pull docker.io/fedora
 docker pull docker.io/library/fedora:latest
 ```
 
-### Kernel Namespace
+### Kernel Namespace (простір імен ядра)
 
-A [kernel namespace](https://en.wikipedia.org/wiki/Linux_namespaces) is completely different than the namespace we are referring to when discussing [Repositories](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.20722ydfjdj8) and [Registry Servers](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.4cxnedx7tmvq). When discussing containers, Kernel namespaces are perhaps the most  important data structure, because they enable containers as we know them today. Kernel namespaces enable each container to have it's own mount  points, network interfaces, user identifiers, process identifiers, etc.
+Простір імен ядра повністю відрізняється від простору імен, про який йдеться під час обговорення репозиторіїв і серверів реєстру. У контексті контейнерів простори імен ядра є, мабуть, найважливішою структурою даних, оскільки саме вони роблять можливими контейнери в тому вигляді, в якому ми їх знаємо сьогодні. Простори імен ядра дозволяють кожному контейнеру мати власні точки монтування, мережеві інтерфейси, ідентифікатори користувачів, ідентифікатори процесів тощо.
 
-When you type a command in a Bash terminal and hit enter, Bash makes a request to the kernel to create a normal Linux process using a version  of the [exec()](http://man7.org/linux/man-pages/man3/exec.3.html) system call. A container is special because when you send a request to a container engine like docker, the docker daemon makes a request to the  kernel to create a containerized process using a different system call  called [clone()](http://man7.org/linux/man-pages/man2/clone.2.html). This [clone()](http://man7.org/linux/man-pages/man2/clone.2.html) system call is special because it can create a process with its own  virtual mount points, process ids, user ids, network interfaces,  hostname, etc
+Коли ви вводите команду в терміналі Bash і натискаєте Enter, Bash надсилає запит до ядра на створення звичайного процесу Linux з використанням одного з варіантів системного виклику exec(). Контейнер відрізняється тим, що коли ви надсилаєте запит до рушія контейнерів, наприклад docker, демон docker звертається до ядра з проханням створити контейнеризований процес за допомогою іншого системного виклику — clone(). Системний виклик clone() є особливим, оскільки він може створювати процес із власними віртуальними точками монтування, ідентифікаторами процесів, ідентифікаторами користувачів, мережевими інтерфейсами, іменем хоста тощо.
 
-While, technically, there is no single data structure in Linux that represents a container, kernel namespaces and the [clone()](http://man7.org/linux/man-pages/man2/clone.2.html) system call are as close as it comes.
+Хоча з технічної точки зору в Linux не існує єдиної структури даних, яка безпосередньо представляє контейнер, простори імен ядра разом із системним викликом clone() є найближчим до цього механізмом.
 
 ![img](media/kernel-namespace2-300x117.png)
 
-### Graph Driver
+### Graph Driver (драйвер графа)
 
-When the end user specifies the [Tag](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.mc246mlp25y6) of a container image to run - by default this is the latest [Tag](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.mc246mlp25y6) - the graph driver unpacks all of the dependent [Image Layers](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.epuvi2fkxbx2) necessary to construct the data in the selected [Tag](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.mc246mlp25y6). The graph driver is the piece of software that maps the necessary image layers in the [Repository](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.20722ydfjdj8) to a piece of local storage. The container image layers can be mapped  to a directory using a driver like Overlay2 or in block storage using a  driver like Device Mapper. Drivers include: aufs, devicemapper, btrfs,  zfs, and overlayfs.
+Коли кінцевий користувач вказує тег контейнерного образу для запуску — за замовчуванням це тег latest — драйвер графа розпаковує всі залежні шари образу, необхідні для побудови даних, що відповідають вибраному тегу. Драйвер графа — це програмний компонент, який відображає потрібні шари образів з репозиторію на локальне сховище. Шари контейнерного образу можуть бути відображені у вигляді каталогу за допомогою драйверів на кшталт Overlay2 або у блочному сховищі за допомогою драйверів типу Device Mapper. Серед драйверів використовуються aufs, devicemapper, btrfs, zfs та overlayfs.
 
-When the container is started, the image layers are mounted read-only with a kernel namespace. The [Image Layers](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.epuvi2fkxbx2) from the [Repository](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.20722ydfjdj8) are *always* mounted read only but by default, a separate copy-on-write layer is  also set up. This allows the containerized process to write data within  the container. When data is written, it is stored in the copy-on-write  layer, on the underlying host. This copy-on-write layer can be disabled  by running the container with an option such as *--readonly*.
+Під час запуску контейнера шари образу монтуються лише для читання в межах простору імен ядра. Шари образів із репозиторію завжди монтуються тільки для читання, але за замовчуванням додатково створюється окремий шар з механізмом copy-on-write. Це дозволяє контейнеризованому процесу записувати дані всередині контейнера. Усі зміни при записі зберігаються в шарі copy-on-write на базовому хості. Цей шар copy-on-write можна вимкнути, запустивши контейнер з опцією на кшталт --readonly.
 
-The docker daemon has it's own set of Graph Drivers and there are  other open source libraries which provide Graph Drivers such as [containers/images](https://github.com/containers/storage) which is used in tools like [CRI-O](https://github.com/kubernetes-incubator/cri-o), [Skopeo](https://github.com/projectatomic/skopeo) and other container engines.
+Демон docker має власний набір драйверів графа. Крім того, існують інші бібліотеки з відкритим кодом, що реалізують драйвери графа, наприклад containers/images, які використовуються в таких інструментах, як CRI-O, Skopeo та інших рушіях контейнерів.
 
 ![img](media/scott-graph-driver-300x155.png)
 
-Determining which graph driver you are using can be done with the docker info command:
+Визначити, який драйвер графа використовується, можна за допомогою команди `docker info`:
 
 ```
 [root@rhel7 ~]# docker info
@@ -384,144 +380,142 @@ Determining which graph driver you are using can be done with the docker info co
  Library Version: 1.02.107-RHEL7 (2015-10-14)
 ```
 
-## Container Use Cases
+## Container Use Cases (сценарії використання контейнерів)
 
-There are many types of [Container](https://www.google.com/url?q=https://rhelblog.wordpress.com/wp-admin/post.php?post%3D2813%26action%3Dedit%23h.j2uq93kgxe0e&sa=D&ust=1506025300441000&usg=AFQjCNHBBfZQGCIs8mcL8VJeRcEtMR9Vmg) design patterns forming. Since containers are the run time version of a  container image, the way it is built is tightly coupled to how it is  run.
+Формується багато типів шаблонів проєктування контейнерів. Оскільки контейнери є версією контейнерного образу під час виконання, спосіб, у який образ створюється, тісно пов’язаний зі способом його запуску.
 
-Some [Container Images](https://www.google.com/url?q=https://rhelblog.wordpress.com/wp-admin/post.php?post%3D2813%26action%3Dedit%23h.dqlu6589ootw&sa=D&ust=1506025300441000&usg=AFQjCNHiJUkk9qUkWjXlxF_G4GbENDavtA) are designed to be run without privilege, while others are more specialized and require root-like privileges. There are many dimensions in which patterns can be evaluated and often users  will see multiple patterns or use cases tackled together in one  container image/container.
+Деякі контейнерні образи спроєктовані для запуску без привілеїв, тоді як інші є більш спеціалізованими і потребують привілеїв рівня root. Існує багато вимірів, за якими можна оцінювати шаблони, і часто користувачі стикаються з кількома шаблонами або сценаріями використання, поєднаними в одному контейнерному образі або контейнері.
 
-This section will delve into some of the common use cases that users are tackling with containers.
+У цьому розділі розглядаються деякі з поширених сценаріїв використання контейнерів.
 
-### Application Containers
+### Application Containers (контейнери застосунків)
 
-Application containers are the most  popular form of container. These are what developers and application  owner's care about. Application containers contain the code that  developers work on. They also include things like MySQL, Apache,  MongoDB, and or Node.js.
+Контейнери застосунків є найпоширенішим типом контейнерів. Саме вони цікавлять розробників і власників застосунків. Контейнери застосунків містять код, над яким працюють розробники. Вони також можуть включати такі компоненти, як MySQL, Apache, MongoDB або Node.js.
 
-There is a great ecosystem of application containers forming. Projects like Software  Collections are providing secure and supportable applications container  images for use with Red Hat Enterprise Linux. At the same time, Red Hat  community members are driving some great cutting edge applications  containers.
+Навколо контейнерів застосунків формується потужна екосистема. Такі проєкти, як Software Collections, надають безпечні та підтримувані контейнерні образи застосунків для використання з Red Hat Enterprise Linux. Водночас учасники спільноти Red Hat активно розвивають сучасні, передові контейнерні застосунки.
 
-Red Hat believes that Application  Containers should not typically require special privileges to run their  workloads. That said, production container environments typically  require much more than just non-privileged application containers to  provide other supporting services.
+Red Hat вважає, що контейнери застосунків зазвичай не повинні вимагати спеціальних привілеїв для виконання своїх навантажень. Водночас промислові контейнерні середовища зазвичай потребують значно більшого, ніж просто непривілейовані контейнери застосунків, щоб забезпечити роботу допоміжних сервісів.
 
-### Operating System Containers
+### Operating System Containers (контейнери операційної системи)
 
-See also [System Containers](http://h.ufrqcl5t9y2i)
+Див. також System Containers.
 
-Operating System Containers are  containers which are treated more like a full virtual operating system.  Operating System Containers still share a host kernel, but run a full  init system which allows them to easily run multiple processes. LXC and  LXD are examples of Operating System Containers because they are treated much like a full virtual machine.
+Контейнери операційної системи — це контейнери, які сприймаються радше як повноцінна віртуальна операційна система. Вони й надалі спільно використовують ядро хоста, але запускають повноцінну init-систему, що дозволяє без проблем виконувати кілька процесів усередині контейнера. LXC та LXD є прикладами контейнерів операційної системи, оскільки вони використовуються майже так само, як повноцінні віртуальні машини.
 
-It is also possible to approximate an  Operating System Container with docker/OCI based containers, but  requires running systemd inside the container. This allows an end user  to install software like they normally would and treat the container  much more like a full operating system.
+Також можливо наблизити поведінку контейнера операційної системи, використовуючи docker/OCI-контейнери, але для цього потрібно запускати systemd всередині контейнера. Це дозволяє кінцевому користувачу встановлювати програмне забезпечення звичним способом і поводитися з контейнером майже як з повноцінною операційною системою.
 
 ```
 yum install mysql
 systemctl enable mysql
 ```
 
-This makes it easier to migrate existing  applications. Red Hat is working hard to make Operating System  Containers easier by enabling systemd to run inside a container and by  enabling management with machined. While many customers aren't (yet)  ready to adopt micro-services, they can still gain benefits from  adopting image based containers as a software delivery model.
+Такий підхід спрощує міграцію наявних застосунків. Red Hat активно працює над тим, щоб зробити контейнери операційної системи зручнішими, зокрема шляхом підтримки запуску systemd усередині контейнерів та керування ними за допомогою machined. Хоча багато замовників поки що не готові до переходу на мікросервіси, вони все одно можуть отримати переваги від використання контейнерів на основі образів як моделі постачання програмного забезпечення.
 
-### Pet Containers
+### Pet Containers (контейнери типу «pet»)
 
-While Red Hat certainly recommends, supports and evangelizes the use [cloud native patterns](https://www.redhat.com/en/explore/cloud-native-apps) for new application development, in reality not all existing applications  will be rewritten to take advantage of new patterns. Many existing  applications are one of a kind, and one of kind applications are often  referred to as [Pets](https://rhelblog.redhat.com/2016/02/08/container-tidbits-does-the-pets-vs-cattle-analogy-still-apply/). Containers built specifically to handle these pet applications are sometimes referred to as [Pet Containers](https://rhelblog.redhat.com/2016/09/01/in-defense-of-the-pet-container-part-3-puppies-kittens-and-containers/) 
+Хоча Red Hat безумовно рекомендує, підтримує та популяризує використання cloud-native підходів для розробки нових застосунків, на практиці не всі наявні застосунки будуть переписані з урахуванням нових шаблонів. Багато існуючих застосунків є унікальними, а такі унікальні застосунки часто називають «pet». Контейнери, спеціально створені для роботи з такими застосунками, іноді називають контейнерами типу «pet».
 
-Pet containers provide users with the  portability and convenience of a standardized container infrastructure  relying on registry servers, container images, and standard container  hosts for infrastructure, but provide the flexibility of a traditional  environment within the container. The idea is to make things easier to  containerize existing applications, such as using systemd in a  container. The goal is to reuse existing automation, installers, and  tools to easily create a container image that just runs.
+Контейнери типу «pet» надають користувачам портативність і зручність стандартизованої контейнерної інфраструктури, що спирається на сервери реєстрів, контейнерні образи та стандартні хости контейнерів як інфраструктуру, але водночас забезпечують гнучкість традиційного середовища всередині контейнера. Ідея полягає в тому, щоб спростити контейнеризацію існуючих застосунків, наприклад шляхом використання systemd усередині контейнера. Мета — повторно використати наявну автоматизацію, інсталятори та інструменти, щоб легко створити контейнерний образ, який просто працює.
 
-### Super Privileged Containers
+### Super Privileged Containers (суперпривілейовані контейнери)
 
-When building container infrastructure on dedicated container hosts such as Red Hat Enterprise Linux Atomic Host, systems administrators still need to perform administrative tasks.  Whether used with distributed systems, such as Kubernetes or OpenShift  or standalone container hosts,[ Super Privileged Containers (SPC)](https://www.google.com/url?q=https://developers.redhat.com/blog/2014/11/06/introducing-a-super-privileged-container-concept/&sa=D&ust=1506025300448000&usg=AFQjCNECN4PUbIfhkUKQLqnQZvYQQCwMPQ) are a powerful tool. SPCs can even do things like load specialized kernel modules, such as with systemtap.
+Під час побудови контейнерної інфраструктури на виділених хостах контейнерів, таких як Red Hat Enterprise Linux Atomic Host, системним адміністраторам усе одно потрібно виконувати адміністративні завдання. Незалежно від того, чи використовуються розподілені системи на кшталт Kubernetes або OpenShift, чи окремі хости контейнерів, суперпривілейовані контейнери (SPC) є потужним інструментом. SPC можуть виконувати навіть такі дії, як завантаження спеціалізованих модулів ядра, наприклад за допомогою systemtap.
 
-In an infrastructure that is built to run containers, administrators will most likely need SPCs to do things like monitoring, backups, etc. It's important to realize that there is  typically a tighter coupling between SPCs and the host kernel, so  administrators need to choose a rock solid container host and  standardize on it, especially in a large clustered/distributed  environment where things are more difficult to troubleshoot. They then  need to select a user space in the SPC that is compatible with the host  kernel.
+В інфраструктурі, побудованій для виконання контейнерів, адміністраторам майже напевно знадобляться SPC для таких завдань, як моніторинг, резервне копіювання тощо. Важливо усвідомлювати, що зазвичай існує тісніший зв’язок між SPC і ядром хоста, тому адміністраторам необхідно обирати надійний хост контейнерів і стандартизувати його використання, особливо у великих кластерних або розподілених середовищах, де усунення несправностей є складнішим. Також потрібно підібрати простір користувача всередині SPC, який буде сумісний з ядром хоста.
 
-### Tools & Operating System Software
+### Tools & Operating System Software (інструменти та системне програмне забезпечення)
 
-Linux distributions have always provided users with system software such as Rsyslogd, SSSD, sadc, etc.  Historically, these pieces of system software were installed through RPM or DEB packages. But with the advent of containers as a packaging  format, it has become both convenient and easy to install system  software through containers images. Red Hat provides some pre-packaged  containers for things like the Red Hat Virtualization tools, rsyslog,  sssd, and sadc.
+Дистрибутиви Linux завжди надавали користувачам системне програмне забезпечення, таке як rsyslogd, sssd, sadc тощо. Історично ці компоненти системного програмного забезпечення встановлювалися за допомогою пакетів RPM або DEB. Однак із появою контейнерів як формату пакування стало зручно і просто встановлювати системне програмне забезпечення у вигляді контейнерних образів. Red Hat надає деякі попередньо підготовлені контейнери, зокрема для інструментів Red Hat Virtualization, rsyslog, sssd та sadc.
 
+## Architecture of Containers (архітектура контейнерів)
 
+У міру того як усе більше людей постачають програмне забезпечення за допомогою контейнерів, формуються нові шаблони проєктування. Інженерні команди Red Hat активно використовують і розвивають багато з цих шаблонів у спільноті. Мета цього розділу — підсвітити та визначити деякі з них.
 
-## Architecture of Containers
+Спосіб, у який контейнер зберігається на диску (тобто формат його образу), може суттєво впливати на те, як він запускається. Наприклад, контейнер, призначений для виконання sssd, потребує спеціальних привілеїв під час кожного запуску, інакше він не зможе виконувати свої функції. Нижче наведено короткий перелік шаблонів, які формуються в контейнерній спільноті.
 
-New design patterns are forming as more and more people deliver software with containers.  Red  Hat engineering is leveraging and driving many of these patterns in the  community. The goal of this section is to help highlight and define some of these patterns.
+### Application Images (образи застосунків)
 
-The way a container is saved on disk  (i.e. its image format) can have a dramatic affect on how it is run. For example, a container which is designed to run sssd needs to have  special privileges whenever it's run, or it can't do its job. The  following is a short list of patterns that are forming in the container  community:
+Ці образи споживають кінцеві користувачі. Сценарії використання варіюються від баз даних і вебсерверів до прикладних систем і сервісних шин. Такі образи можуть створюватися всередині організації або постачатися замовнику незалежним виробником програмного забезпечення (ISV). Часто кінцеві користувачі аналізують і зважають на те, з яких компонентів було зібрано автономний образ. Автономні образи є найпростішими для використання, але водночас найскладнішими для проєктування, збирання та оновлення.
 
-### Application Images
+### Base Images (базові образи)
 
-These images are what end users consume.  Use cases range from databases and web servers, to applications and  services buses. These can be built in house or delivered to a customer  from an ISV. Often end users will investigate and care about what bits  were used to create a standalone image. Standalone images are the  easiest kind of image to consume, but the hardest to design, build, and  patch.
+Базовий образ є одним із найпростіших типів образів, але водночас існує багато різних трактувань цього поняття. Іноді користувачі називають «базовим образом» корпоративну стандартну збірку або навіть образ застосунку. Технічно це не є базовим образом. Такі образи є проміжними.
 
-### Base Images
-
-A base image is one of the simplest types of images, but you will find a lot of definitions. Sometimes users will refer to corporate standard build, or even an application image as the  “base image.”  Technically this is not a base image. These are  Intermediate images.
-
-Simply put, a base image is an image  that has no parent layer. Typically, a base image contains a fresh copy  of an operating system. Base images normally include the tools (yum,  rpm, apt-get, dnf, [microdnf](https://www.google.com/url?q=https://github.com/rpm-software-management/microdnf&sa=D&ust=1506025300450000&usg=AFQjCNHSjUmJW3vk82k_66ZcVoTOI_oA_g)) necessary to install packages / make updates to the image over time.  While base images can be “hand crafted”, in practice they are typically  produced and published by open source projects (like Debian, Fedora or  CentOS) and vendors (like Red Hat). The provenance of base images is  critical for security. In short, the sole purpose of a base image is to  provide a starting place for creating your derivative images. When using a dockerfile, the choice of which base image you are using is explicit:
+Простими словами, базовий образ — це образ, який не має батьківського шару. Зазвичай базовий образ містить чисту копію операційної системи. Базові образи, як правило, включають інструменти (yum, rpm, apt-get, dnf, microdnf), необхідні для встановлення пакетів і подальшого оновлення образу. Хоча базові образи можуть створюватися вручну, на практиці вони зазвичай виробляються та публікуються проєктами з відкритим кодом (такими як Debian, Fedora або CentOS) і вендорами (наприклад, Red Hat). Походження базових образів є критично важливим з точки зору безпеки. Коротко кажучи, єдина мета базового образу — надати початкову точку для створення похідних образів. Під час використання dockerfile вибір базового образу є явним:
 
 ```
 FROM registry.access.redhat.com/rhel7-atomic
 ```
 
-### Builder Images
+### Builder Images (образи-збирачі)
 
-These are a specialized form of  container image which produce application container images as offspring. They include everything but a developer's source code. Builder images  include operating system libraries, language runtimes, middleware, and  the[ source-to-image](https://www.google.com/url?q=https://github.com/openshift/source-to-image&sa=D&ust=1506025300451000&usg=AFQjCNHEJPtVf9RKO6KHAnnPxywSrHWZeg) tooling.
+Це спеціалізований різновид контейнерних образів, які створюють образи контейнерів застосунків як результат своєї роботи. Вони містять усе, окрім вихідного коду розробника. Образи-збирачі включають бібліотеки операційної системи, середовища виконання мов програмування, проміжне програмне забезпечення, а також інструменти source-to-image.
 
-When a builder image is run, it injects  the developers source code and produces a ready-to-run offspring  application container image. This newly created application container  image can then be run in development or production.
+Під час запуску образу-збирача до нього підставляється вихідний код розробника, після чого він створює готовий до запуску дочірній контейнерний образ застосунку. Цей новостворений образ застосунку можна запускати як у середовищі розробки, так і в промисловому середовищі.
 
-For example, if a developer has PHP code  and they want to run it in a container, they can use a PHP builder image to produce a ready to run application container image. The developer  passes the GitHub URL where the code is stored and the builder image  does the rest of the work for them. The output of a Builder container is an Application container image which includes Red Hat Enterprise Linux, PHP from Software Collections, and the developer’s code, all together,  ready to run.
+Наприклад, якщо розробник має код на PHP і хоче запустити його в контейнері, він може скористатися PHP-образом-збирачем для створення готового до виконання контейнерного образу застосунку. Розробник передає URL репозиторію GitHub, у якому зберігається код, а образ-збирач виконує всю решту роботи. Результатом роботи контейнера-збирача є контейнерний образ застосунку, який включає Red Hat Enterprise Linux, PHP зі складу Software Collections та код розробника — усе разом, у вигляді готового до запуску образу.
 
-Builder images provide a powerful way to go from code to container quickly and easily, building off of trusted components.
+Образи-збирачі забезпечують потужний спосіб швидко перейти від коду до контейнера.
 
-### Containerized  Components
+### Containerized Components (контейнеризовані компоненти)
 
-A container is meant to be deployed as part of a larger software system, not on its own. Two major trends are driving this.
+Контейнер призначений для розгортання як частина більшої програмної системи, а не для самостійного використання. Цьому сприяють дві основні тенденції.
 
-First, microservices are driving the use  of best of breed components - this is also driving the use of more  components combined together to build a single application.  Containerized components are meeting the need to deploy an expanding  quantity of complex software more quickly and easily. Each of these  components can have different revisions, and container images help  enable this. Application definitions such as Kubernetes/OpenShift [deployments yaml/json](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), [open service broker](https://www.openservicebrokerapi.org/), [OpenShift Templates](https://docs.openshift.org/latest/dev_guide/templates.html), and [Helm Charts](https://helm.sh/) are all making it possible to define applications at a higher level.
+По-перше, мікросервісна архітектура стимулює використання найкращих у своєму класі компонентів, що водночас призводить до поєднання більшої кількості компонентів для побудови одного застосунку. Контейнеризовані компоненти задовольняють потребу швидшого та простішого розгортання зростаючої кількості складного програмного забезпечення. Кожен із таких компонентів може мати різні ревізії, і контейнерні образи допомагають це реалізувати. Опис застосунків за допомогою таких механізмів, як deployments у Kubernetes/OpenShift (yaml/json), Open Service Broker, OpenShift Templates та Helm Charts, дозволяє визначати застосунки на більш високому рівні абстракції.
 
-Second, not all pieces of software are easy to deploy as containers. Sometimes, it makes sense to containerize only certain components which are easier to move to containers or provide more value to the  overall project. With multi-service application, some services may be  deployed as containers, while others may be deployed through traditional a traditional methodology such as an RPM or installer script - see [Pet Containers](http://h.def2e0bag2rr). But, other components might be difficult to put into containers because they are too tightly coupled to break up, need access to special  hardware, or perhaps requires lower level kernel APIs, etc. Within a  larger application there will likely be parts of the application that  can be containerized, and parts that can't. Containerized components  represent the parts that can and are containerized. Containerized  components are intended to be ran as part of a specific application, not standalone. It’s important to understand that  containerized components are not designed to function on their own.  They provide value to a larger piece of software, but provide very  little value on their own.
+По-друге, не всі програмні компоненти легко розгортати у вигляді контейнерів. Іноді доцільно контейнеризувати лише окремі компоненти, які простіше перенести в контейнери або які дають більшу цінність для всього проєкту. У багатосервісному застосунку деякі сервіси можуть бути розгорнуті як контейнери, тоді як інші — за традиційною методологією, наприклад через RPM-пакети або інсталяційні скрипти (див. Pet Containers). Інші компоненти можуть бути складними для контейнеризації через надто тісну зв’язаність, потребу в спеціалізованому обладнанні або необхідність доступу до низькорівневих API ядра тощо. У межах великого застосунку зазвичай є частини, які можна контейнеризувати, і частини, які цього не допускають. Контейнеризовані компоненти представляють саме ті частини, які можуть і були контейнеризовані.
 
-For example, when OpenShift Enterprise  3.0 was released, most of the core code was deployed using RPMs, but  after installation administrators deployed the router and registry as  containers. With the release of OpenShift 3.1 an option was added to the installer to deploy the master, node, openvswitch and etcd components  as containers - after installation, administrators were given the option to deploy elasticsearch, fluentd, and kibana as containers.
+Контейнеризовані компоненти призначені для виконання як частина конкретного застосунку, а не як самостійні одиниці. Важливо розуміти, що вони не спроєктовані для автономної роботи. Вони надають цінність більшому програмному комплексу, але самі по собі мають обмежену корисність.
 
-While the OpenShift installer still makes modifications to a server’s file system, all of the major  software components can now be installed using container images. What  makes these containerized components is that, for example, an instance  of the etcd image built into OpenShift should and would never be used to store data for your customer facing application code, because it is a  containerized component designed to be run as part of OpenShift  Container Platform.
+Наприклад, під час випуску OpenShift Enterprise 3.0 більшість основного коду розгорталася за допомогою RPM-пакетів, але після інсталяції адміністратори розгортали маршрутизатор і реєстр як контейнери. Починаючи з OpenShift 3.1, до інсталятора було додано можливість розгортати компоненти master, node, openvswitch та etcd у вигляді контейнерів. Після встановлення адміністратори також могли розгорнути elasticsearch, fluentd та kibana як контейнери.
 
-With the latest releases of OpenShift,  there is a trend towards more and more containerized components. The  containerized component pattern is becoming more and more common and  other software vendors are seeing an advantage to deploying as  containerized components.
+Хоча інсталятор OpenShift і надалі вносить зміни до файлової системи сервера, усі основні програмні компоненти тепер можуть встановлюватися за допомогою контейнерних образів. Визначальною ознакою контейнеризованих компонентів є те, що, наприклад, екземпляр образу etcd, вбудований в OpenShift, не повинен і не буде використовуватися для зберігання даних клієнтського застосунку, оскільки це контейнеризований компонент, призначений для роботи саме в складі OpenShift Container Platform.
 
-### Deployer Images
+У нових випусках OpenShift спостерігається тенденція до збільшення кількості контейнеризованих компонентів. Шаблон контейнеризованих компонентів стає дедалі поширенішим, і інші вендори програмного забезпечення також бачать переваги в розгортанні своїх продуктів у вигляді контейнеризованих компонентів.
 
-A deployer image is a specialized kind of container which, when run, deploys or manages other containers. This  pattern enables sophisticated deployment techniques such as mandating  the start order of containers, or first run logic such as populating  schema or data.
+### Deployer Images (образи-розгортальники)
 
-As an example, the “image/container type” pattern is used to deploy the logging and metrics in OpenShift. Deploying these  components with a deployer container allows the OpenShift engineering  team to control start order of the different components and make sure  they are all up and running together.
+Образ-розгортальник — це спеціалізований тип контейнера, який під час запуску розгортає або керує іншими контейнерами. Цей шаблон дозволяє реалізовувати складні сценарії розгортання, наприклад примусовий порядок запуску контейнерів або логіку першого запуску, таку як ініціалізація схем чи заповнення початкових даних.
 
-### Intermediate Images
+Як приклад, шаблон «image/container type» використовується для розгортання журналювання та метрик в OpenShift. Розгортання цих компонентів за допомогою контейнера-розгортальника дозволяє інженерній команді OpenShift контролювати порядок запуску різних компонентів і гарантувати, що всі вони запускаються та працюють узгоджено.
 
-An Intermediate image is any container  image that relies on a base image. Typically, core builds, middleware  and language runtimes are built as layers on “top of” a base image.  These images are then referenced in the FROM directive of another image. These images are not used on their own, they are typically used as a  building block to build a standalone image.
+### Intermediate Images (проміжні образи)
 
-It is common to have different teams of  specialists own different layers of an image. Systems administrators may own the core build layer, while “developer experience” may own the  middleware layer. Intermediate Images are built to be consumed by other  teams building images, but can sometimes be run standalone too,  especially for testing.
+Проміжний образ — це будь-який контейнерний образ, який базується на базовому образі. Зазвичай базові збірки, проміжне програмне забезпечення та середовища виконання мов будуються у вигляді шарів поверх базового образу. Такі образи потім використовуються в директиві FROM іншого образу. Вони не призначені для самостійного використання, а зазвичай слугують будівельними блоками для створення автономного образу.
 
-### Intermodal Container Images
+Поширеною практикою є ситуація, коли різні команди спеціалістів відповідають за різні шари образу. Системні адміністратори можуть відповідати за базовий шар збірки, тоді як команда, відповідальна за досвід розробників, — за шар проміжного програмного забезпечення. Проміжні образи створюються для використання іншими командами, які будують кінцеві образи, але іноді можуть запускатися і самостійно, особливо для тестування.
 
-Intermodal container images, analogous to [intermodal shipping containers](http://www.worldshipping.org/about-the-industry/history-of-containerization/the-birth-of-intermodalism), are images that have hybrid architectures. For example, many Red Hat Software Collections images can be used in two ways. First, they can be used as simple Application Containers running a fully contained Ruby on Rails and Apache server. Second, they can be used as Builder Images inside of OpenShift Container  Platform. In this case, the output child images which contain Ruby on  Rails, Apache, and the application code which the [source to image](https://www.google.com/url?q=https://github.com/openshift/source-to-image&sa=D&ust=1506025300456000&usg=AFQjCNH6mW7P-0kgsW6TQjIc6fJZXlPY1Q) process was pointed towards during the build phase.
+### Intermodal Container Images (інтермодальні контейнерні образи)
 
-The [intermodal](http://www.worldshipping.org/about-the-industry/history-of-containerization/the-birth-of-intermodalism) pattern is becoming more and more common to solve two business problems with one container image.
+Інтермодальні контейнерні образи, за аналогією з інтермодальними вантажними контейнерами, є образами з гібридною архітектурою. Наприклад, багато образів Red Hat Software Collections можуть використовуватися двома способами. По-перше, як звичайні контейнери застосунків, у яких повністю ізольовано запускаються Ruby on Rails та сервер Apache. По-друге, вони можуть використовуватися як образи-збирачі всередині OpenShift Container Platform. У цьому випадку результатом є дочірні образи, що містять Ruby on Rails, Apache та код застосунку, на який під час фази збирання було спрямовано процес source-to-image.
 
-### System Containers
+Інтермодальний шаблон стає дедалі поширенішим, оскільки дозволяє розв’язувати одразу дві бізнес-задачі за допомогою одного контейнерного образу.
 
-When system software is distributed as a container, it often needs to run super privileged. To make this  deployment easier, and to allow these containers to start before the  container runtime or [orchestration](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.6yt1ex5wfo66), Red Hat developed a special container pattern called [System Containers](https://www.google.com/url?q=https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/managing_containers/running_system_containers&sa=D&ust=1506025300457000&usg=AFQjCNFdTAbrZJF0RVxRSjhXa_pJD-I4ZA). System Containers start early in the boot process and rely on the  atomic command and systemd to be started independent of any container  runtime or [orchestration](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.6yt1ex5wfo66). Red Hat provides System Containers for many pieces of software  including rsyslog, cockpit, etcd, and flanneld. In the future, Red Hat  will expand the list.
+### System Containers (системні контейнери)
 
-This design pattern will make it easier  for administrators to add these services to Red Hat Enterprise Linux and Atomic Host in a modular way.
+Коли системне програмне забезпечення поширюється у вигляді контейнера, воно часто потребує запуску з суперпривілеями. Щоб спростити таке розгортання і дозволити цим контейнерам запускатися ще до середовища виконання контейнерів або оркестрації, Red Hat розробила спеціальний шаблон контейнерів, який називається System Containers. Системні контейнери запускаються на ранньому етапі процесу завантаження системи і використовують команду atomic та systemd для запуску незалежно від будь-якого контейнерного runtime або оркестрації. Red Hat надає системні контейнери для багатьох компонентів програмного забезпечення, зокрема rsyslog, cockpit, etcd та flanneld. У майбутньому цей перелік буде розширюватися.
 
+Цей шаблон проєктування спрощує для адміністраторів модульне додавання таких сервісів до Red Hat Enterprise Linux та Atomic Host.
 
+## Висновок
 
-## Conclusion
+Контейнери досить прості у використанні, але під час побудови промислового контейнерного середовища складність зміщується за лаштунки. Щоб мати змогу обговорювати архітектуру та способи побудови середовища, важливо мати спільну номенклатуру. Поглиблюючись у проєктування та архітектуру середовища, легко натрапити на низку підводних каменів. Нижче наведено кілька ключових моментів, які варто пам’ятати.
 
-Containers are quite easy to consume, but when building a  production container environment, it shifts the complexity behind the  scenes. To be able to discuss architectures, and how you will build your environment, it's important to have shared nomenclature. There are a  lot of pitfalls as you dig deeper into building and architecting your  environment. We leave you with a couple of critical ones to remember.
+Люди часто використовують терміни контейнерний образ і репозиторій як взаємозамінні, а підкоманди docker не роблять чіткого розрізнення між образом і репозиторієм. Команди є доволі простими у використанні, але коли починаються архітектурні обговорення, важливо розуміти, що репозиторій насправді є центральною структурою даних.
 
-People often use the words container  image and repository interchangeably and the docker sub-commands don’t  make a distinction between an image and a repository. The commands are  quite easy to use, but once architecture discussions start, it’s  important to understand that a repository is really the central data  structure.
-
-It’s also quite easy to misunderstand the difference between a namespace, repository, image layer, and tag.  Each of these has an architectural purpose. While different vendors, and users are using them for different purposes, they are tools in our  toolbox.
+Також досить легко неправильно зрозуміти різницю між простором імен, репозиторієм, шаром образу та тегом. Кожен із цих елементів має своє архітектурне призначення. Хоча різні вендори та користувачі застосовують їх по-різному, всі вони є інструментами в нашому інженерному наборі.
 
 ![img](media/Scott2-300x186.png)
 
-The goal of this article is to leave  you with the ability to command this nomenclature so that more  sophisticated architectures can be created. For example, imagine that  you have just been charged with building an infrastructure that limits,  based on role, which namespaces, repositories, and even which image  layers and tags can be pushed and pulled based on business rules.  Finally, remember that how a container image is built will have profound effect on how it is to be run ([orchestrated](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#h.6yt1ex5wfo66), privileged, etc). 
+Мета цієї статті — дати вам можливість впевнено оперувати цією номенклатурою, щоб можна було створювати більш складні архітектури. Наприклад, уявіть, що вам доручили побудувати інфраструктуру, яка обмежує, залежно від ролі, до яких просторів імен, репозиторіїв, а також до яких шарів образів і тегів дозволено виконувати операції push і pull відповідно до бізнес-правил. Також варто пам’ятати, що спосіб, у який контейнерний образ зібраний, має суттєвий вплив на те, як він буде запускатися (оркеструватися, виконуватися з привілеями тощо).
 
-For further reading, check out the Architecting Containers series:
+Для подальшого ознайомлення перегляньте серію статей Architecting Containers:
 
 - [Architecting Containers Part 1: Why Understanding User Space vs. Kernel Space Matters](https://rhelblog.redhat.com/2015/07/29/architecting-containers-part-1-user-space-vs-kernel-space/)
 - [Architecting Containers Part 2: Why the User Space Matters](https://rhelblog.redhat.com/2015/09/17/architecting-containers-part-2-why-the-user-space-matters-2/)
 - [Architecting Containers Part 3: How the User Space Affects Your Application](https://rhelblog.redhat.com/2015/11/10/architecting-containers-part-3-how-the-user-space-affects-your-application/)
 
-As always, if you have comments or questions, please leave a message below.
+Як завжди, якщо у вас є коментарі або запитання, залишайте повідомлення нижче.
 
 
 
