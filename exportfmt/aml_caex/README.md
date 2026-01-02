@@ -29,6 +29,7 @@
 - [Формати CAEX та AutomationML: теоретична частина](teor.md)
 - [CAEX - Computer Aided Engineering eXchange](caex.md)
 - [AutomationML - Automation Markup Language](aml.md)
+- [AutomationML Communication - переклад білої книги](amlcommuncation.md)
 
 ## Практична частина
 
