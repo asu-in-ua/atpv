@@ -325,7 +325,7 @@ C:\Users\<username>\.node-red
 ## Автор
 
 
-Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
 
 
 
