@@ -2,12 +2,10 @@
 
 # Системи керування версіями
 
-## Загальні теми
+## Git
 
-- [Системи керування версіями](git/README.md)
+- [Основи систем керування версіями та Git](git/README.md)
 
-## Git, GitHub, GitLab
+## GitHub
 
-- [Як почати користуватися GitHub для створення документів та сайту ](workshop1/README.md)
-- [Робота з віддаленими сховищами в Git/GitHub](github/README.md)
-
+- [Основи GitHub](github/README.md)
