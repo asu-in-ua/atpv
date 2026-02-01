@@ -11,6 +11,7 @@
 ## Швидкі старти
 
 - [Основи роботи з UNITY PRO: швидкий старт](faststartm340/README.md)
+- [Вступ до Control Expert](faststartcontrolexpert/README.md)
 
 
 
