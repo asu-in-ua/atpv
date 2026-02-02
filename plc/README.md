@@ -8,6 +8,12 @@
 
 
 
+## Розподіл по платформам
+
+- [PLC MachineStruxure M241, M251, M262 та інші](ecostruxuremachineexpert.md)
+
+
+
 ## Швидкі старти
 
 - [Основи роботи з UNITY PRO: швидкий старт](faststartm340/README.md)
@@ -75,6 +81,10 @@
 - [Приклади роботи з датою та часом](app_dt/README.md)
 - [Приклади роботи зі структурами, масивами, циклами](app_udt/README.md)
 - [Приклади використанням інтерполяції](app_interpol/README.md)
+
+
+
+
 
 
 
