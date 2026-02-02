@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)		[Коментувати](#feedback)
 
 # Реалізація контурів регулювання з використанням виконавчих механізмів типу МЕО в UnityPRO/ControlExpert: практична частина
 
@@ -204,10 +204,17 @@
 
 Алгоритм роботи блоку *SERVO* працює таким чином, що у ручному режимі він буде видавати сигнали "більше" та "менше" відповідно до значення входу *INPD* на кожному циклу. Враховуючи що змінна *TC2_OUTD* обновлюється з періодичністю виклику *TC2* (500 мс), а блок *TS2* з кожним циклом, протягом 500 мс блок *TS2* буде формувати нові імпульси. Для того щоб уникнути цього ефекту, в ручному режимі (*TC2_AUTO=FALSE*) змінна *TC2_OUTD* обнуляється після обробки контуру.
 
-## Демонстрація роботи
+## Автори
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zLANv0IUpps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h1hwtiYtE-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Практичне заняття розробив  [Олександр Пупена](https://github.com/pupenasan). 
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

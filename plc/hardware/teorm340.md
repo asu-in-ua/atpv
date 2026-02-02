@@ -1,3 +1,5 @@
+[<- До підрозділу](README.md)		[Коментувати](#feedback)
+
 # Апаратне забезпечення контролерів Modicon M340
 
 ## 1. Фізична структура Modicon М340
@@ -533,3 +535,18 @@ I3V3_BAC3,3 В + I24V_BAC24 В ≤ PPS                  (2.3)
 | BMX DDM 16025            | 100                | 50                              | 30   |      |
 | BMX DDM 3202 K           | 150                | -                               | 55   |      |
 | Модуль розширення        | BMX XBE  1000      | 22                              | 160  | -    |
+
+## Автори
+
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

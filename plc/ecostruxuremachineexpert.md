@@ -2,9 +2,10 @@
 
 # PLC MachineStruxure M241, M251, M262 та інші
 
-## Теретичні матеріали
+## Теоретичні матеріали
 
 - [Апаратне забезпечення контролерів Modicon M241](hardware/teorm241.md)
+- [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
 
 ## Практичні заняття
 

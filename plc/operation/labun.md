@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)		[Коментувати](#feedback)
 
 # Основи програмування ПЛК М340: практична частина
 
@@ -163,8 +163,17 @@ UNITY PRO по відношенню до ПЛК може знаходитись 
 
 Операторські екрани в UNITY PRO створюються екрани в розділі проекту Operaor Screens. Для можливості зміни значень в операторських екранах необхідно викликати команду Services -> Enable Variable Modification. 
 
-Як працювати з операторськими екранами можна подивитися в цьому відео:
+## Автори
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/421b-vTdXTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+Практичне заняття розробив  [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

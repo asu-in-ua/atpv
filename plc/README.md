@@ -11,6 +11,9 @@
 ## Розподіл по платформам
 
 - [PLC MachineStruxure M241, M251, M262 та інші](ecostruxuremachineexpert.md)
+- [PLC M220, M221 Machine Expert Basic](machineexpertbasic.md)
+- [PLC S7-1200, S7-1500 TIA Protal](tia1200.md)
+- [PLCNext](plcnext.md)
 
 
 
