@@ -5,9 +5,10 @@
 ## Теоретичні матеріали
 
 - [Апаратне забезпечення контролерів Modicon M241](hardware/teorm241.md)
-- [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
 - [Робота з даними в Machine Expert: теоретична частина](data/teorm241.md)
+- [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
 
 ## Практичні заняття
 
 - [Встановлення середовища, створення та запуск проєкту EcoStruxure Machine Expert ](ide/lab_mach_expert.md)
+- [Конфігурування локальної та розподіленої системи I/O M241 в Machine Expert : практична частина](hardware/lab_m241.md)
