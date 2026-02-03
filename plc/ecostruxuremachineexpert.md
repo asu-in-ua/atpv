@@ -6,6 +6,7 @@
 
 - [Апаратне забезпечення контролерів Modicon M241](hardware/teorm241.md)
 - [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
+- [Робота з даними в Machine Expert: теоретична частина](data/teorm241.md)
 
 ## Практичні заняття
 
