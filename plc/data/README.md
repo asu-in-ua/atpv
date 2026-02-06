@@ -41,7 +41,7 @@
 
 - [Робота з даними в PLCnext](teorplcnext.md)
 
-## M241
+## EcoStruxure Machine Expert
 
 - [Робота з даними в Machine Expert: теоретична частина](teorm241.md)
 

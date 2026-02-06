@@ -37,11 +37,14 @@
 
 - [Програмні сутності POU (Функції, процедури та функціональні блоки) в UnityPRO](teorun.md)
 - [Приклади роботи з підпрограмами та функціональними блоками користувача UnityPRO/Control Expert](exmplun.md)
-- 
 
 ## PLCNext
 
 - [Програмні сутності POU в PLCnext](teorplcnext.md)
+
+## EcoStruxure Machine Expert
+
+- [Програмні сутності POU в в Machine Expert: теоретична частина](teormachexpert.md)
 
 ## Перевірка знань
 
