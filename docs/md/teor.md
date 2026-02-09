@@ -1164,6 +1164,9 @@ journey
 1. [LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 1. [Mermaid](https://mermaid.js.org)
 
+## Відеозаписи лекцій 
+
+- [Лек.2.1. Створення документації на основі MarkDown](https://youtu.be/B-s3QVcrIwM)
 
 ## Автори
 
