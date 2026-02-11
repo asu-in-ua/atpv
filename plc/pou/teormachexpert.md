@@ -260,7 +260,10 @@ erg := FBinstexample.out_var;	//зчитується вихідна змінна
 
 якщо Дія в екземплярі Функціонального Блока.
 
+## Джерела
 
+1. Modicon M241 Logic Controller User Guide, 04/2021, Schneider Electric 
+2. EcoStruxure Machine Expert Software User Guide, 09/2021, Schneider Electric
 
 ## Автори
 

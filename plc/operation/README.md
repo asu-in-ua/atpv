@@ -37,7 +37,9 @@
 - [Функціонування, операційні режими, задачі ПЛК в UnityPRO/Control Expert](teorun.md)
 - [Основи програмування ПЛК М340: практична частина](labun.md)
 
+## ПЛК M241 в  EcoStruxure Machine Expert
 
+- [Функціонування, операційні режими, задачі ПЛК в Machine Expert](teormachexpert.md)
 
 ## Перевірка знань
 

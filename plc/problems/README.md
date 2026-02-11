@@ -26,14 +26,13 @@
 - Bolton, W. Designing Industrial Control Systems. 4th edition. Oxford: Elsevier Newnes, 2006.
 - Parr, E. A. Programmable Controllers: An Engineer’s Guide. 3rd edition. Oxford: Newnes (Elsevier), 2003. ISBN 0-7506-5757-X.
 - Hackworth, John R.; Hackworth, Frederick D., Jr. Programmable Logic Controllers: Programming Methods and Applications. Upper Saddle River, NJ: Prentice Hall, 2004.
+- Jürgen Kaftan SPS-Beispiele mit SIMATIC S7
 
 ## Загальна теоретична частина
 
 - [Авторські задачі від Олександра Пупени](pupena.md)
-
 - [Задачі з книги Frank Petruzella](petruzella.md)
-
-- 
+- [Задачі з книги Bolton](bolton.md)
 
 ## Перевірка знань
 
