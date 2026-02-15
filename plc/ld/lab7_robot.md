@@ -336,6 +336,4 @@
 
 **Приклад роботи з віртуальним стендом можна подивитися у наступному відео:** https://youtu.be/AlzEJIRDaIQ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AlzEJIRDaIQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Розробив лабораторну - Полупан Володимир. [АКТСУ НУХТ](http://www.iasu-nuft.pp.ua)

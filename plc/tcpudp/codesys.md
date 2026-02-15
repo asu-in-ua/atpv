@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md)	[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md)	[CODESYS (загальна)](../codesys.md)	[Коментувати](#feedback)
 
 # Бібліотека NetBaseServices Codesys: TCP/UDP
 

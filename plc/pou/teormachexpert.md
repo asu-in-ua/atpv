@@ -1,6 +1,8 @@
-[<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md)	[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md) 	[CODESYS (загальна)](../codesys.md)	[Коментувати](#feedback)
 
-# Програмні сутності POU в в Machine Expert: теоретична частина
+# Програмні сутності POU в в Machine Expert і CODESYS: теоретична частина
+
+У цій лекції теорія дається в контексті ПЗ Machine Expert, який базується на CODESYS.
 
 ## POU
 

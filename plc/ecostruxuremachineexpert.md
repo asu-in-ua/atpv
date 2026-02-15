@@ -10,6 +10,7 @@
 - [Функціонування, операційні режими, задачі ПЛК в Machine Expert](operation/teormachexpert.md)
 - [Організація пам'яті в M241: теоретична частина : теоретична частина](memory/teorm241.md)
 - [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
+- [CODESYS Control Win: теоретична частина ](simul/teorcodesyscontrolwin.md)
 
 
 
@@ -17,3 +18,5 @@
 
 - [Встановлення середовища, створення та запуск проєкту EcoStruxure Machine Expert ](ide/lab_mach_expert.md)
 - [Конфігурування локальної та розподіленої системи I/O M241 в Machine Expert : практична частина](hardware/lab_m241.md)
+- [Реалізація Modbus TCP Server](../filedbus/modbusadvanced/mbserver_codesys.md)
+- [Встановлення та робота з CODESYS Control Win: практичне заняття](simul/labcodesyscontrolwin.md)
