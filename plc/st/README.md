@@ -32,7 +32,9 @@
 
 - [Програмування на мові ST в UnityPRO/Control Expert](teorun.md)
 
+## CODESYS / Machine Expert
 
+- [Програмування на мові ST в CODESYS](teorcodesys.md)
 
 ## Перевірка знань
 
