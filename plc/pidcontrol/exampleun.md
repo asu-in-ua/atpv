@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)		[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[PLC M340, M580 Control Expert/Unity Pro](../controlexpert.md)		[Коментувати](#feedback)
 
 # Приклади реалізації ПІ та ПІД-регулювання в UnityPRO/Control Expert
 

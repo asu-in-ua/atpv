@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)		[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[PLC M340, M580 Control Expert/Unity Pro](../controlexpert.md)		[Коментувати](#feedback)
 
 # Конфігурування ПЛК та робота зі змінними I/O в М340: практична частина
 

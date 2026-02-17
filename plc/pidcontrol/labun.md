@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)		[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[PLC M340, M580 Control Expert/Unity Pro](../controlexpert.md)		[Коментувати](#feedback)
 
 # Основи регулювання в UnityPRO/ControlExpert: практична частина
 
