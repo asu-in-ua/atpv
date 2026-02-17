@@ -42,6 +42,7 @@
 - [Програмні сутності POU в в Machine Expert: теоретична частина](teormachexpert.md)
 - [Функціонування, операційні режими, задачі ПЛК в Machine Expert](../operation/teormachexpert.md)
 - [Організація пам'яті в M241: теоретична частина : теоретична частина](../memory/teorm241.md)
+- [Програмування на мові ST в CODESYS: теоретична частина](../st/teorcodesys.md)
 
 ## 1. Програми
 

@@ -1,6 +1,6 @@
 [<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md) 	[CODESYS (загальна)](../codesys.md)	[Коментувати](#feedback)
 
-# Програмування на мові ST в CODESYS
+# Програмування на мові ST в CODESYS: теоретична частина
 
 ## 1. Мова Structured Text (ST)
 
