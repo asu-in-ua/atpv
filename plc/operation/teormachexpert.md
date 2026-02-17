@@ -627,6 +627,10 @@ VAR myVariable AT %MW0 : WORD; END_VAR
 1. Modicon M241 Logic Controller User Guide, 04/2021, Schneider Electric 
 2. EcoStruxure Machine Expert Software User Guide, 09/2021, Schneider Electric
 
+## Відео
+
+- [Лек.2.1. Функціонування, операційні режими, задачі ПЛК в Machine Expert](https://youtu.be/JHxIUqAX_dk)
+
 ## Автори
 
 

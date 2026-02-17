@@ -297,6 +297,10 @@ M241 має вбудовані дискретні входи, які можут�
 1. Modicon M241 Logic Controller User Guide, 04/2021, Schneider Electric 
 2. EcoStruxure Machine Expert Software User Guide, 09/2021, Schneider Electric
 
+## Відео
+
+- [Лек.1.2. Апаратні засоби для контролю та керування машинами в системі PLC - M241](https://youtu.be/MK69mBsBqxc)
+
 ## Автори
 
 
