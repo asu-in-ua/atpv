@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[PLC M220, M221 Machine Expert Basic](../machineexpertbasic.md) 	[Коментувати](#feedback)
 
 # Створення власних функцій та функціональних блоків в EcoStruxure Machine Expert Basic: практична частина  
 
@@ -340,4 +340,17 @@ S = Smin + (R-Rmin)(Smax-Smin)/(Rmax-Rmin) 				(10.2)
 
 
 
-Розробив лабораторну - Олександр Пупена. [АКТСУ НУХТ](http://www.iasu-nuft.pp.ua)
+## Автори
+
+
+Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

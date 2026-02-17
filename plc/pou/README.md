@@ -31,6 +31,7 @@
 ## ПЛК M221 в EcoStruxure Machine Expert - Basic
 
 - [Розробка власних функціональних елементів в в EcoStruxure Machine Expert - Basic](teorm221.md)
+- [Робота з функціональними блоками в EcoStruxure Machine Expert Basic: практична частина ](labm221_base.md)
 - [Створення власних функцій та функціональних блоків в EcoStruxure Machine Expert Basic: практична частина](labm221.md)
 
 ## UnityPRO/Control Expert
@@ -45,6 +46,7 @@
 ## EcoStruxure Machine Expert
 
 - [Програмні сутності POU в в Machine Expert: теоретична частина](teormachexpert.md)
+- [Програмні сутності в Machine Expert і CODESYS: практична частина](labmachexpert.md)
 
 ## Перевірка знань
 

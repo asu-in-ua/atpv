@@ -18,5 +18,6 @@
 
 - [Встановлення середовища, створення та запуск проєкту EcoStruxure Machine Expert ](ide/lab_mach_expert.md)
 - [Конфігурування локальної та розподіленої системи I/O M241 в Machine Expert : практична частина](hardware/lab_m241.md)
+- [Програмні сутності в Machine Expert і CODESYS: практична частина](pou/labmachexpert.md)
 - [Реалізація Modbus TCP Server](../filedbus/modbusadvanced/mbserver_codesys.md)
 - [Встановлення та робота з CODESYS Control Win: практичне заняття](simul/labcodesyscontrolwin.md)
