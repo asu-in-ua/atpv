@@ -31,7 +31,8 @@
 
 ## Практична частина
 
-- [Основи Ethernet та IP: практична частина](lab.md)
+- [Основи Ethernet та IP: практична частина (VM Windows XP)](lab.md)
+- [Основи Ethernet та IP: практична частина (VM Windows 10)](labwin10.md)
 
 ## Перевірка знань
 
