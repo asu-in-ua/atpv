@@ -1,4 +1,4 @@
- [Зміст](../contents.md)
+[< -- До розділу](../README.md)     [Зміст](../contents.md)
 
 # PLC MachineStruxure M241, M251, M262 та інші
 
@@ -12,6 +12,10 @@
 - [Програмування на мові ST в CODESYS](st/teorcodesys.md)
 - [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
 - [CODESYS Control Win: теоретична частина ](simul/teorcodesyscontrolwin.md)
+- [ControlLoopLibrary Library CodeSYS](contcontrol/controllooplibcodesys.md)
+- [ПІ та ПІД-регулювання в ControlLoopLibrary в CODESYS: теоретичні відомості](pidcontrol/teorcodesys.md)
+- [Обробка сигналів в контурі регулювання з ControlLoopLibrary в CODESYS: теоретичні відомості](signcontrol/teorcodesys.md)
+- [Налагодження програм користувача в CODESYS: теоретичні відомості](debug/teorcodesys.md)
 
 
 
