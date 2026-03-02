@@ -32,7 +32,14 @@
 
 - [Обробка сигналів в контурі регулювання UnityPRO/Control Expert](teorun.md)
 
+## CodeSys
 
+- [Обробка сигналів в контурі регулювання з ControlLoopLibrary в CODESYS: теоретичні відомості](teorcodesys.md)
+
+## Machine Expert
+
+- [Обробка сигналів в контурі регулювання з Toolbox в Machine Expert: теоретичні відомості](teormachexpert.md)
+- [Імітаційна модель об'єкта в Machine Expert з використанням Filter_PT1: практична частина ](labmachexpert.md)
 
 ## Перевірка знань
 

@@ -34,7 +34,13 @@
 - [Реалізація контурів регулювання в  UnityPRO/Control Expert](teorun.md)
 - [Приклади реалізації стабілізаційного регулювання в  UnityPRO/Control Expert](exampleun.md)
 
+## CodeSYS
 
+- [ControlLoopLibrary Library CodeSYS](controllooplibcodesys.md)
+
+## Machine Expert 
+
+- [Toolbox в Machine Expert: теоретичні відомості](toolboxmachexpert.md)
 
 ## Перевірка знань
 

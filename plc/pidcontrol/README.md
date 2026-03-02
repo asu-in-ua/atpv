@@ -44,6 +44,15 @@
 
 - [PID регулятор з PID_Compact](teorcompacttia.md)
 
+## CodeSys
+
+- [ПІ та ПІД-регулювання в ControlLoopLibrary в CODESYS: теоретичні відомості](teorcodesys.md)
+
+## Machine Expert
+
+- [ПІ та ПІД-регулювання в Toolbox в Machine Expert: теоретичні відомості](teormachexpert.md)
+- [Основи ПІ регулювання з використанням Toolbox в Machine Expert : практична частина](labmachexpert.md)
+
 ## Перевірка знань
 
 todo

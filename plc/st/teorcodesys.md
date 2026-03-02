@@ -533,7 +533,7 @@ END_REPEAT
 ## Автори
 
 
-Теретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
 
 ## Feedback
 

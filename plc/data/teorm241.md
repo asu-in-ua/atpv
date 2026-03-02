@@ -1,6 +1,6 @@
-[<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md)	[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[PLC MachineStruxure](../ecostruxuremachineexpert.md)	[CODESYS (загальна)](../codesys.md) 	[Коментувати](#feedback)
 
-# Робота з даними в Machine Expert: теоретична частина
+# Робота з даними в Machine Expert/CODESYS: теоретична частина
 
 У даному розділі розглядаються тільки базові можливості роботи з даними без урахування можливостей об'єктно-орієнтованого програмування таких як, інтерфейси, методи, наслідування тощо.  
 

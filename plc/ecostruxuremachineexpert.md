@@ -13,9 +13,13 @@
 - [Бібліотека NetBaseServices Codesys: TCP/UDP](tcpudp/codesys.md)
 - [CODESYS Control Win: теоретична частина ](simul/teorcodesyscontrolwin.md)
 - [ControlLoopLibrary Library CodeSYS](contcontrol/controllooplibcodesys.md)
+- [Toolbox в Machine Expert: теоретичні відомості](contcontrol/toolboxmachexpert.md)
 - [ПІ та ПІД-регулювання в ControlLoopLibrary в CODESYS: теоретичні відомості](pidcontrol/teorcodesys.md)
+- [ПІ та ПІД-регулювання в Toolbox в Machine Expert: теоретичні відомості](pidcontrol/teormachexpert.md)
 - [Обробка сигналів в контурі регулювання з ControlLoopLibrary в CODESYS: теоретичні відомості](signcontrol/teorcodesys.md)
+- [Обробка сигналів в контурі регулювання з Toolbox в Machine Expert: теоретичні відомості](signcontrol/teormachexpert.md)
 - [Налагодження програм користувача в CODESYS: теоретичні відомості](debug/teorcodesys.md)
+- 
 
 
 
@@ -24,5 +28,7 @@
 - [Встановлення середовища, створення та запуск проєкту EcoStruxure Machine Expert ](ide/lab_mach_expert.md)
 - [Конфігурування локальної та розподіленої системи I/O M241 в Machine Expert : практична частина](hardware/lab_m241.md)
 - [Програмні сутності в Machine Expert і CODESYS: практична частина](pou/labmachexpert.md)
+- [Імітаційна модель об'єкта в Machine Expert з використанням Filter_PT1: практична частина ](signcontrol/labmachexpert.md)
+- [Основи ПІ регулювання з використанням Toolbox в Machine Expert : практична частина](pidcontrol/labmachexpert.md)
 - [Реалізація Modbus TCP Server](../filedbus/modbusadvanced/mbserver_codesys.md)
 - [Встановлення та робота з CODESYS Control Win: практичне заняття](simul/labcodesyscontrolwin.md)
