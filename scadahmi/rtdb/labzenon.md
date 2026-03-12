@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
 # Практичне заняття SCADA zenon: створення змінних
 
@@ -57,7 +57,7 @@
 
 - Закінчіть конфігурування драйверу натиснувши кнопку *OK*
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/R_XnzFzaVxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=R_XnzFzaVxw)
 
 ### 2. Типи даних
 
@@ -93,7 +93,7 @@
 
 Далі аналогічним чином додайте до структури елемент 'Пуск\Стоп': BOOL та 'Клапан': BOOL, Dim1=4.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/nHP-1gR0sIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=nHP-1gR0sIc)
 
 ### 3. Створення змінних
 
@@ -138,7 +138,7 @@
 
 Давайте виконаємо аналогічні дії, але вже з використанням структурованого типу даних.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/m0VBKVsQlXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=m0VBKVsQlXo)
 
 #### Завдання 4. Створення структурованої змінної
 
@@ -164,7 +164,7 @@
 
 На цьому, наше знайомство зі створенням змінних можна вважати завершеним.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/N7EgBMnIZGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=N7EgBMnIZGk)
 
 ## Порядок приймання роботи 
 
@@ -180,4 +180,16 @@
 6. Як створюються структуровані змінні в SCADA zenon?
 7. Прокоментуйте призначення властивостей змінних, які змінювалися в лабораторній роботі.
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко.
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

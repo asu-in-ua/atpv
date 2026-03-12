@@ -1,6 +1,6 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
-# Організація проектів у SCADA zenon
+# Організація проектів у SCADA zenon : теоретична частина
 
 ## 1. Основні компоненти середовищ розроблення та виконання 
 
@@ -127,4 +127,17 @@ SCADA zenon дає можливість компілювати проекти п
 
 Команда "Start Remote Desktop connection" викликає доступ до віддаленого керування або контролю робочого столу цільової системи. Перед цим на цільовому ПК необхідно активувати цю опцію і налаштувати через утиліту zenon "Remote Desktop Server configuration". 
 
+## Автори
+
+
 Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

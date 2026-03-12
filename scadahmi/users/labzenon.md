@@ -1,6 +1,6 @@
-[На основну сторінку курсу](../../README.md)     [До списку лабораторних](../README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
-# Лабораторна робота №7
+# Адміністрування користувачів та блокування : практична частина
 
 **Тема. Адміністрування користувачів та блокування**
 
@@ -59,7 +59,7 @@
 - На вкладці *Change* *password* введіть 6-ти значний пароль
 - На вкладці *Authorization* *levels* для цього користувача визначіть рівень доступу 1 та 2
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/RFKxAccmlZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=RFKxAccmlZI)
 
 ### 2. Додаткові налаштування
 
@@ -79,7 +79,7 @@
 
 Після компілювання проекту цю галочку можна повернути назад.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/aZXgIwXzE00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=aZXgIwXzE00)
 
 ### 3. Прив’язка рівнів доступу
 
@@ -121,7 +121,7 @@
 
 Зазвичай така  тимчасова процедура авторизації використовується в окремих конкретно  визначених випадках і для керування цілим проектом є неприйнятною.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/YvpwK-2j1io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=YvpwK-2j1io)
 
 ### 4. Створення екрану авторизації
 
@@ -150,7 +150,7 @@
 - Через головне меню *Control* *elements* розмістіть на екрані стандартний кнопочний шаблон
 - Підредагуйте розміри елементів згідно розмірів екрану
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/QFBqe1US35g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=QFBqe1US35g)
 
 ### 5. Робота з екраном авторизації
 
@@ -172,7 +172,7 @@
 
 Після реалізації  системи доступу, перевірте роботу усіх елементів керування, яким ми  визначили різні рівні доступу: без авторизації користувача, з  авторизацією як 'Оператор' і 'Інженер'.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/_Iv8yPc_1PY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=_Iv8yPc_1PY)
 
 ### 6. Візуалізація авторизації
 
@@ -213,7 +213,7 @@
 
 Для того, щоб графічне зображення замка в нас не  плуталось з зображенням заблокованих елементів технологією блокувань,  яку ми розглянемо пізніше, давайте встановимо усі елементи, для яких  потрібна авторизація, в сірий колір, а виконаний нами другий пункт  відмініть.
 
- <iframe width="640" height="360" src="https://www.youtube.com/embed/OdC2JK3_mP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ [Відео](https://www.youtube.com/watch?v=OdC2JK3_mP0)
 
 ### 7. Функції адміністратора
 
@@ -278,7 +278,7 @@ Authorization levels: `0, 1`
 
 Докладніше про систему адміністрування можна познайомитись в мануалі User administration.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/tSVKmAh0WRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=tSVKmAh0WRQ)
 
 ### 8. Блокування
 
@@ -318,7 +318,7 @@ Authorization levels: `0, 1`
 
 - Після натиснення кнопки *OK* створення блокування буде завершеним
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/wfkaGZunChc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=wfkaGZunChc)
 
 **Прив’язка до елементу**
 
@@ -349,7 +349,7 @@ Authorization levels: `0, 1`
 
 Докладніше про блокування можна прочитати в мануалі Interlockings.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/mn21nrvIJIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=mn21nrvIJIc)
 
 ## Порядок прийому роботи 
 
@@ -365,3 +365,17 @@ Authorization levels: `0, 1`
 6. Як в SCADA zenon організоване створення та редагування користувачів?
 7. Наведіть приклади навіщо необхідне блокування функцій людино-машинного інтерфейсу?
 8. Як в SCADA zenon реалізовані функції блокування?  
+
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

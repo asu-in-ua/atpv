@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
 # Практичне заняття SCADA zenon:  Розроблення головних та контекстних меню
 
@@ -52,7 +52,7 @@
 
 ![img](media8/3.png) ![img](media8/4.png) ![img](media8/5.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/cyq4X9PUHo0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=cyq4X9PUHo0)
 
 ### 2. Означення дій
 
@@ -83,7 +83,7 @@
 
 На цьому конфігурування пунктів меню завершене.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/AFQUHDNUq8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=AFQUHDNUq8k)
 
 ### 3. Активація головного меню
 
@@ -109,7 +109,7 @@
 
 Запустіть Runtime і перевірте роботу меню.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/grDibtiEhcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=grDibtiEhcQ)
 
 ### 4. Контекстне меню
 
@@ -151,7 +151,7 @@
 
 Докладніше про створення меню можна познайомитись в мануалі Menus.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/i1mF3_J93S4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=i1mF3_J93S4)
 
 ## Порядок прийому роботи 
 
@@ -164,4 +164,16 @@
 3. Що означує `Action type` в меню і які були використані в лабораторній роботі і для чого?
 4. Розкажіть про можливості вибірки контексту з елементу в контекстне меню. 
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко.
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)		[Коментувати](#feedback)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
 # Робота з SQL драйверами zenon: практична частина
 

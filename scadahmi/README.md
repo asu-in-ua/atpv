@@ -2,6 +2,8 @@
 
 # Програмні засоби SCADA/HMI, тривожної сигналізації та Historian
 
+## Тематичні розділи
+
 - [Призначення та можливості людино-машинних інтерфейсів та збирання даних в автоматизованих системах керування](basic/README.md)
 - [Загальні принципи розроблення SCADA/HMI](basedesign/README.md)
 - [Підсистема керування збором та обробленням даних в реальному часі](rtdb/README.md)
@@ -29,4 +31,17 @@
 - [Промисловий Інтернет речей та інтеграція з хмарними застосунками](iiot/README.md)
 - [Основи кібербезпеки в АСКТП](cybersecurity/README.md)
 - [Життєвий цикл SCADA/HMI](lifecycle/README.md)
+
+
+
+## Розділи по платформам
+
+- [SCADA Citect / Plant SCADA](plantscada.md)
+
+- [SCADA zenon](zenon.md)
+
+- [WinCC Comfort](wincccomfort.md)
+- [AVEVA Edge](avevaedge.md)
+
+
 

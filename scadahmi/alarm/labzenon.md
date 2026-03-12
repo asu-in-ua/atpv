@@ -1,6 +1,6 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
-# Тривоги та події
+# Тривоги та події: практична частина
 
 **Тривалість**: 4 акад. години (2 пари).
 
@@ -36,7 +36,7 @@
 
 *Майте на увазі, що після вибору спеціального типу для екрану, потім змінити його на інший вже не можна.*
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/sb4akMdPzic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео створення екрану CEL SCADA zenon](https://youtu.be/sb4akMdPzic?si=1G9o25PMx_LEVmpe)
 
 #### Завдання 5.2: Розміщення на екрані елементів
 
@@ -54,7 +54,8 @@
 
 Непотрібні кнопки чи текстові поля можна видаляти.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/GW-2xR3fl6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео використання кнопочного шаблону SCADA zenon](https://youtu.be/GW-2xR3fl6E?si=RXyvvXN-tojYy2x7)
+
 
 ### 2. Створення функції виклику екрану CEL
 
@@ -108,8 +109,9 @@
 Якщо в проекті виконане моделювання обладнання, то тут можна визначити відображення списку подій, що стосуються певного  обладнання.
 
 - На даному кроці нічого змінювати не потрібно, тому просто закінчіть створення та конфігурування функції натиснувши кнопку *OK*. 
+https://www.youtube.com/watch?v=
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Au5l8Yx75FU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Au5l8Yx75FU)
 
 ### 3. Робота з екраном CEL
 
@@ -135,7 +137,7 @@
 
 Виконайте  перемикання між екранами `Процес` та `Хронологія` і перевірте як працює  збережений профіль. За бажанням зробіть інші налаштування списку.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/orjamvOIJ3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=orjamvOIJ3k)
 
 ### 4. Реєстрація лімітних значень
 
@@ -162,7 +164,7 @@
 
 Для поліпшення взаємодії оператора з екраном хронології існує спеціальний тип екрану - *Chronological* *Event* *List* *Filter,* який дозволяє в зручному вигляді здійснювати фільтрування списку подій  по часу чи заданому ключовому слову. Цей екран фільтру повинен  базуватись на своєму індивідуальному фреймі (як спливаюче pop-up вікно). Виклик такого екрану можна здійснювати через відповідну кнопку фільтру, чи разом з перемиканням на екран Хронологічного списку подій. Докладніше про створення і роботу з екраном типу CEL можна познайомитись в мануалі Chronological Event List.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/652Cfc_8jC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=652Cfc_8jC0)
 
 ### 5. Створення екрану тривог (AML)
 
@@ -182,7 +184,7 @@
 
 - Для переходу на цей екран аналогічно до попередніх пунктів створіть функцію *Screen* *switch*.  При створенні функції перемикання екранів з’явиться діалогове вікно конфігурування, яке має опції налаштування відображення тривог. Діалогове вікно  конфігурування має шість вкладок, суть яких подібна до тих, що були для  функції перемикання на екран `Хронології`. Залиште усі налаштування  які стоять за замовчуванням. Закінчіть створення та конфігурування  функції натиснувши кнопку *OK* і перейменуйте її в `Перехід на екран Тривоги`.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/QCEH4ot1Ry0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=QCEH4ot1Ry0)
 
 #### Завдання 5.9: Створення кнопки виклику екрану AML
 
@@ -218,7 +220,7 @@
 
 - Перевірте в Runtime спрацювання цієї тривоги.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Hf2C84JuyGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Hf2C84JuyGo)
 
 ### 7. Матриці реакції та додаткові налаштування
 
@@ -243,7 +245,7 @@
 
 - Конфігурування матриці реакції закінчіть кнопкою *OK*
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/-dFqi47mS8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=-dFqi47mS8c)
 
 #### Завдання 5.12: Прив'язка матриці реакцій до змінної.
 
@@ -268,7 +270,7 @@
 
 Для поліпшення взаємодії оператора з екраном тривог існує спеціальний тип екрану – *Alarm* *Message* *List* *Filter,* який дозволяє в зручному вигляді здійснювати фільтрування списку подій  по часу чи заданому ключовому слову. Цей екран фільтру повинен  базуватись на своєму індивідуальному фреймі (як спливаюче pop-up вікно). Виклик такого екрану можна здійснювати через відповідну кнопку фільтру, чи разом з перемиканням на екран Інформаційного списку подій. Докладніше про створення і роботу з екраном типу AML можна познайомитись в мануалі Alarms administration.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/2lXlQIRp-kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=2lXlQIRp-kw)
 
 ## Порядок прийому роботи 
 
@@ -287,4 +289,19 @@
 9. Поясніть властивості налаштування лімітів, які були використані та розглянуті в лабораторних роботах курсу.
 10. Що таке матриці реакцій і чим їх використання принципово відрізняється від використання лімітів?    
 
+
+
+## Автори
+
+
 Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко.
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

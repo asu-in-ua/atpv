@@ -1,6 +1,6 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
-# Підсистема рецептів у SCADA zenon 
+# Підсистема рецептів у SCADA zenon : теоретична частина
 
 У SCADA zenon рецепти реалізовані у вигляді двох модулів:
 
@@ -46,4 +46,17 @@
 
 *Рис. 8.31.* Налаштування функції "Recipegroup Manager" 
 
+## Автори
+
+
 Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

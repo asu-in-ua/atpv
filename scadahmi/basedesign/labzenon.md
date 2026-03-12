@@ -1,6 +1,6 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
-# Практичне заняття SCADA zenon: проект, екрани, функції
+# Практичне заняття SCADA zenon: проект, екрани, функції 
 
 **Тривалість**: 4 акад. години (2 пари).
 
@@ -73,7 +73,9 @@
 - Інші налаштування залиште без змін і, натиснувши кнопку *OK*, створіть проект. Система автоматично згенерує структуру та файли внутрішньої SQL-бази проекту.
 - Після цього автоматично з’явиться діалогове вікно  Майстра створення нового проекту, написаного на VSTA. Ми будемо  розробляти проект уручну, тому просто закрийте його кнопкою *Canсel*.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/p0530LMHynA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео: Створення нового проекту SCADA zenon](https://youtu.be/p0530LMHynA?si=fHI7YKano81X0Gsv) 
+
+
 
 ### 2. Конфігурування проекту
 
@@ -97,7 +99,7 @@
 
   Конкретні шляхи розміщення файлової структури системи, залежно від операційної системи, описані в довідниковій системі у розділі `Installation and updates -> File structure.` 
 
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/cfKCoBry3rE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  [Відео](https://www.youtube.com/watch?v=cfKCoBry3rE)
 
 ### 3. Резервне копіювання
 
@@ -129,7 +131,7 @@
 - Зайдіть в головне меню *File* *->* *Workspace* і виберіть пункт *Open*
 - Виберіть в папці з назвою робочого простору файл *.wsb6
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/6A2XjYlHaxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=6A2XjYlHaxE)
 
 ### 4. Фрейми (шаблони) для екранів
 
@@ -167,7 +169,7 @@
 
 ![img](media2/1_3.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Eyk0MFrbwkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Eyk0MFrbwkI)
 
 ### 5. Екрани
 
@@ -199,7 +201,7 @@
 
 ![img](media2/1_5.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/cp8xTfb5qos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=cp8xTfb5qos)
 
 ### 6. Функції та запуск режиму виконання
 
@@ -228,7 +230,7 @@
 
 Оскільки на початку створення проекту в налаштуваннях *Graphical* *design* пункт *Runtime title* ми обрали опцію *no title (full screen),* то інтерфейс екранів проекту не має жодних заголовків чи системних кнопок, тобто дисплейна мнемосхема займає всю площу відображення. Проте, при  потребі, існує можливість визначення цих елементів індивідуально для окремих екранів (наприклад, pop-up діалоги). Для цього у властивостях  фрейму, на якому базується відповідний екран, необхідно зайти в розділ *Border* *->* *Border* *type* і вибрати тип границі.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/MflE-NzscYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=MflE-NzscYw)
 
 ### 7. Статичний текст
 
@@ -252,7 +254,7 @@
 
 Після активації зроблених змін, в намальованому текстовому полі з’явиться введена фраза. Відредагуйте розмір таким чином, щоб вона повністю поміщалася в один рядок.  Спробуйте для цього елементу змінити колір фону та тексту.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/35WhKMvEnOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=35WhKMvEnOQ)
 
 #### Завдання 2.11. Створення власного шрифту
 
@@ -272,7 +274,7 @@
 
 - Виберіть на головному екрані створений нами текстовий елемент і у властивостях *Representation* *->* *Font* змініть шрифт на ім’я 'Заголовок'
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/tIpoBU5EGME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=tIpoBU5EGME)
 
 ### 8. Кнопки
 
@@ -312,7 +314,7 @@
 
 - Запустіть Runtime і перевірте як працюють створені кнопки. Тепер ми можемо не  закривати Runtime, а користуватись кнопкою Reload. Майте на увазі, що  при натисканні кнопки 'Процес' в проекті нічого змінюватися не буде,  оскільки цей екран в нас вже відкрито.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/DSJuA7xhTvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=DSJuA7xhTvg)
 
 ### 9. Типи екранів та їх шаблони
 
@@ -344,4 +346,18 @@
 12. Які графічні елементи застосовувалися в цьому проекті для побудови людино-машинного інтерфейсу? Розкажіть про їх налаштування.
 13. Розкажіть про типи екранів та їх шаблони.
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

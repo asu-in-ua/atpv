@@ -1,4 +1,4 @@
-[На основну сторінку курсу](../../README.md)     [До списку лабораторних](../README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
 # Практичне заняття SCADA zenon:  Створення графічного інтерфейсу
 
@@ -58,7 +58,7 @@
 
 Таким чином, від  контролера ми отримуємо значення в діапазоні `-32768 ... 32767`, а на  дисплейній мнемосхемі будемо відображати його в діапазоні `0...150`.  Аналогічно зробіть і для інших змінних температур.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/zJTN9fjr9H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=zJTN9fjr9H4)
 
 #### Завдання 4.2. Створення стрілочного покажчика  
 
@@ -68,7 +68,7 @@
 - В наступному вікні виберіть змінну `Температура[1]`
 - Підлаштуйте розміри елементу, його колір, кількість рисок шкали, кут повороту шкали
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/rDa7KW3V6VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=rDa7KW3V6VA)
 
 #### Завдання 4.3: Створення універсального повзунку
 
@@ -93,7 +93,7 @@
 
 Давайте спробуємо інші варіанти вводу значень.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/mTMI378Rg1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=mTMI378Rg1E)
 
 ### 2. Введення значень
 
@@ -132,9 +132,9 @@
 
 Попрактикуйтесь вводити значення різними способами.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Bm9e-c9pwhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Bm9e-c9pwhk)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/dtTFpUoFPtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=dtTFpUoFPtw)
 
 ### 3. Символи
 
@@ -209,7 +209,7 @@
 
 Тепер значення рівня повинні відображатися коректно.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/WZ0CgbuTwCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=WZ0CgbuTwCk)
 
 ### 4. Анімація символу
 
@@ -244,7 +244,7 @@
 
 Також можна  перевірити який екран зараз відкритий. Для цього необхідно правою  кнопкою мишки натиснути на пустому полі екрану. Через декілька секунд  з’явиться поле з ім’ям екрану.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/N87sfgGvZcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=N87sfgGvZcs)
 
 #### Завдання 4.11: Створення власного динамічного символу 
 
@@ -271,7 +271,7 @@
 
 Як ми  згадували раніше, зміни в вихідному “батьківському” символі будуть  автоматично відтворюватись в усіх “дочірніх” символах. Давайте  перевіримо як це працює.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/3A2BLCt0qoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=3A2BLCt0qoA)
 
 ### 5. Внесення змін в символ
 
@@ -304,7 +304,7 @@
 
 *![img](media4/011.png)*
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/gtY8rx3Yxt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=gtY8rx3Yxt4)
 
 ### 6. Трубопроводи
 
@@ -348,7 +348,7 @@
 
 ![img](media4/1.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/9kPjCCX-JgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=9kPjCCX-JgY)
 
 ### 7. Мішалка
 
@@ -369,7 +369,7 @@
 
 - Скопіюйте зроблений символ і розмістіть його над другим танком
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/gP58fS2Sekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=gP58fS2Sekw)
 
 #### Завдання 4.17: Кнопки включення/відключення мішалок 
 
@@ -451,7 +451,7 @@
 
 Ми розглянули три варіанти реалізації кнопок: елементи *Switch*, *Button* та *Combined* *element*.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/0XrWd84-Dew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=0XrWd84-Dew)
 
 ### 9. Зображення
 
@@ -499,7 +499,7 @@
 
 *![img](media4/10.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Lrkd40JVIgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Lrkd40JVIgU)
 
 ### 11. Самописець (тренд реального часу)
 
@@ -535,7 +535,7 @@
 
 ![img](media4/12.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/1HTPmxdI6hE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=1HTPmxdI6hE)
 
 ### 12. Зміна кольору, тексту, невидима кнопка
 
@@ -574,7 +574,7 @@
 
 ![img](media4/13.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/GuI27KeEBlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=GuI27KeEBlE)
 
 #### Завдання 4.24: Невидима кнопка
 
@@ -592,7 +592,7 @@
 
 Прозорі кнопки можна використовувати не тільки для зміни значень змінних, а й для виконання функцій.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/azYqlcpH1hM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=azYqlcpH1hM)
 
 ### 13. Діалогове вікно
 
@@ -675,7 +675,7 @@
 
 *![img](media4/15.png)*
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Fuzmsi75VrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Fuzmsi75VrA)
 
 ### 14. Зміна розміру
 
@@ -703,7 +703,7 @@
 
 ![img](media4/16.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/nly7Fz2pBpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=nly7Fz2pBpg)
 
 ### 15. Анімація руху
 
@@ -721,7 +721,7 @@
 
 ![img](media4/17.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/afgYD0B2sXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=afgYD0B2sXs)
 
 ### 16. Зміна кольору
 
@@ -763,7 +763,7 @@
 
 ![img](media4/18.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ykazTOxhnLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=ykazTOxhnLA)
 
 ### 17. Блимання
 
@@ -782,7 +782,7 @@
 
 Познайомитись з іншими елементами, які ми не розглянули, та інструментами їх динамізації можна в манулі Screens -> Screen elements та Screens -> Edit screen element.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/G-rQ8pmEnII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=G-rQ8pmEnII)
 
 #### Завдання 4.33: Деактивація змінних
 
@@ -798,7 +798,7 @@
 
 *![img](media4/19.png)*
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/xkvE3v5vDyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=xkvE3v5vDyI)
 
 ### 18. Скрипти
 
@@ -832,7 +832,7 @@
 
 Перевірте роботу створеного скрипту.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/XHC8iud3wMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=XHC8iud3wMQ)
 
 #### Завдання 4.35: Запуск скрипту при досягненні рівня
 
@@ -847,7 +847,7 @@
 
 Перевірте в Runtime як виконується даний скрипт. Попередньо ввімкніть і відімкніть відповідні екранні елементи.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/IgEDke56yKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=IgEDke56yKI)
 
 #### Завдання 4.36: Автоматичний запуск скрипта
 
@@ -868,7 +868,7 @@
 
 ![img](media4/2_3.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/7kLBYcjmoQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=7kLBYcjmoQ0)
 
 ### 19. Віртуальна клавіатура
 
@@ -949,4 +949,16 @@
 16. Розкажіть що таке скрипт в zenon? Як зробити автоматичний запуск скрипта за певної події?
 17. Розкажіть про створення та використання віртуальної клавіатури в zenon.
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко.
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

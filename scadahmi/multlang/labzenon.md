@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
 # Мультимовна підтримка у SCADA zenon: практична частина
 
@@ -48,7 +48,7 @@
 
 - Аналогічним чином модифікуйте підписи на кнопках 'Процес', 'Хронологія', 'Тривоги', 'Архів', 'Тренди' навігаційної панелі
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/yOnJ6ut57Hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=yOnJ6ut57Hg)
 
 **Створення мовних таблиць**
 
@@ -86,7 +86,7 @@
 
 Для кожної мовної таблиці в Runtime-файлах проекту система створює свій мовний файл (ZENONSTR.TXT, UA.TXT та EN.TXT). Також, в дереві проекту, розділ Files, система створила мовні папки для наповнення їх відповідним контентом.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/PsT1XuP1qhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=PsT1XuP1qhs)
 
 ### 2. Керування перемиканням
 
@@ -130,7 +130,7 @@
 
 Спробуйте самостійно за його допомогою крок за кроком створити мовні таблиці проекту.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/kbQ17MS50fU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=kbQ17MS50fU)
 
 ### 4. Зміна одиниць вимірювання
 
@@ -156,7 +156,7 @@
 
 ![img](media10/9.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/1dUKFvRpNKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=1dUKFvRpNKI)
 
 Для ініціації зміни одиниць вимірювання необхідно створити відповідні функції та кнопки на панелі навігації.
 
@@ -184,7 +184,7 @@
 
 Докладніше про зміну одиниць вимірювання можна прочитати в мануалі Measuring unit conversion.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/xepblaLx7qE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=xepblaLx7qE)
 
 ## Порядок прийому роботи 
 
@@ -198,4 +198,16 @@
 4. Яким чином в SCADA zenon організовується зміна зображень, одиниць вимірювання та інших ресурсів при перемиканні на іншу мову?
 5. Розкажіть про автоматизацію створення мовних таблиць в проекті.
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко.
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)

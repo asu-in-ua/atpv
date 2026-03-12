@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)	[SCADA zenon](../zenon.md)		[Коментувати](#feedback)
 
 # Розроблення трендової підсистеми в SCADA zenon: практична частина
 
@@ -93,7 +93,7 @@
 
 ![image-20230414101738217](media6/image-20230414101738217.png)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Q3lHUAatcOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Q3lHUAatcOM)
 
 ### 2. Екран перегляду архіву у вигляді таблиці
 
@@ -105,7 +105,7 @@
 - В якості спеціального типу виберіть *Archive* *revision*
 - Через головне меню *Control* *elements* розмістіть на екрані усі необхідні елементи керування та відображення
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/7QUkAq9jG7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=7QUkAq9jG7s)
 
 #### Завдання 6.3: Створення функції виклику перегляду 
 
@@ -119,7 +119,7 @@
 
 - Залишіть усі значення, як встановлено за замовчуванням. Завершіть конфігурування функції натиснувши кнопку *OK* і перейменуйте її в `Перехід на екран Архів`. 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/htM41Nq0N_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=htM41Nq0N_E)
 
 #### Завдання 6.4: Створення кнопки виклику функції
 
@@ -153,7 +153,7 @@ ZUSTANDBREITE=10
 
 Також варто зауважити, що архівні  дані представляються суцільним списком, який не дуже зручний для  аналізу. Для представлення виміряної інформації у вигляді повноцінного  табличного звіту з довільним розбиттям даних по стовбцям чи колонкам,  необхідно використовувати модуль Reporting, який не розглядається в цьому лабораторному курсі.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/qlsPni9-99w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=qlsPni9-99w)
 
 ### 3. Екран з часовим фільтром
 
@@ -174,7 +174,7 @@ ZUSTANDBREITE=10
 - На екрані  `Архів` створіть кнопку з написом `Простий фільтр` і вкажіть запуск функції відкриття новоствореного екрану фільтру
 - Перевірте роботу кнопки та фільтру в середовищі виконання 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Eb8dL6oIduI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Eb8dL6oIduI)
 
 ### 4. Аріхівні файли та експорт архіву
 
@@ -211,7 +211,7 @@ ZUSTANDBREITE=10
 
 - Запустіть Runtime і виконайте експорт архіву. Оскільки при конфігуруванні функції експорту було активовано опцію  відображення діалогу налаштування, то оператор має можливість в онлайн  режимі вибрати формат збереження даних та параметри, які повинні  заноситись до архіву. Поетапно виконайте експорт архіву в усі доступні формати: `dBase`, `CSV` та `XML`. 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Y6uRYWWtplQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=Y6uRYWWtplQ)
 
 ### 5. Каскадний архів
 
@@ -251,7 +251,7 @@ ZUSTANDBREITE=10
 
 Система підгрузить лише мінімальні значення, які  мали змінні протягом кожних 2-х хвилин. До імені змінної допишеться  закінчення `[МI]` – мінімальне значення. При інших типах каскадних архівів допишеться `[МА]` – максимум, `[МW]` – середнє значення, `[SU]` – сума. Спробуйте самостійно опрацювати ці варіанти. 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/vsl9GUZ8sqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=vsl9GUZ8sqs)
 
 ### 6. Налаштування трендових екранів
 
@@ -265,7 +265,7 @@ ZUSTANDBREITE=10
 - В якості спеціального типу виберіть *Extended* *Trend* і задайте довільний колір фону
 - Через головне меню *Control* *elements,* використовуючи кнопочні шаблони, розмістіть на екрані усі необхідні елементи керування та відображення
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/h0bNjYKIoiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=h0bNjYKIoiU)
 
 #### Завдання 6.9: Створення функції виклику екрану
 
@@ -333,7 +333,7 @@ ZUSTANDBREITE=10
 
 Перейменуйте створену функцію в `Перехід на екран Тренди`
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/uYUXsNBeWbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=uYUXsNBeWbI)
 
 ### 7. Трендові екрани в режимі виконання
 
@@ -353,14 +353,14 @@ ZUSTANDBREITE=10
 
 - За допомогою кнопок переміщення по  діаграмі зробіть прокрутку кривих в часі та їх аналіз.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/4cesrPWlOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=4cesrPWlOrc)
 
 #### Завдання 6.11: Перевірка екрану часового фільтру 
 
 - На сторінці перегляду трендів добавте кнопку виклику екрану фільтру, що Ви створювали для перегляду у табличному вигляді.
 - Перевірте роботу фільтра. 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/OlKXVXGuDtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Відео](https://www.youtube.com/watch?v=OlKXVXGuDtU)
 
 ## Порядок прийому роботи 
 
@@ -377,4 +377,16 @@ ZUSTANDBREITE=10
 7. Які функції надає екран перегляду архівів у вигляді трендів? Що налаштовується на цьому екрані і які спеціальні функції використовуються в лабораторній роботі.
 8. Розкажіть про функціональність трендових екранів в режимі виконання. 
 
-Практичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко.
+## Автори
+
+Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan) за матеріалами наданими Олександром Голінько (СВ Альтера). Запис відео Альона Бирченко..
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)
