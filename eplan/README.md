@@ -4,6 +4,8 @@
 
 - [Загальні поняття в Eplan](intro/README.md)
 
+- [Модель даних в Eplan](datamodel/README.md)
+
 - [Створення схем в Eplan](pages/README.md)
 - [З'єднання в Eplan](connection/README.md)
 - [Звіти в Eplan](reports/README.md)
