@@ -339,9 +339,9 @@ Hello gateway $0A
 
 ## Частина 4. Робота з Modbus RTU та TCP/IP
 
-### 1. Встановлення та налаштування Modrsism2  
+### 1. Встановлення та налаштування Modrsim2  
 
-- [ ] Завантажте `Modrssim2`  перейшовши за [цим посиланням](https://sourceforge.net/projects/modrssim2/) , натиснувши `download`. Це імітатор Modbus Server, який буде слугувати джерелом даних. 
+- [ ] Завантажте `Modrsim2`  перейшовши за [цим посиланням](https://sourceforge.net/projects/modrssim2/) , натиснувши `download`. Це імітатор Modbus Server, який буде слугувати джерелом даних. 
 - [ ] Створіть папку на диску, перемістіть туди файл, та завантажте в неї файл `mfc100.dll` який знаходиться за [цим посиланням](https://drive.google.com/file/d/1l7gpSOrhGIJb0aswPrErFtmPPG2JKAo0/view?usp=drive_link). Ця бібліотека потрібна для роботи `Modrssim2`.
 - [ ] Завантажте та встановіть Microsoft Visual C++ Redistributable for Visual Studio 2010 http://go.microsoft.com/fwlink/?LinkID=177916&clcid=0x489 
 - [ ] Перейдіть за посиланням <https://github.com/pupenasan/scriptlanginiot/blob/main/lab/lab2.vbs> та натисніть кнопку `Dwnload raw file` для завантаження файлу імітатора об'єкту. Перемістіть файл в ту ж папку, що і Modrsism2.
@@ -368,7 +368,7 @@ Hello gateway $0A
 
 У цій лабораторній роботі у якості імітаційної установки використовується той самий об'єкт що і попередінй лабораторній роботі. Передбачається, що з установкою зв'язаний пристрій вводу/виводу, що має інтерфейси Modbus RTU та Modbus TCP/IP. Нижче наведений перелік об'єктів Modbus для даної установки 
 
-![](media1/dia1.png)
+![](media/dia1.png)
 
 - [ ] Ознайомтеся з даними входів/виходів Modbus, що наведені в таблиці нижче
 

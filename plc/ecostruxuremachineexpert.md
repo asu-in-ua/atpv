@@ -19,7 +19,7 @@
 - [Обробка сигналів в контурі регулювання з ControlLoopLibrary в CODESYS: теоретичні відомості](signcontrol/teorcodesys.md)
 - [Обробка сигналів в контурі регулювання з Toolbox в Machine Expert: теоретичні відомості](signcontrol/teormachexpert.md)
 - [Налагодження програм користувача в CODESYS: теоретичні відомості](debug/teorcodesys.md)
-- 
+- [Огляд Industrial EtherNet в EcoStruxure Machine Expert](../filedbus/indethernet/teormachexpert.md)
 
 
 
@@ -30,5 +30,6 @@
 - [Програмні сутності в Machine Expert і CODESYS: практична частина](pou/labmachexpert.md)
 - [Імітаційна модель об'єкта в Machine Expert з використанням Filter_PT1: практична частина ](signcontrol/labmachexpert.md)
 - [Основи ПІ регулювання з використанням Toolbox в Machine Expert : практична частина](pidcontrol/labmachexpert.md)
-- [Реалізація Modbus TCP Server](../filedbus/modbusadvanced/mbserver_codesys.md)
+- [Реалізація Modbus TCP Server в CODESYS Control Win з використанням бібліотеки ModbusFB ](../filedbus/modbusadvanced/mbserver_codesys.md)
+- [Реалізація Modbus TCP Client в CODESYS Control Win з використанням бібліотеки ModbusFB](../filedbus/modbusadvanced/mbclient_codesys)
 - [Встановлення та робота з CODESYS Control Win: практичне заняття](simul/labcodesyscontrolwin.md)

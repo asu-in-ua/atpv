@@ -20,4 +20,5 @@
 
 - [Встановлення та робота з CODESYS Control Win: практичне заняття](simul/labcodesyscontrolwin.md)
 - [Програмні сутності в Machine Expert і CODESYS: практична частина](pou/labmachexpert.md)
-- [Реалізація Modbus TCP Server](../filedbus/modbusadvanced/mbserver_codesys.md)
+- [Реалізація Modbus TCP Server в CODESYS Control Win з використанням бібліотеки ModbusFB ](../filedbus/modbusadvanced/mbserver_codesys.md)
+- [Реалізація Modbus TCP Client в CODESYS Control Win з використанням бібліотеки ModbusFB](../filedbus/modbusadvanced/mbclient_codesys)
