@@ -36,7 +36,7 @@
 - [Реалізація Modbus TCP Server S7 1200/1500](mbservers71200.md)
 - [Реалізація Modbus Master з використанням функції MB_MASTER для S7-1200](mbmaster_s71200.md)
 - [Реалізація функції 23 (1716) Read/Write Multiple Registers в M340](rw23m340.md)
-- [Реалізація Modbus TCP Client в CODESYS Control Win з використанням бібліотеки ModbusFB ](mbclient_codesys)
+- [Реалізація Modbus TCP Client в CODESYS Control Win з використанням бібліотеки ModbusFB ](mbclient_codesys.md)
 - [Реалізація Modbus TCP Server в CODESYS Control Win з використанням бібліотеки ModbusFB ](mbserver_codesys.md)
 
 ## Перевірка знань
