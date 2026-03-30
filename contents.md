@@ -305,9 +305,15 @@
 
 - Overview of NEC/NFPA and Other Codes
 
-### Стандарти ISA
+
+
+### Інші міжнародні стандарти I
 
 - ISA Standards for Documentation
+
+- [Стандарти NAMUR](namur/README.md)
+
+
 
 
 
