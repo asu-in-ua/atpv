@@ -8,9 +8,9 @@
 
 ### 1. Завантаження та добавлення в список образу віртуальної машини Mikrotik
 
-- [ ] Завантажте образ віртуальної машини `*.vdi` за посиланням: <https://mikrotik.com/download>, вибирайте стабільну версію з переліку `Cloud Hosted Router` VDI Image. 
+- [ ] Завантажте образ віртуальної машини `*.vdi` за посиланням: <https://mikrotik.com/download/chr>, вибирайте стабільну версію з переліку `Cloud Hosted Router (CHR)` VDI Image. 
 
-![image-20221030083213276](../../nets/tcpiipadd/media/image-20221030083213276.png)
+![Без назви](../../nets/tcpiipadd/media/1.jpg)
 
 рис.1.
 
