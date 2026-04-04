@@ -317,7 +317,7 @@ DTM дає можливість не тільки зчитувати чи змі
 
 - [ ] У Command and Reference виставте режим керування через комунікаційний модуль 
 
-![image-20260404183133181](C:\Users\OleksandrPupena\AppData\Roaming\Typora\typora-user-images\image-20260404183133181.png)
+![image-20260404183133181](media/image-20260404183133181.png)
 
 рис.25.
 
