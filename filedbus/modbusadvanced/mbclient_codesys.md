@@ -192,11 +192,11 @@ END_VAR
 - [ ] У розділі коду вставте наступний код
 
 ```pascal
-IF NOT clientTcp.xConnected AND xConnect THEN
+IF clientTcp.xError AND xConnect THEN
 	xConnect := FALSE;
-ELSE
- 	xConnect := TRUE;
-END_IF; 
+ELSE 
+	xConnect := TRUE;
+END_IF;
 clientTcp (
 	aIPaddr:=IPAddress, 
 	uiPort:=502,
