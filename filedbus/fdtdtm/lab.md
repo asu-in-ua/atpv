@@ -81,7 +81,11 @@
 
  **Увага! ПЗ  ATV Virtual Training Device не працює на віртуальних машинах!**
 
-- [ ] Запросіть у вашого представника Шнейдер Електрик дистрибувати ATV Virtual Training Device.
+- [ ] Запросіть у вашого представника Шнейдер Електрик дистрибувати ATV Virtual Training Device, або завантажте його з мережного диску:
+
+  - зайдіть з браузера [за посиланням]( https://schneiderelectric.sharepoint.com/:f:/s/IndustryproductsUkrainePublic/ElOQfk3cNmxBmlRHFA582AMBeKHxgFjf3zrBttz7kHd1tA) 
+  - перейдіть в папку `Altivar & Altistart - привідна техніка -> Віртуальний стенд`
+  - Завантажте `OneDrive_2026-02-24.zip`, розархівуйте інсталятор `ATV_VirtualTrainingDeviceSetup_V2.0.0.0.exe`
 
 - [ ] Запустіть інсталятор. Якщо у вас є попередня версія цього інструменту, обов’язково видаліть її перед установкою новішої версії! 
 
