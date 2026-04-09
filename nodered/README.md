@@ -4,6 +4,6 @@
 
 - [Вступ до Node-RED](intro/README.md)
 
-
+- [Робота з HTTP Node-RED](http/README.md)
 
 - [Репозиторій Node-RED](https://pupenasan.github.io/NodeREDGuidUKR/)
