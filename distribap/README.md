@@ -6,4 +6,5 @@
 - [Серіалізація: XML та JSON](../netsxmljson/README.md)
 - [Керування ідентифікацією і доступом](../netssecurity/README.md) 
 - [XML SOAP](soap/README.md)
+- [XML-RPC](xmlrpc/README.md)
 

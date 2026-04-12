@@ -200,6 +200,7 @@
 - Керування обслуговуванням обладнання та EAM
 - Керування якістю продукції (Quality Management)
 - Керування записами (Inventory Management)
+- [Платформа ODOO](odoo/README.md)
 
 
 
