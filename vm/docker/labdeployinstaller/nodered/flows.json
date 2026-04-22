@@ -1,0 +1,413 @@
+[
+    {
+        "id": "f1d30b400b26381a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a8c31725c52f8863",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "0b181ae49f15ddcb",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "d21c497f2a9dbd55",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "a8c31725c52f8863",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "0b181ae49f15ddcb",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "336d04dd323b72c4",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "d21c497f2a9dbd55",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "129871c697e6536e",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgresdb",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "DB1",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "postgresuser",
+        "userFieldType": "str",
+        "password": "1",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "29509eeb5eaaf5e0",
+        "type": "postgresql",
+        "z": "f1d30b400b26381a",
+        "name": "tohistory",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "129871c697e6536e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "0f0f8232ca8f7df1"
+            ]
+        ]
+    },
+    {
+        "id": "56dd3016f8f0e258",
+        "type": "ui-template",
+        "z": "f1d30b400b26381a",
+        "group": "336d04dd323b72c4",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "head": "",
+        "format": "<template>\n    <div>\n        <div id=\"charttpw\" style=\"width: 100%; height: 80%; margin: 5px auto; padding: 5px;\">\n        </div>\n    </div>\n</template>\n<script type=\"text/javascript\" src=\"/static/scripts/echarts.min.js\"></script>\n<script>\n    let interval = setInterval(() => {\n                if (window.echarts) {\n                    clearInterval(interval);\n                    init();\n                }\n            }, 100);\n  var topChart;\n  function init () {\n    var chartDom = document.getElementById('charttpw');\n    topChart = echarts.init(chartDom);\n  };\n  // Subscribe to the incoming msg's\n  this.$socket.on('msg-input:' + this.id, function(msg) {\n      let option = msg.payload.maintrend.option.series ? msg.payload.maintrend.option : {series: msg.payload.maintrend.option};\n      topChart && topChart.setOption(option);\n  });\n\n  function stomin (s){\n    return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`; \n  }    \n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 700,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4217124b2389d479",
+        "type": "function",
+        "z": "f1d30b400b26381a",
+        "name": "cfg",
+        "func": "let tagscfg = {\n    EXHAUTS_TT_PV:\t{\n        descr: \"Температура повітря на виході\",\n        color: '#597cff'\n        },\n    PRODUCT_TT_PV: {\n        descr: \"Температура продукту\",\n        color:  '#6ffe79'\n    },\n    GAS_PDT_PV: {\n        descr: \"Парепад тиску\",\n        color: 'yellow'\n    }   \n}\n\nglobal.set(\"tagscfg\", tagscfg)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "e20f2c55dfba3365"
+            ]
+        ]
+    },
+    {
+        "id": "c2127d04803f0508",
+        "type": "inject",
+        "z": "f1d30b400b26381a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 285,
+        "y": 80,
+        "wires": [
+            [
+                "4217124b2389d479"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e20f2c55dfba3365",
+        "type": "function",
+        "z": "f1d30b400b26381a",
+        "name": "graph options",
+        "func": "let tagscfg = global.get (\"tagscfg\");\nif (!tagscfg) return\nlet now = new Date();\nconst trends = global.get(\"trends\") || {};\nconst deltat = 2;\nconst fulltime = 20*60; //повний час тренду в секундах\nconst pointscnt = fulltime / deltat ; //кількість точок на тренді\nconst optiontop = {\n    title: {show : false},\n    tooltip: {\n        trigger: 'axis'\n    },\n    grid: {\n        left: 0,\n        right: 0,\n        bottom: 8,\n        top:8,\n        containLabel: true\n    },\n    legend: {\n        show: false,\n        data: ['Tair', 'Tbeans', 'P'],\n        axisPointer: {\n            type: 'cross'\n        }\n    },\n    xAxis: {\n        type: 'category',\n        boundaryGap: false,\n        //interval: 60/deltat,\n        splitNumber : 5,\n        data: [],\n        splitLine: {\n            show: true,\n            lineStyle: {\n                color: '#585d73',\n                width: 1\n            }\n        },\n        axisLabel:{\n            show:false,\n            interval : 30/deltat - 1\n        },\n    },\n    yAxis: [\n        {\n            type: 'value',\n            interval: 20,\n            axisLabel: {\n                formatter: '{value}',\n            },\n            min: 0.0,\n            max: 10.0,\n            splitLine: {\n                show: true,\n                lineStyle: {\n                    color:  '#585d73',\n                    width: 1\n                }\n            },\n        }\n    ],\n    series: [\n        {\n            name: 'Tbeans',\n            type: 'line',\n            //smooth: true,\n            \"symbol\": \"none\",\n            lineStyle:{width: 4},                          \n            data: [],\n            yAxisIndex: 0\n        },\n        {\n            name: 'Tair',\n            type: 'line',\n            //smooth: true,\n            \"symbol\": \"none\",\n            lineStyle:{width: 4}, \n            data: [],\n            yAxisIndex: 0\n        },\n        {\n            name: 'P',\n            type: 'line',\n            //smooth: true,\n            \"symbol\": \"none\",\n            lineStyle:{width: 4},                          \n            data: [],\n            yAxisIndex: 0\n        }\n    ],\n    color: [tagscfg.PRODUCT_TT_PV.color, tagscfg.EXHAUTS_TT_PV.color, tagscfg.GAS_PDT_PV.color]\n};\n\nconst chartsoptions = {\n    optiontop: optiontop,\n}\nlet maintrend = trends.maintrend  || {\n    tagnames: [\"PRODUCT_TT_PV\", \"EXHAUTS_TT_PV\", \"GAS_PDT_PV\"],\n    option : chartsoptions.optiontop    \n};\n\nglobal.set(\"chartsoptions\", chartsoptions);\nglobal.set(\"trends\", {maintrend :maintrend});\n\nfunction stomin(s) {\n    return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;\n}     \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8b0b7be91f44375",
+        "type": "inject",
+        "z": "f1d30b400b26381a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "19a1d6a151812f96"
+            ]
+        ]
+    },
+    {
+        "id": "19a1d6a151812f96",
+        "type": "function",
+        "z": "f1d30b400b26381a",
+        "name": "simulation",
+        "func": "const tags = global.get (\"tags\") || {\n    EXHAUTS_TT_PV:{val:0.0 },\n    PRODUCT_TT_PV:{val:0.0},\n    GAS_PDT_PV: {val:0.0},\n    secs: 0     \n} \ntags.GAS_PDT_PV.val += Math.PI/120.0;\ntags.secs ++;\nif (tags.GAS_PDT_PV.val >= 2 * Math.PI){\n    tags.GAS_PDT_PV.val = 0;\n    tags.secs = 0; \n}  \ntags.EXHAUTS_TT_PV.val = (Math.sin (tags.GAS_PDT_PV.val) + 1.0) * 5.0;\ntags.PRODUCT_TT_PV.val = (Math.cos(tags.GAS_PDT_PV.val) + 1.0) * 5.0;   \nglobal.set (\"tags\", tags);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "57a064eb22026191"
+            ]
+        ]
+    },
+    {
+        "id": "57a064eb22026191",
+        "type": "function",
+        "z": "f1d30b400b26381a",
+        "name": "bufer",
+        "func": "const tags = global.get (\"tags\");\nconst tagscfg = global.get(\"tagscfg\");\n\nconst trend = global.get(\"trends.maintrend\");\nif (!trend) return\nconst now = new Date();\nconst timeText = String(now.getMinutes()).padStart(2, '0') + ':' + String(now.getSeconds()).padStart(2, '0');\ntrend.option.xAxis.data.push (timeText);\ntrend.option.series[0].data.push(tags.EXHAUTS_TT_PV.val);\ntrend.option.series[1].data.push(tags.PRODUCT_TT_PV.val);\ntrend.option.series[2].data.push(tags.GAS_PDT_PV.val);\nif (trend.option.xAxis.data.length > 600) {\n    trend.option.xAxis.data.shift();\n}\ntrend.option.series.forEach(series => {\n    if (series.data.length > 600) {\n        series.data.shift();\n    }\n});\nmsg.payload = {maintrend : trend};\n\nif (!trend.hisbuf) trend.hisbuf = [];\nfor (let tagname in tagscfg){\n    trend.hisbuf.push({\n        tagname,\n        value: tags[tagname].val,\n        ts: now  \n    });\n\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "56dd3016f8f0e258",
+                "66c6ca6d9704248b"
+            ]
+        ]
+    },
+    {
+        "id": "8d51075258acd9ad",
+        "type": "inject",
+        "z": "f1d30b400b26381a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "14b3ccdecbd45f29"
+            ]
+        ]
+    },
+    {
+        "id": "14b3ccdecbd45f29",
+        "type": "postgresql",
+        "z": "f1d30b400b26381a",
+        "name": "create tables",
+        "query": "CREATE TABLE IF NOT EXISTS his (\n    time        timestamptz NOT NULL,\n    tagname     text NOT NULL,\n    value       double precision,\n    batch_id    integer\n);\n\n-- індекси\nCREATE INDEX IF NOT EXISTS idx_his_time \n    ON his (time);\n\nCREATE INDEX IF NOT EXISTS idx_his_tagname \n    ON his (tagname);\n\nCREATE INDEX IF NOT EXISTS idx_his_batch_id \n    ON his (batch_id);\n\n-- комбінований (часто найкорисніший)\nCREATE INDEX IF NOT EXISTS idx_his_tag_time \n    ON his (tagname, time);",
+        "postgreSQLConfig": "129871c697e6536e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "662e955c0f2669e5"
+            ]
+        ]
+    },
+    {
+        "id": "662e955c0f2669e5",
+        "type": "debug",
+        "z": "f1d30b400b26381a",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "66c6ca6d9704248b",
+        "type": "function",
+        "z": "f1d30b400b26381a",
+        "name": "query to his",
+        "func": "// ініціалізація\nconst trend = global.get(\"trends.maintrend\");\n// перевірка часу\nlet buf = trend.hisbuf;\nconst now = new Date();\n\nif (buf.length > 0) {\n    let firstTs = new Date (buf[0].ts);\n    let diff = now.valueOf() - firstTs.valueOf();\n\n    if (diff >= 5000) {\n        // формуємо VALUES\n        let values = buf.map(r => {\n            let t = new Date(r.ts).toISOString();\n            let v = (r.value !== null && r.value !== undefined) ? r.value : 'NULL';\n            return `('${t}', '${r.tagname}', ${v}, NULL)`;\n        }).join(',');\n\n        let sql = `\n            INSERT INTO his (time, tagname, value, batch_id)\n            VALUES ${values};\n        `;\n        // очистка буфера\n        trend.hisbuf = [];\n        msg.query = sql;\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "29509eeb5eaaf5e0"
+            ]
+        ]
+    },
+    {
+        "id": "0f0f8232ca8f7df1",
+        "type": "debug",
+        "z": "f1d30b400b26381a",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d993a387b36ba6ff",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.23.0",
+            "node-red-contrib-postgresql": "0.15.4"
+        }
+    }
+]

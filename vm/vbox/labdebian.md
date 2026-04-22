@@ -230,7 +230,7 @@ Guest Tools: Installed
 
 рис.2.25.
 
-- [ ] У наступному пункті виберіть опції `SSH Server` і `standart system utilities` , інші приберіть і натисніть `Continue`
+- [ ] У наступному пункті виберіть опції `SSH Server` і `standart system utilities` , **інші приберіть** і натисніть `Continue`
 
 ![image-20251229202655284](media/image-20251229202655284.png)
 

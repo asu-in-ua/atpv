@@ -1,0 +1,63 @@
+services:
+
+  postgresdb:
+    container_name: postgresdb
+    image: postgres:16
+    restart: unless-stopped
+    shm_size: 256mb
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: ${TZ}
+    volumes:
+      - ${DATA_DIR}/postgres-data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    networks:
+      - netintern
+
+  adminer:
+    container_name: adminer
+    image: adminer:4
+    restart: unless-stopped
+    depends_on:
+      - postgresdb
+    ports:
+      - "${ADMINER_PORT}:8080"
+    networks:
+      - netintern
+
+  nodered:
+    container_name: nodered
+    build: .
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+    ports:
+      - "${NODERED_PORT}:1880"
+    volumes:
+      - ${DATA_DIR}/nodered-data:/data
+    depends_on:
+      - postgresdb
+    networks:
+      - netintern
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${DATA_DIR}/portainer-data:/data
+      
+networks:
+  netintern:
+    driver: bridge

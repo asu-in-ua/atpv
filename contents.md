@@ -272,7 +272,7 @@
 - [Мова SQL](sql/README.md)
 - [Стандартні технології доступу до баз даних](dbaccess/README.md)
 - MongoDB
-- 
+- [PostgreSQL](dbpostgre/README.md)
 
 
 
