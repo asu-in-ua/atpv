@@ -1,4 +1,4 @@
-[<- До підрозділу](README.md)
+[<- До підрозділу](README.md)		[Коментувати](#feedback)
 
 # Основи JavaScript: теоретична частина
 
@@ -2167,4 +2167,22 @@ console.log(buf.readFloatLE(0)); //виведе 6.549669022254195e-42
 - [Відеозапис лекції Ч2](https://youtu.be/HXSIx6xgsvs)
 - [Презентація](https://drive.google.com/file/d/1W4J3tqWn77HqrOHcOcLfXY0ETyBoQsd2/view?usp=drive_link)
 
+## Джерела
+
+1. 
+
+
+## Автори
+
+
 Теоретичне заняття розробив [Олександр Пупена](https://github.com/pupenasan). 
+
+## Feedback
+
+Якщо Ви хочете залишити коментар у Вас є наступні варіанти:
+
+- [Обговорення у WhatsApp](https://chat.whatsapp.com/BRbPAQrE1s7BwCLtNtMoqN)
+- [Обговорення в Телеграм](https://t.me/+GA2smCKs5QU1MWMy)
+- [Група у Фейсбуці](https://www.facebook.com/groups/asu.in.ua)
+
+Про проект і можливість допомогти проекту написано [тут](https://asu-in-ua.github.io/atpv/)
