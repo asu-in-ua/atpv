@@ -30,7 +30,7 @@
 - [Стандарт на універсальний інтерфейс PDS (з посібника)](teor.md)
 - [Профіль CIA402](../cia402/README.md) - інший підрозділ
 - [Профіль PROFIDRIVE](../profidrive/README.md) - інший підрозділ
-- [Стандарт plcopen motion control](plcopenmotion.md)
+- [Стандарт PLCOPEN motion control](plcopenmotion.md)
 
 ## Практична частина
 
