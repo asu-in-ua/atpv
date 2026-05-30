@@ -10,6 +10,8 @@
 
 - [Інтегрування з застосунком Google Sheet](googlesheet/README.md)
 
+- [Створення Телеграм-бота в Node-RED](telegram/README.md)
+
 - [Репозиторій Node-RED](https://pupenasan.github.io/NodeREDGuidUKR/)
 
 - 
